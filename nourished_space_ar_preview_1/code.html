@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nourished Space - AR Preview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Be+Vietnam+Pro:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-dim": "#00578c",
+                        "surface-bright": "#faf9f5",
+                        "on-primary-fixed-variant": "#00691a",
+                        "tertiary": "#00639f",
+                        "on-surface-variant": "#5c605b",
+                        "primary-fixed-dim": "#83e881",
+                        "outline-variant": "#afb3ad",
+                        "primary": "#006f1d",
+                        "surface-container-highest": "#e0e3dd",
+                        "secondary-fixed": "#ffdcbe",
+                        "background": "#faf9f5",
+                        "on-tertiary": "#f7f9ff",
+                        "inverse-on-surface": "#9c9d9a",
+                        "on-primary-fixed": "#00480f",
+                        "error-dim": "#821a01",
+                        "secondary-container": "#ffdcbe",
+                        "surface": "#faf9f5",
+                        "on-tertiary-container": "#00395f",
+                        "surface-variant": "#e0e3dd",
+                        "tertiary-fixed": "#7bbeff",
+                        "primary-container": "#91f78e",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#787c77",
+                        "on-primary-container": "#005e17",
+                        "secondary": "#8c5100",
+                        "secondary-fixed-dim": "#ffca99",
+                        "surface-container-high": "#e7e9e3",
+                        "primary-dim": "#006118",
+                        "on-secondary-fixed-variant": "#874e00",
+                        "secondary-dim": "#7b4700",
+                        "on-error": "#fff7f4",
+                        "tertiary-fixed-dim": "#5fb1fb",
+                        "on-secondary": "#fff7f4",
+                        "primary-fixed": "#91f78e",
+                        "on-surface": "#2f332f",
+                        "on-background": "#2f332f",
+                        "surface-container-low": "#f3f4ef",
+                        "inverse-surface": "#0d0f0d",
+                        "surface-dim": "#d7dbd5",
+                        "on-secondary-fixed": "#5f3500",
+                        "inverse-primary": "#91f78e",
+                        "on-tertiary-fixed": "#00223b",
+                        "error-container": "#fa7150",
+                        "on-error-container": "#671200",
+                        "tertiary-container": "#7bbeff",
+                        "surface-tint": "#006f1d",
+                        "on-tertiary-fixed-variant": "#00426d",
+                        "error": "#aa371c",
+                        "on-primary": "#eaffe2",
+                        "surface-container": "#edeee9",
+                        "on-secondary-container": "#794500"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .ar-grid-overlay {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-stone-950 font-body text-on-surface overflow-hidden">
+<!-- AR Camera View Background -->
+<div class="fixed inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 brightness-75 contrast-90" data-alt="Modern living room with soft natural light, warm beige tones, minimalist furniture, and blurred background for AR depth effect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMq_oE4Gen2wvXQcG8h4w8oF6TX2on0WtoxBy-xrKUMBSA7yVtnGb0vPIm_K1mJSxxUdJiAWDVawUX4zpWPfgg76CG9y4x3pk-OLMTiWlVTRh3SGRXYjaVsC2yGjEbrxbGha5ttcRPZ-newT3LwVqMZZ8UB2ydlrQeE13TaG75nQjI_dxPIURLFKxUS04pg_BYII5zmQwChwUw4xf6U2Cr0vkgNAqKN5ry2S5rK1B209nOoNL6wsqZ9B5Wc9vBPBYPIDdZegNzsKQ"/>
+<div class="absolute inset-0 ar-grid-overlay opacity-30"></div>
+</div>
+<!-- 3D Element Simulation (Floating Assets) -->
+<div class="fixed inset-0 z-10 flex items-center justify-center pointer-events-none">
+<div class="relative w-full max-w-lg aspect-square flex items-center justify-center">
+<!-- Main Furniture Asset -->
+<img class="w-[80%] drop-shadow-[0_40px_60px_rgba(0,0,0,0.5)] z-20" data-alt="Sleek minimalist meditation chair with organic curves and light grey fabric upholstery, studio lighting on white background for transparency simulation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWH6o4XnMw3y0sG2SsbYvPWYR3GYsdPFR1yZWM15hlAi8CxpT2elpKAwShG32mwyPimuEBUMkaIUN4aSGEnWxlREB7M5eSg52iAzRqcbDWGnzjYi6sbK37s1m-2lF7-Dsk1jJF2c0TBsTPjO-o2yd0lEGCraDsFd3ur2EKgGZKmlXPvrCXEHwo78igBjvXgNA5dawvUiduB8leIx1a25Jl5ghClb9Yk4C7Grjhpb5x0NnkSaC-VKToZHxvCc-vpauq9M9tRXjOHXc"/>
+<!-- Accessory Asset -->
+<img class="absolute -bottom-10 -right-10 w-[40%] drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] z-30 transform rotate-6" data-alt="Single potted snake plant in a textured ceramic pot with soft daylight highlighting the green leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO0dNQNpj61wEerqQ2tEnp4FjAgo5LnTk4YxynlD_0rfIOXkmSKKBsRLqQ3bTYLVgopkMWGSalOJuUHOFkhHpa1WDWO0XB5s8LZvBr1V_YHzQDX8l803wADpERew6sjtNVVggtWBrc0IKvg3ZwxLpISUMBNW-2NTQ4LGWSw6lZvXRbwbAjLAY2akOc2UlziC9EmE0sGx7ylLF_R0RHyy4O_xls_Dg_1eyj0sCMYQglaZq8-jt4DSguExPN5vUFvQEI9P33Ydg87Xw"/>
+<!-- AR Reticle/Tracker -->
+<div class="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-48 h-12 border-2 border-primary-container/40 rounded-full flex items-center justify-center glass-panel">
+<span class="text-[10px] uppercase tracking-widest text-primary-container font-label">Surface Locked</span>
+</div>
+</div>
+</div>
+<!-- UI Overlay Layer -->
+<div class="relative z-50 flex flex-col h-screen justify-between p-6">
+<!-- Top App Bar (Shared Component Strategy) -->
+<header class="flex justify-between items-center w-full px-6 py-4 bg-stone-50/10 backdrop-blur-xl rounded-full text-white">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-stone-50/20 flex items-center justify-center hover:opacity-80 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</div>
+<h1 class="text-2xl font-bold italic tracking-tight font-headline text-stone-100">Nourished</h1>
+</div>
+<div class="flex gap-2">
+<div class="px-4 py-2 bg-primary/20 border border-primary/30 rounded-full backdrop-blur-md">
+<span class="text-xs font-label uppercase tracking-widest text-primary-fixed">Zen Den Live</span>
+</div>
+</div>
+</header>
+<!-- Main AR Content Area (Center spacer) -->
+<div class="flex-grow flex flex-col items-center justify-center pointer-events-none">
+<!-- Center Crosshair / Scanning Indicator -->
+<div class="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center opacity-40">
+<div class="w-1 h-1 bg-white rounded-full"></div>
+</div>
+</div>
+<!-- Bottom Controls Area -->
+<div class="space-y-6 max-w-xl mx-auto w-full">
+<!-- Mood Vibe Selector -->
+<div class="bg-stone-50/10 backdrop-blur-2xl p-6 rounded-xl border border-white/5 space-y-4">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-[10px] font-label uppercase tracking-[0.2em] text-stone-400">Environment Preset</span>
+<h2 class="text-xl font-headline font-semibold text-white">Change Mood Vibe</h2>
+</div>
+<span class="material-symbols-outlined text-stone-400">tune</span>
+</div>
+<div class="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
+<!-- Active: Zen -->
+<button class="flex items-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-full shrink-0 transition-transform active:scale-95 duration-300">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">filter_vintage</span>
+<span class="font-label text-sm font-medium tracking-wide">Zen</span>
+</button>
+<!-- Focus -->
+<button class="flex items-center gap-2 bg-stone-50/10 text-stone-300 hover:bg-stone-50/20 px-5 py-3 rounded-full shrink-0 transition-all duration-300">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+<span class="font-label text-sm font-medium tracking-wide">Focus</span>
+</button>
+<!-- Energy -->
+<button class="flex items-center gap-2 bg-stone-50/10 text-stone-300 hover:bg-stone-50/20 px-5 py-3 rounded-full shrink-0 transition-all duration-300">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span class="font-label text-sm font-medium tracking-wide">Energy</span>
+</button>
+</div>
+</div>
+<!-- Primary Action -->
+<div class="flex gap-4 items-center">
+<button class="flex-1 bg-gradient-to-r from-primary to-primary-dim text-on-primary py-5 rounded-full font-headline font-bold text-lg shadow-2xl hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    Save to Space
+                </button>
+<button class="w-16 h-16 bg-stone-50/10 backdrop-blur-xl border border-white/10 rounded-full flex items-center justify-center hover:bg-stone-50/20 transition-colors">
+<span class="material-symbols-outlined text-white">photo_camera</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Background Decoration (Soft Glowing Orbs for Mood Lighting) -->
+<div class="fixed top-1/4 -left-20 w-80 h-80 bg-primary/20 blur-[100px] rounded-full mix-blend-overlay pointer-events-none"></div>
+<div class="fixed bottom-1/4 -right-20 w-96 h-96 bg-tertiary/10 blur-[120px] rounded-full mix-blend-overlay pointer-events-none"></div>
+<!-- Hidden Nav Shell (BottomNavBar Logic) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-stone-50/5 backdrop-blur-xl shadow-[0_-20px_40px_rgba(0,0,0,0.2)] md:hidden">
+<div class="flex flex-col items-center justify-center text-stone-400 px-5 py-2 hover:text-green-300 transition-all">
+<span class="material-symbols-outlined">filter_vintage</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest mt-1">Mood</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-green-100/10 text-green-100 rounded-full px-5 py-2 scale-105">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest mt-1">Plan</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 px-5 py-2 hover:text-green-300 transition-all">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest mt-1">Stats</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 px-5 py-2 hover:text-green-300 transition-all">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daily Affirmations - Daily Breath</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-dim": "#006118",
+                    "on-primary-container": "#005e17",
+                    "on-primary-fixed": "#00480f",
+                    "surface-container-highest": "#e0e3dd",
+                    "inverse-surface": "#0d0f0d",
+                    "secondary-container": "#ffdcbe",
+                    "primary-container": "#91f78e",
+                    "on-surface": "#2f332f",
+                    "error-dim": "#821a01",
+                    "on-primary": "#eaffe2",
+                    "primary": "#006f1d",
+                    "inverse-on-surface": "#9c9d9a",
+                    "surface": "#faf9f5",
+                    "secondary-dim": "#7b4700",
+                    "tertiary-dim": "#00578c",
+                    "on-tertiary-fixed": "#00223b",
+                    "surface-container": "#edeee9",
+                    "inverse-primary": "#91f78e",
+                    "secondary": "#8c5100",
+                    "tertiary-fixed": "#7bbeff",
+                    "error-container": "#fa7150",
+                    "surface-bright": "#faf9f5",
+                    "outline-variant": "#afb3ad",
+                    "surface-variant": "#e0e3dd",
+                    "on-secondary-container": "#794500",
+                    "tertiary": "#00639f",
+                    "secondary-fixed": "#ffdcbe",
+                    "on-surface-variant": "#5c605b",
+                    "on-secondary": "#fff7f4",
+                    "surface-dim": "#d7dbd5",
+                    "on-secondary-fixed-variant": "#874e00",
+                    "outline": "#787c77",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#ffca99",
+                    "on-tertiary": "#f7f9ff",
+                    "surface-tint": "#006f1d",
+                    "on-error": "#fff7f6",
+                    "surface-container-high": "#e7e9e3",
+                    "on-primary-fixed-variant": "#00691a",
+                    "on-secondary-fixed": "#5f3500",
+                    "error": "#aa371c",
+                    "primary-fixed-dim": "#83e881",
+                    "on-tertiary-fixed-variant": "#00426d",
+                    "on-error-container": "#671200",
+                    "tertiary-container": "#7bbeff",
+                    "primary-fixed": "#91f78e",
+                    "background": "#faf9f5",
+                    "on-background": "#2f332f",
+                    "on-tertiary-container": "#00395f",
+                    "surface-container-low": "#f3f4ef",
+                    "tertiary-fixed-dim": "#5fb1fb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .editorial-overlay {
+            background: linear-gradient(to top, rgba(47, 51, 47, 0.4) 0%, rgba(47, 51, 47, 0) 60%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#faf9f5]/70 dark:bg-stone-950/70 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-800 dark:text-green-200" data-icon="spa">spa</span>
+<h1 class="text-xl font-bold text-green-800 dark:text-green-200 font-['Plus_Jakarta_Sans'] tracking-tight">Daily Breath</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-stone-500 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-stone-500 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto space-y-12">
+<!-- Header Section -->
+<section class="space-y-2">
+<span class="text-on-surface-variant font-label text-[10px] uppercase tracking-[0.1em]">Your Morning Ritual</span>
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold tracking-tight text-on-surface">Today's Affirmation</h2>
+</section>
+<!-- Main Affirmation Card -->
+<section class="relative group">
+<div class="aspect-[4/5] relative rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(47,51,47,0.06)] bg-surface-container">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="soft morning sunlight filtering through dense green forest trees with gentle morning mist and warm golden highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWcBbcGz4lThTV6xjsv12M4qZmZzFu5NcPqR99ae19Z1DaUteiXz_5sucIbk6yimwkqtsvYsL2i5HpyGaWJbI6auAUX-0UnSUG9RqXMyEtpQTSAC2bYixeTtda3vRc0HU4sDc5cN8EWaoDIMVcRbzCCw69F6Av5SMH6Trhy1-thjMIEqGo70Wao3PPoaNSmsMUJdGnpXfErknMmuANx2hUexJ6ozKa4BgcpwcJtFIvl5_ApQSuBKJ_v0CnH7if2fFb6h4cCB9wfzU"/>
+<div class="absolute inset-0 editorial-overlay"></div>
+<!-- Content Overlay -->
+<div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center space-y-6">
+<span class="material-symbols-outlined text-white/80 text-4xl" data-icon="format_quote">format_quote</span>
+<p class="text-3xl md:text-4xl font-headline font-bold text-white leading-tight">
+                        I am grounded, I am present, and I am enough.
+                    </p>
+<div class="w-12 h-[1px] bg-white/40"></div>
+</div>
+<!-- Floating Actions -->
+<div class="absolute bottom-8 right-8 flex gap-3">
+<button class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white/30 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white/30 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Breath Integration -->
+<section class="flex flex-col items-center justify-center py-8 px-6 bg-surface-container-low rounded-lg space-y-6">
+<div class="relative flex items-center justify-center w-24 h-24">
+<div class="absolute inset-0 border-2 border-primary/20 rounded-full"></div>
+<div class="w-16 h-16 bg-primary-container/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="air">air</span>
+</div>
+</div>
+<div class="text-center space-y-1">
+<h3 class="font-headline font-bold text-xl text-on-surface">Take a Deep Breath</h3>
+<p class="text-on-surface-variant font-body">Inhale for 4 seconds, exhale for 4 seconds.</p>
+</div>
+<button class="px-8 py-3 bg-gradient-to-br from-green-700 to-green-600 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all active:scale-95">
+                Begin Guided Session
+            </button>
+</section>
+<!-- Previous Affirmations -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<h3 class="text-2xl font-headline font-bold text-on-surface">Earlier this Week</h3>
+<button class="text-primary font-semibold text-sm hover:underline">View All</button>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-4 -mx-6 px-6">
+<!-- Earlier Card 1 -->
+<div class="flex-shrink-0 w-48 space-y-3">
+<div class="aspect-[3/4] rounded-lg overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="close up of single dewdrop hanging from a vibrant green blade of grass in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZDAUsE9_VFTHJ84itEg5aODDLXNSC9iYIdJNMZHTloB6J_UBM0rEjnS2WA2qvqjdbkFcA-2M8p-GGAZbiDjdoEHdE6q2eP6CK-VckNTdlBcVofaGi3usfMVKewhOWNS0p9i_rDaidaM6vpSZJKCWe-lJn6uY8if8mrXNvWMNo3ppycax80n4DeM0jYpZcjAkfkJWCJoSWXF7jWePwTevABb74SZdMzXdyZKgxQeJoz_mxGJ16iGVQeU4KTNpNsG_dApRSjOXRe5c"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<p class="font-headline font-bold text-sm line-clamp-2">My peace is my priority and my power.</p>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest">Monday</span>
+</div>
+<!-- Earlier Card 2 -->
+<div class="flex-shrink-0 w-48 space-y-3">
+<div class="aspect-[3/4] rounded-lg overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="ancient trees in a quiet misty forest with soft cool lighting and peaceful atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWavosm-KqjBAcA0f_QJr7jJU9Sb45Z0G_TE06IRKOW0pvz0gWeeIgFYTSvpD-idK7RJPoZAPnILWkUjOcB_1wT-hdGaIeq9MmEa0MpCAT1pLDKuJhaXpsWeyx42O0hiWgFQU8HzqOFWGR56dwqis1cNlEMhliAZS50rj5NsWFdWbntg0HNrwb-e2EsedL9JW6hEJOzN4d9UJIWUt3A4bFd6e9c92zmsvRpUSgVrqTGfVzCn0WK9lD77aG8Lf4wKNxInLmlPKKi2M"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<p class="font-headline font-bold text-sm line-clamp-2">I release all that does not serve me.</p>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest">Tuesday</span>
+</div>
+<!-- Earlier Card 3 -->
+<div class="flex-shrink-0 w-48 space-y-3">
+<div class="aspect-[3/4] rounded-lg overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="panoramic view of tranquil lake at dawn with reflection of mountains and soft purple sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATrywkOu_CG9YLRPYIqtpGn5IPWpihUBbGs_DKEnBpDcel3pBBqT2iEXcWm-V2Y71BtF_VI0lXE0MvgZlvEgAVk3hsDZTSA7khoFzqJfUBS_bDA0dzY1Wb_CNEf-Mi1unFB_wuoYPYVAL9gBTg5K3zYbXwiw3HHniXIPvuxK59OsX2uwxPmulpYd9-kuJtdpwPeSAj4wWv6tOgljMpm8UjiQJB6DB82uo78yi8BG0-zQ26PSJrd0jjUJbcf4HAlbmXx4fIRyhGK3M"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<p class="font-headline font-bold text-sm line-clamp-2">I am creating the life I desire.</p>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest">Wednesday</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-24 flex justify-around items-center px-8 pb-4 bg-[#faf9f5]/70 dark:bg-stone-950/70 backdrop-blur-xl rounded-t-xl z-50 shadow-[0_-20px_40px_rgba(47,51,47,0.06)]">
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-green-700 to-green-600 text-white rounded-full p-3 scale-110 -translate-y-2 ease-in-out duration-500" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-[0.05em] mt-1">Today</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-2 hover:text-green-700 dark:hover:text-green-300 transition-colors ease-in-out duration-500" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-[0.05em] mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-2 hover:text-green-700 dark:hover:text-green-300 transition-colors ease-in-out duration-500" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-[0.05em] mt-1">Journal</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-2 hover:text-green-700 dark:hover:text-green-300 transition-colors ease-in-out duration-500" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-[0.05em] mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

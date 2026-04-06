@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nourished - Mood Check-in</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#005e17",
+                        "error": "#aa371c",
+                        "surface-container": "#edeee9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#874e00",
+                        "inverse-primary": "#91f78e",
+                        "on-secondary": "#fff7f4",
+                        "on-primary": "#eaffe2",
+                        "inverse-surface": "#0d0f0d",
+                        "on-tertiary-fixed": "#00223b",
+                        "primary-container": "#91f78e",
+                        "secondary-fixed": "#ffdcbe",
+                        "outline-variant": "#afb3ad",
+                        "surface-variant": "#e0e3dd",
+                        "surface-dim": "#d7dbd5",
+                        "tertiary-container": "#7bbeff",
+                        "secondary-fixed-dim": "#ffca99",
+                        "surface-container-highest": "#e0e3dd",
+                        "tertiary-fixed-dim": "#5fb1fb",
+                        "on-error": "#fff7f6",
+                        "on-secondary-fixed": "#5f3500",
+                        "on-surface": "#2f332f",
+                        "on-error-container": "#671200",
+                        "surface-container-high": "#e7e9e3",
+                        "background": "#faf9f5",
+                        "primary-fixed": "#91f78e",
+                        "outline": "#787c77",
+                        "error-container": "#fa7150",
+                        "on-tertiary": "#f7f9ff",
+                        "surface-container-low": "#f3f4ef",
+                        "surface-tint": "#006f1d",
+                        "primary-fixed-dim": "#83e881",
+                        "on-background": "#2f332f",
+                        "on-surface-variant": "#5c605b",
+                        "tertiary-fixed": "#7bbeff",
+                        "secondary-dim": "#7b4700",
+                        "on-primary-fixed-variant": "#00691a",
+                        "secondary": "#8c5100",
+                        "inverse-on-surface": "#9c9d9a",
+                        "secondary-container": "#ffdcbe",
+                        "surface": "#faf9f5",
+                        "error-dim": "#821a01",
+                        "on-secondary-container": "#794500",
+                        "on-primary-fixed": "#00480f",
+                        "primary": "#006f1d",
+                        "primary-dim": "#006118",
+                        "tertiary": "#00639f",
+                        "surface-bright": "#faf9f5",
+                        "on-tertiary-container": "#00395f",
+                        "on-tertiary-fixed-variant": "#00426d",
+                        "tertiary-dim": "#00578c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #faf9f5;
+            color: #2f332f;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-stone-50/70 dark:bg-stone-950/70 backdrop-blur-xl">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-green-800 dark:text-green-400 text-2xl cursor-pointer hover:opacity-80 transition-opacity active:scale-90 duration-300">menu</span>
+<h1 class="font-['Plus_Jakarta_Sans'] text-2xl font-black text-green-800 dark:text-green-400 tracking-tighter">Nourished</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container hover:opacity-80 transition-opacity cursor-pointer active:scale-90 duration-300">
+<img alt="User Profile" data-alt="close-up portrait of a smiling woman with a warm expression in soft natural lighting against a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9wdkx6bglV6rz_vZ2z3fWaEAa0H9QDWrtumLniCmTZWN47bUPT3vHKiLe6METq-nWmXL52HnBVXI6PjeMVvW2DtBQLQj9H6Wg0ejQYKzPvEg65ukKgrXuckA4hKNWIXaQZZPxUhe0X61NIIkkrOiXITg88VNO9QscImVm3Em75F_0dvsdJBGZIkEUjbopKYEDakgauGJTJ9ZjUFaqfqY1Ut4TT3VIAYQ0tYO7irceaCLz3ZtP5iQgF-yDvPZDdLWiE2a8f9YyJ_U"/>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Hero Greeting -->
+<section class="mb-10">
+<h2 class="text-[3.5rem] leading-[1.1] font-extrabold tracking-tight text-on-surface mb-2">How are you feeling?</h2>
+<p class="text-on-surface-variant text-lg font-medium opacity-80">Tune into your body’s rhythm and pick a mood.</p>
+</section>
+<!-- Mood Selection Grid -->
+<section class="mb-12">
+<div class="grid grid-cols-2 gap-4">
+<!-- Mood Card: Zen & Calm (Active State example) -->
+<button class="flex flex-col items-center justify-center aspect-square p-6 bg-primary-container text-on-primary-container rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-95 group relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
+<span class="material-symbols-outlined text-5xl mb-3 relative z-10" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="font-bold text-center leading-tight relative z-10">Zen &amp; Calm</span>
+</button>
+<!-- Mood Card: Need a Boost -->
+<button class="flex flex-col items-center justify-center aspect-square p-6 bg-surface-container text-on-surface rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-95 group">
+<span class="material-symbols-outlined text-5xl mb-3 text-secondary group-hover:scale-110 transition-transform">bolt</span>
+<span class="font-bold text-center leading-tight">Need a Boost</span>
+</button>
+<!-- Mood Card: Brain Power -->
+<button class="flex flex-col items-center justify-center aspect-square p-6 bg-surface-container text-on-surface rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-95 group">
+<span class="material-symbols-outlined text-5xl mb-3 text-tertiary group-hover:scale-110 transition-transform">psychology</span>
+<span class="font-bold text-center leading-tight">Brain Power</span>
+</button>
+<!-- Mood Card: Comfort Seekers -->
+<button class="flex flex-col items-center justify-center aspect-square p-6 bg-surface-container text-on-surface rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-95 group">
+<span class="material-symbols-outlined text-5xl mb-3 text-error group-hover:scale-110 transition-transform">favorite</span>
+<span class="font-bold text-center leading-tight">Comfort Seekers</span>
+</button>
+<!-- Mood Card: Celebration Mode (Wide) -->
+<button class="col-span-2 flex items-center justify-between p-6 bg-secondary-container text-on-secondary-container rounded-xl transition-all duration-300 hover:scale-[1.01] active:scale-95 group overflow-hidden relative">
+<div class="flex flex-col items-start relative z-10">
+<span class="font-black text-2xl tracking-tight">Celebration Mode</span>
+<span class="text-sm font-medium opacity-80 uppercase tracking-widest mt-1">Savor the moment</span>
+</div>
+<span class="material-symbols-outlined text-6xl text-secondary opacity-40 group-hover:rotate-12 transition-transform relative z-10">celebration</span>
+</button>
+</div>
+</section>
+<!-- Recommended Meal Section -->
+<section class="relative">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-2xl font-extrabold tracking-tight">Recommended for your Zen</h3>
+<span class="text-primary font-bold text-sm tracking-widest uppercase hover:underline cursor-pointer">View All</span>
+</div>
+<!-- Personalized Meal Card -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_20px_40px_rgba(47,51,47,0.06)] transition-all duration-500 hover:scale-[1.01]">
+<div class="relative h-72 w-full overflow-hidden">
+<img alt="Healhy Buddha Bowl" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="vibrant buddha bowl with fresh avocado, quinoa, roasted chickpeas, and tahini dressing on a handmade ceramic plate with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9uCtKAQ1FODJhveevt1gGf0itqYRV01G_KjUj9Pm0aNZ-UYQAQbdcFxkBxi83AtGq_2gyKJ01wtrVOHgHSRuCmNEk03mhnpP9Qefoi2nJhs-zywQA3L1ivFZeM23eTVQYGGx8vwcXtsAQG6qI14vUbUwKx_IuzbPrVYmv801a9JSWOZS9Pxk47sSYpWbzo8dPxXszjNczYsp92agetsqDU7Xw2JThObfc7hHzv428jnK7CoS0-3eP88BPNAaayFlFbap93YlnudU"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-primary/90 text-on-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-md">ZEN CHOICE</span>
+<span class="bg-surface-container-lowest/90 text-on-surface px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-md">25 MINS</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-start justify-between mb-4">
+<div>
+<h4 class="text-[1.75rem] font-bold leading-tight mb-2">Matcha Infused Soba with Roasted Greens</h4>
+<p class="text-on-surface-variant leading-relaxed max-w-md">Rich in L-theanine, this meal is designed to lower cortisol and induce a state of focused tranquility.</p>
+</div>
+</div>
+<div class="flex items-center gap-6 pt-4 border-t border-outline-variant/15">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant opacity-60">Calories</span>
+<span class="text-lg font-bold text-on-surface">420 kcal</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant opacity-60">Protein</span>
+<span class="text-lg font-bold text-on-surface">18g</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant opacity-60">Fiber</span>
+<span class="text-lg font-bold text-on-surface">12g</span>
+</div>
+</div>
+<button class="mt-8 w-full py-4 bg-gradient-to-r from-primary to-primary-dim text-on-primary rounded-full font-bold text-lg transition-all duration-300 hover:scale-[1.02] active:scale-95 shadow-lg shadow-primary/20">
+                        Start Cooking
+                    </button>
+</div>
+</div>
+</section>
+<!-- Stats Teaser Bento -->
+<section class="mt-12 grid grid-cols-2 gap-4">
+<div class="p-6 bg-tertiary-container rounded-lg text-on-tertiary-container flex flex-col justify-between aspect-[4/3]">
+<span class="material-symbols-outlined text-3xl">water_drop</span>
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest block mb-1">Hydration</span>
+<span class="text-2xl font-black">1.8 / 2.5L</span>
+</div>
+</div>
+<div class="p-6 bg-surface-container-high rounded-lg text-on-surface flex flex-col justify-between aspect-[4/3]">
+<span class="material-symbols-outlined text-3xl text-secondary">mindfulness</span>
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest block mb-1">Mindful Meals</span>
+<span class="text-2xl font-black">12 streak</span>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB (Suppressed on Home as per rules but technically optional - choosing to include for "Add Mood" action if required by context) -->
+<!-- Suppressed to prioritize navigation shell as per prompt context -->
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-stone-50/70 dark:bg-stone-950/70 backdrop-blur-xl rounded-t-[3rem] shadow-[0_-20px_40px_rgba(47,51,47,0.06)]">
+<!-- Mood (Active) -->
+<a class="flex flex-col items-center justify-center bg-green-100 dark:bg-green-900/40 text-green-900 dark:text-green-100 rounded-full px-5 py-2 scale-105 transition-all duration-500 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emoji_emotions</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-widest font-bold mt-1">Mood</span>
+</a>
+<!-- Plan -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-widest font-bold mt-1">Plan</span>
+</a>
+<!-- Stats -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-widest font-bold mt-1">Stats</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-widest font-bold mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

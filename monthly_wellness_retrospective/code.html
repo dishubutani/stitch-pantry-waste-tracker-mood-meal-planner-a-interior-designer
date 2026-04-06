@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Monthly Wellness Retrospective</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary-fixed": "#ffdcbe",
+                "on-secondary": "#fff7f4",
+                "primary-fixed-dim": "#83e881",
+                "on-primary": "#eaffe2",
+                "inverse-on-surface": "#9c9d9a",
+                "error-dim": "#821a01",
+                "tertiary-fixed": "#7bbeff",
+                "error": "#aa371c",
+                "secondary-fixed-dim": "#ffca99",
+                "primary": "#006f1d",
+                "on-secondary-container": "#794500",
+                "tertiary": "#00639f",
+                "outline-variant": "#afb3ad",
+                "on-primary-fixed-variant": "#00691a",
+                "on-surface-variant": "#5c605b",
+                "outline": "#787c77",
+                "on-tertiary": "#f7f9ff",
+                "secondary-dim": "#7b4700",
+                "surface-container-high": "#e7e9e3",
+                "on-tertiary-fixed": "#00223b",
+                "on-primary-fixed": "#00480f",
+                "on-surface": "#2f332f",
+                "on-error": "#fff7f6",
+                "surface": "#faf9f5",
+                "on-background": "#2f332f",
+                "tertiary-fixed-dim": "#5fb1fb",
+                "tertiary-dim": "#00578c",
+                "secondary": "#8c5100",
+                "surface-tint": "#006f1d",
+                "inverse-primary": "#91f78e",
+                "surface-dim": "#d7dbd5",
+                "surface-container": "#edeee9",
+                "primary-container": "#91f78e",
+                "surface-container-low": "#f3f4ef",
+                "primary-fixed": "#91f78e",
+                "on-primary-container": "#005e17",
+                "on-error-container": "#671200",
+                "surface-container-lowest": "#ffffff",
+                "surface-bright": "#faf9f5",
+                "inverse-surface": "#0d0f0d",
+                "on-secondary-fixed-variant": "#874e00",
+                "surface-variant": "#e0e3dd",
+                "primary-dim": "#006118",
+                "on-secondary-fixed": "#5f3500",
+                "on-tertiary-fixed-variant": "#00426d",
+                "on-tertiary-container": "#00395f",
+                "error-container": "#fa7150",
+                "surface-container-highest": "#e0e3dd",
+                "background": "#faf9f5",
+                "tertiary-container": "#7bbeff",
+                "secondary-container": "#ffdcbe"
+            },
+            "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Be Vietnam Pro"],
+                "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #faf9f5;
+            color: #2f332f;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(47, 51, 47, 0.04);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#faf9f5]/70 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-5xl mx-auto">
+<button class="text-[#2E7D32] hover:opacity-80 transition-opacity active:duration-300 scale-95">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline text-xl font-bold tracking-tight text-[#2E7D32]">Monthly Reflection</h1>
+<button class="text-[#2E7D32] hover:opacity-80 transition-opacity active:duration-300 scale-95">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-5xl mx-auto space-y-12">
+<!-- Hero Retrospective Title -->
+<section class="space-y-2">
+<p class="font-label text-[10px] font-bold tracking-widest uppercase text-primary">OCTOBER 1 - OCTOBER 31</p>
+<h2 class="font-headline text-5xl font-extrabold tracking-tighter leading-none">Monthly Wellness <br/>Retrospective</h2>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Monthly Mood Harmony (Area Chart Visual) -->
+<div class="md:col-span-7 bg-surface-container-low rounded-xl p-8 editorial-shadow overflow-hidden relative">
+<div class="flex justify-between items-start mb-10">
+<div class="space-y-1">
+<h3 class="font-headline text-2xl font-bold text-on-surface">Monthly Mood Harmony</h3>
+<p class="text-on-surface-variant text-sm">Balanced distribution of energy states</p>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<!-- Abstract Area Chart Representation -->
+<div class="h-64 flex items-end gap-1 relative">
+<div class="flex-1 bg-tertiary-container/30 h-4/5 rounded-t-full transition-all hover:bg-tertiary-container/50 relative group">
+<span class="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-on-surface text-surface text-[10px] px-2 py-1 rounded">Brain Power</span>
+</div>
+<div class="flex-1 bg-primary-container h-full rounded-t-full transition-all hover:brightness-95 relative group">
+<span class="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-on-surface text-surface text-[10px] px-2 py-1 rounded">Zen</span>
+</div>
+<div class="flex-1 bg-secondary-container h-3/5 rounded-t-full transition-all hover:brightness-95 relative group">
+<span class="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-on-surface text-surface text-[10px] px-2 py-1 rounded">Comfort</span>
+</div>
+<div class="flex-1 bg-primary h-2/5 rounded-t-full transition-all hover:brightness-110 relative group">
+<span class="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-on-surface text-surface text-[10px] px-2 py-1 rounded">Boost</span>
+</div>
+</div>
+<div class="mt-8 flex justify-between items-center text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">
+<span>Oct 1</span>
+<span>Oct 15</span>
+<span>Oct 31</span>
+</div>
+</div>
+<!-- Ritual Streak Mini-Map -->
+<div class="md:col-span-5 bg-surface-container-highest rounded-xl p-8 editorial-shadow flex flex-col justify-between">
+<div class="space-y-4">
+<h3 class="font-headline text-2xl font-bold text-on-surface">Ritual Streak</h3>
+<div class="flex items-baseline gap-2">
+<span class="text-5xl font-extrabold text-primary">24</span>
+<span class="text-on-surface-variant font-medium">days active</span>
+</div>
+</div>
+<!-- 30-Day Mini-Map -->
+<div class="grid grid-cols-7 gap-2 mt-8">
+<!-- Generation of a mini calendar grid -->
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-surface-variant rounded-sm"></div>
+<div class="w-full aspect-square bg-surface-variant rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-surface-variant rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-surface-variant rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+<div class="w-full aspect-square bg-primary rounded-sm"></div>
+</div>
+<p class="mt-6 text-sm text-on-surface-variant font-medium italic">"Consistency is the silent architect of well-being."</p>
+</div>
+</div>
+<!-- Sleep Quality Summary -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-1 flex flex-col justify-center">
+<h3 class="font-headline text-3xl font-bold tracking-tight">Sleep Quality<br/>Summary</h3>
+<p class="text-on-surface-variant mt-4 leading-relaxed">Deep restorative sleep peaked during the third week of the month.</p>
+</div>
+<div class="md:col-span-2 bg-gradient-to-br from-tertiary-container/20 to-tertiary/10 rounded-xl p-8 flex items-center justify-between overflow-hidden relative">
+<div class="relative z-10">
+<div class="flex items-center gap-4 mb-2">
+<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="bedtime">bedtime</span>
+<span class="text-4xl font-extrabold text-on-tertiary-container">82%</span>
+</div>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+<span>Sleep quality improved by 12% this month</span>
+</div>
+</div>
+<div class="absolute right-0 bottom-0 opacity-10">
+<span class="material-symbols-outlined text-[180px]" data-icon="nights_stay">nights_stay</span>
+</div>
+</div>
+</section>
+<!-- Top Mood-Boosting Rituals -->
+<section class="space-y-8">
+<h3 class="font-headline text-2xl font-bold">Top Mood-Boosting Rituals</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Ritual Card 1 -->
+<div class="group cursor-pointer">
+<div class="rounded-lg overflow-hidden h-64 mb-4 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of a person doing a peaceful yoga pose in a sun-drenched studio with soft dust motes in the air" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc_IZOGCk3zm2zA1RGCtARvRmqj_flDUeA5JCUwUQ-V-6YtCOMRH_CWuaK1D1LqeFoGXPoC-46u_wzP1X43Of6ddW9UvNgYS1RLayUuhXv_jVB2nLe7VlYLnvhiH6MsPJONg1ZmnhhE90s_KIOvTUypa1Kh6v5AfVx8IcyeLeDkKx5B7ZiJWALg3pEcgyM55zvxXA4JcZqQhie30303JHJ7V9oo-tGVIDMKbFm4tW_ydxbHH8021M4YNk3mqxnHJZC6OqT83f3Ayg"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary-container/90 backdrop-blur text-on-primary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Zen +40%</span>
+</div>
+</div>
+<h4 class="font-headline text-lg font-bold">15-Minute Solar Meditation</h4>
+<p class="text-on-surface-variant text-sm mt-1">Practiced 18 times this month</p>
+</div>
+<!-- Ritual Card 2 -->
+<div class="group cursor-pointer">
+<div class="rounded-lg overflow-hidden h-64 mb-4 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Artisanal breakfast bowl with vibrant berries, nuts, and yogurt on a rustic wooden table in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdusq1XIUCLheY05TTgGOFdMamwyj7TUVYYnGSMBWe9ecm1EWgOt-YsQ27cnexGxN3VgOvwQKdxTZS4JLE5NZpB8z_GUJRJJiqC_P-wI5jvIigFzlUHkUI2rCmLFAgnqlk7NYj9BuHEflm2dtXM7-KVyjR0mbLZcyo9dfpOlnYCHT99sslGNLONbOglVLmDZPtY_6yBPlkeSshFxq5TFdzmBnLNXRkG-hl6OKTJaY4lkETujSfquZ9mTH7NpViU2vlYAQZgWYElk4"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container/90 backdrop-blur text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Boost +25%</span>
+</div>
+</div>
+<h4 class="font-headline text-lg font-bold">Berry Antioxidant Power Bowl</h4>
+<p class="text-on-surface-variant text-sm mt-1">High energy retention post-meal</p>
+</div>
+<!-- Ritual Card 3 -->
+<div class="group cursor-pointer">
+<div class="rounded-lg overflow-hidden h-64 mb-4 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Macro photography of fresh green tea leaves steeping in clear water with gentle steam rising" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBqedxCP8stByNxy_jOWD69UIlrgTxeOO1-PglbGAMCRNC64c0tjzx29w7QIQI0J4gIpVc9mAqAduVgDcaiWG4YFST32JwCRVGibd-vzW95VsZWUKCf3YcMh6_QSRT_Fggu4dMlhtZ1iNFdF0v62mlSpBx2JLJLUQ2oKdOeIKYJ0NA3-xjM5yJSDSBGxdRBOz3lPTnfkxgyXvV-ntklEhl_2_XkXV6SQMMvhOPcN51OBWMoIayOvCmlvjAx_0dJtXXVzBaFKgBfuM"/>
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-container/90 backdrop-blur text-on-tertiary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Brain Power +15%</span>
+</div>
+</div>
+<h4 class="font-headline text-lg font-bold">Mid-Day Matcha Focus</h4>
+<p class="text-on-surface-variant text-sm mt-1">Correlation with deep-work sessions</p>
+</div>
+</div>
+</section>
+<!-- AI Insight & Goal -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+<!-- Monthly Insight -->
+<div class="bg-primary/5 rounded-xl p-10 space-y-6 relative overflow-hidden">
+<span class="material-symbols-outlined text-primary/20 text-7xl absolute -top-4 -right-4" data-icon="forum">forum</span>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" data-icon="bolt">bolt</span>
+</div>
+<span class="font-headline font-bold text-primary">Monthly Insight</span>
+</div>
+<p class="text-xl font-medium leading-relaxed text-on-surface">
+                    "This month, your <span class="text-primary font-bold">Focus</span> and <span class="text-primary font-bold">Zen</span> moods were highly correlated with your consistent 15-Minute Solar Meditation. We noticed your energy dipped on days without morning hydration. Prioritizing fluid intake could unlock even higher performance."
+                </p>
+</div>
+<!-- Actionable Goal -->
+<div class="bg-on-surface text-surface rounded-xl p-10 flex flex-col justify-between editorial-shadow">
+<div class="space-y-4">
+<h3 class="font-headline text-3xl font-bold tracking-tight">Your November North Star</h3>
+<p class="text-surface/70 font-light text-lg">Define the intention that will guide your next cycle.</p>
+</div>
+<div class="mt-12 group cursor-pointer">
+<div class="flex justify-between items-center py-4 border-b border-surface/20 group-hover:border-primary-container transition-colors">
+<span class="text-xl font-bold">Set Wellness Goal</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+<p class="mt-4 text-[10px] uppercase tracking-widest text-surface/40 font-bold">Recommended: Hydration Consistency</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-8 pb-6 pt-3 bg-[#faf9f5]/70 backdrop-blur-xl z-50 rounded-t-[3rem] shadow-[0_-10px_30px_rgba(47,51,47,0.04)]">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 p-2 hover:text-[#2E7D32] transition-transform duration-500 ease-in-out scale-105" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="font-headline text-[10px] font-bold tracking-widest uppercase mt-1">Nourish</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#2E7D32] to-[#43a047] text-white rounded-full p-3 scale-110 -translate-y-2 transition-all shadow-lg" href="#">
+<span class="material-symbols-outlined" data-icon="self_improvement" data-weight="fill" style="font-variation-settings: 'FILL' 1;">self_improvement</span>
+<span class="font-headline text-[10px] font-bold tracking-widest uppercase mt-1">Reflect</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 p-2 hover:text-[#2E7D32] transition-transform duration-500 ease-in-out scale-105" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-headline text-[10px] font-bold tracking-widest uppercase mt-1">Trends</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 p-2 hover:text-[#2E7D32] transition-transform duration-500 ease-in-out scale-105" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-headline text-[10px] font-bold tracking-widest uppercase mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

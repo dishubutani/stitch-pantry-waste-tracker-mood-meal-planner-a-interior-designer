@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sleep Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#2E7D32",
+                      "surface": "#0a0c0a",
+                      "surface-container": "#161a16",
+                      "surface-container-low": "#111411",
+                      "on-surface": "#e2e3de",
+                      "on-surface-variant": "#c1c9be",
+                      "outline": "#8b9389"
+              },
+              "borderRadius": {
+                      "DEFAULT": "9999px",
+                      "lg": "9999px",
+                      "xl": "9999px",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Be Vietnam Pro"],
+                      "label": ["Be Vietnam Pro"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-timer {
+            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .editorial-spacing {
+            letter-spacing: -0.01em;
+        }
+        body {
+            background-color: #0a0c0a;
+            background-image: radial-gradient(circle at top right, #1a2e1c 0%, #0a0c0a 50%);
+            min-height: 100dvh;
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/40 backdrop-blur-2xl">
+<div class="flex items-center justify-between px-8 py-6 w-full max-w-lg mx-auto">
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity" data-icon="arrow_back">arrow_back</button>
+<h1 class="text-lg font-bold text-on-surface font-headline tracking-tight">Sleep Sanctuary</h1>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant" data-icon="more_vert">more_vert</button>
+</div>
+</header>
+<main class="pt-24 pb-40 max-w-lg mx-auto px-8 space-y-16">
+<!-- Immersive Timer Section -->
+<section class="relative aspect-[4/5] w-full rounded-[3rem] overflow-hidden group shadow-2xl">
+<img alt="Starlit Night" class="absolute inset-0 w-full h-full object-cover scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPss7zzoEuh11if1BK6oZj6kkwhwig5OUibswxThoqpgCj_aSKQUO8l4dgSeI58kAIJKtpBz78yMPZ5ZM1YDe9hPJg12HF1nIECBq_Uz_F_z2IvdzHflWGyxTgATsqKIwUHfRlGNG42YWPu_N3KaaL0quRnke60sxi9hFJSV6m-fb5UqNV01v_wClzj4KxmkWqDE3KkwWTXoaBb2tx7BZlHVY-ZpsinYOVcN99w1ZEwQclfc7OOArhplXt9n2IbcWxmUdrABLPlm8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-8">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] opacity-60 mb-8">Wind Down Timer</span>
+<div class="relative mb-12">
+<!-- Visual Progress Ring -->
+<svg class="w-72 h-72 -rotate-90">
+<circle cx="144" cy="144" fill="none" r="130" stroke="white" stroke-opacity="0.1" stroke-width="2"></circle>
+<circle class="glow-timer transition-all duration-1000" cx="144" cy="144" fill="none" r="130" stroke="white" stroke-dasharray="816" stroke-dashoffset="220" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-7xl font-headline font-extrabold editorial-spacing tracking-tighter">45:00</span>
+<span class="text-xs font-medium opacity-50 mt-2">Minutes Remaining</span>
+</div>
+</div>
+<div class="flex gap-4 w-full px-4">
+<button class="flex-1 bg-primary text-white py-4 rounded-full font-bold transition-all active:scale-95 flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    Start Ritual
+                </button>
+<button class="px-8 py-4 rounded-full font-bold bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all active:scale-95">
+                    Reset
+                </button>
+</div>
+</div>
+</section>
+<!-- Evening Rituals -->
+<section class="space-y-8">
+<div class="flex items-baseline justify-between">
+<h2 class="text-2xl font-headline font-bold text-on-surface editorial-spacing">Evening Rituals</h2>
+<span class="text-xs font-bold text-primary tracking-wider uppercase">2 of 4 Complete</span>
+</div>
+<div class="space-y-4">
+<!-- Ritual Item 1 -->
+<div class="bg-surface-container-low rounded-[2.5rem] p-6 flex items-center justify-between border border-white/[0.03]">
+<div class="flex gap-5 items-center">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="light_mode">light_mode</span>
+</div>
+<div class="flex-1">
+<h3 class="text-base font-headline font-bold mb-1">Dim the Lights</h3>
+<p class="text-on-surface-variant text-xs leading-relaxed max-w-[180px]">Cue your body's natural melatonin production.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-12 h-7 bg-white/10 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Ritual Item 2 -->
+<div class="bg-surface-container-low rounded-[2.5rem] p-6 flex items-center justify-between border border-white/[0.03]">
+<div class="flex gap-5 items-center">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="phonelink_off">phonelink_off</span>
+</div>
+<div class="flex-1">
+<h3 class="text-base font-headline font-bold mb-1">Digital Detox</h3>
+<p class="text-on-surface-variant text-xs leading-relaxed max-w-[180px]">Quiet the digital noise 30 minutes before bed.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-12 h-7 bg-white/10 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Ritual Item 3 -->
+<div class="bg-surface-container-low rounded-[2.5rem] p-6 flex items-center justify-between border border-white/[0.03]">
+<div class="flex gap-5 items-center">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="local_cafe">local_cafe</span>
+</div>
+<div class="flex-1">
+<h3 class="text-base font-headline font-bold mb-1">Herbal Tea</h3>
+<p class="text-on-surface-variant text-xs leading-relaxed max-w-[180px]">Sip on chamomile to gently soothe the mind.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-12 h-7 bg-white/10 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Soundscape Selector -->
+<section class="space-y-8">
+<h2 class="text-2xl font-headline font-bold text-on-surface editorial-spacing">Soundscapes</h2>
+<div class="flex overflow-x-auto gap-5 pb-8 no-scrollbar -mx-8 px-8">
+<!-- Rain Card -->
+<div class="flex-shrink-0 w-64 aspect-[3/4] relative rounded-[2.5rem] overflow-hidden group cursor-pointer shadow-xl">
+<img alt="Rain" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsMTTD5OYt6v63d_upK5E0nzRbERx7jIMKXSwNsqpOuPjRCwUaTMkplKQbMOA20G4IUNF4nHAFVDPpQ0En35UzTwAOGqWn5UKKGe0qlPrHKEmR2Mj-2GmO2ZEsGhkKHnnRsOWMO1EXZLLoYFplYazCU-rpsGJM13QcdVDzbfWdDcR9nNcBrkNDr8oPRJzoD0gWBn5jdv3jFreETBHiwbP4JL1Lh9-BQeY4JaPvzsWVQoIbegIWRsuI7Sw9F1cyJu7xiXpJuDxvJjk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<h4 class="text-xl font-headline font-bold text-white mb-2">Rain on Leaves</h4>
+<div class="flex items-center gap-2 opacity-70">
+<span class="material-symbols-outlined text-sm" data-icon="volume_up">volume_up</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">Deep Forest</span>
+</div>
+</div>
+<div class="absolute top-6 right-6 bg-white/20 backdrop-blur-xl rounded-full p-3 border border-white/20">
+<span class="material-symbols-outlined text-white text-xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<!-- White Noise Card -->
+<div class="flex-shrink-0 w-64 aspect-[3/4] relative rounded-[2.5rem] overflow-hidden group cursor-pointer shadow-xl">
+<img alt="Static" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhaDBxf7Bh_93X1BqwWbADjaPoOeJ9mTbmnRN7o2MEg0ZfzD6ArvvuZh6RfVyPxjF1eI475Vtqn4gjVnu5A-KxmIa0g7_HfTsAxWs7fVryRtgMD717-VF4rzyKV_dbB8qMP8M-h_6wmfP4NCuLKa-L7ml6vg492ffuZU7JtPd4xoGitK50xNYoE-pNyO52WNvT6AeDe297gfxo9YZLHCkdQGePb04VSmuf5R7UpSJmvyTe3n90y77lqygGe0ySiqULQhfTowCjnJY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<h4 class="text-xl font-headline font-bold text-white mb-2">Cloud Drift</h4>
+<div class="flex items-center gap-2 opacity-70">
+<span class="material-symbols-outlined text-sm" data-icon="volume_up">volume_up</span>
+<span class="text-[10px] uppercase tracking-widest font-bold">White Noise</span>
+</div>
+</div>
+<div class="absolute top-6 right-6 bg-white/20 backdrop-blur-xl rounded-full p-3 border border-white/20">
+<span class="material-symbols-outlined text-white text-xl" data-icon="pause" style="font-variation-settings: 'FILL' 1;">pause</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-lg flex justify-around items-center px-10 pb-10 pt-6 bg-surface/80 backdrop-blur-3xl z-50 rounded-t-[3.5rem] border-t border-white/[0.05]">
+<button class="flex flex-col items-center justify-center text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-2xl" data-icon="restaurant">restaurant</span>
+<span class="font-label text-[9px] uppercase tracking-widest font-bold mt-2">Nourish</span>
+</button>
+<button class="flex flex-col items-center justify-center">
+<div class="bg-primary w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-primary/30 mb-2">
+<span class="material-symbols-outlined text-white text-2xl" data-icon="bedtime" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+</div>
+<span class="font-label text-[9px] uppercase tracking-widest font-bold text-primary">Sanctuary</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-2xl" data-icon="spa">spa</span>
+<span class="font-label text-[9px] uppercase tracking-widest font-bold mt-2">Mind</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-2xl" data-icon="person">person</span>
+<span class="font-label text-[9px] uppercase tracking-widest font-bold mt-2">Profile</span>
+</button>
+</nav>
+</body></html>

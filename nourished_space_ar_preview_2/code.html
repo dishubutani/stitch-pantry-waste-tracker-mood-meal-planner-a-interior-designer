@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nourished AR - Interior Preview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#d7dbd5",
+                    "inverse-surface": "#0d0f0d",
+                    "surface-container": "#edeee9",
+                    "surface-container-high": "#e7e9e3",
+                    "on-error-container": "#671200",
+                    "tertiary-fixed": "#7bbeff",
+                    "surface": "#faf9f5",
+                    "inverse-primary": "#91f78e",
+                    "surface-bright": "#faf9f5",
+                    "on-tertiary-fixed-variant": "#00426d",
+                    "inverse-on-surface": "#9c9d9a",
+                    "tertiary-container": "#7bbeff",
+                    "background": "#faf9f5",
+                    "primary-container": "#91f78e",
+                    "on-primary": "#eaffe2",
+                    "primary-dim": "#006118",
+                    "primary": "#006f1d",
+                    "on-background": "#2f332f",
+                    "error-container": "#fa7150",
+                    "on-tertiary-fixed": "#00223b",
+                    "on-primary-fixed-variant": "#00691a",
+                    "on-surface-variant": "#5c605b",
+                    "on-primary-fixed": "#00480f",
+                    "surface-variant": "#e0e3dd",
+                    "on-secondary": "#fff7f4",
+                    "on-error": "#fff7f6",
+                    "outline-variant": "#afb3ad",
+                    "surface-container-low": "#f3f4ef",
+                    "primary-fixed-dim": "#83e881",
+                    "outline": "#787c77",
+                    "secondary-fixed-dim": "#ffca99",
+                    "on-primary-container": "#005e17",
+                    "on-tertiary": "#f7f9ff",
+                    "tertiary": "#00639f",
+                    "tertiary-dim": "#00578c",
+                    "on-secondary-fixed": "#5f3500",
+                    "secondary-fixed": "#ffdcbe",
+                    "on-secondary-container": "#794500",
+                    "on-surface": "#2f332f",
+                    "tertiary-fixed-dim": "#5fb1fb",
+                    "surface-container-highest": "#e0e3dd",
+                    "error": "#aa371c",
+                    "error-dim": "#821a01",
+                    "secondary": "#8c5100",
+                    "secondary-dim": "#7b4700",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#ffdcbe",
+                    "on-tertiary-container": "#00395f",
+                    "on-secondary-fixed-variant": "#874e00",
+                    "surface-tint": "#006f1d",
+                    "primary-fixed": "#91f78e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .backdrop-blur-xl { backdrop-filter: blur(24px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface overflow-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#faf9f5]/70 dark:bg-[#1a1c1a]/70 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#2f332f] dark:text-[#e2e3de] hover:opacity-80 transition-opacity">menu</span>
+<h1 class="text-[#2E7D32] dark:text-[#91f78e] font-plus-jakarta font-extrabold tracking-tighter text-2xl">Nourished</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border-2 border-primary-container">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a smiling young man in a minimalist setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgZWS5XL16PA3COzqwXQlOsHUb-ss_-xlRQ11pOOelfd0MQk5VBhEtBoRlSD6lUATFLY8In4cJlV1M6LUzPHT4RsMsq1a2EvS14QHaOh_7Hk_oVnUNc4B7cR-tKKpGHCMsJ9y3tMwMFPHW4Qp7Q4ZPmHEtLsqPmeE8N46EKk_zYIPqz8O34xP-ys-bmVJo9GcIAbLX9_9JuMyJ66_qI0sjZHJI45cvxxndcadgUH_MPBn9ladzu1ZAOt9x38aiBeIM7uL6-d6rS4Q"/>
+</div>
+</div>
+</header>
+<!-- Main AR Canvas -->
+<main class="relative h-screen w-full pt-16 pb-32">
+<!-- AR Viewport (Simulated Camera Feed) -->
+<div class="absolute inset-0 z-0">
+<img alt="Living Room AR" class="w-full h-full object-cover" data-alt="Sun-drenched minimalist living room with white walls, light wood flooring, and large windows with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOoCc8htcNn9afNFgCwKoa_whytnE6JryQ8JKC6-vRHI7ywtgmDY5xlPD3ewzNEqbCgAXUxQhzxRXF2zlK7ZQcFx5vMcCBCUYm-Fjbw7WD5om7GtgUVr_D2EJ7DfjaFZN4pjCrN_am0gv0OSCAwomZASl8ty1_HIvY6USRiOwy2PF2ZG6B-LJ4x40JFrjdLCTleICnZowujOUxmV7Y3o84Xiq28DyqyjiOnlYKaa1SHHtIXTFjiRSL7Y97UeTXCH2EyQxXP3XXZoY"/>
+<!-- AR Overlay: Zen Den Chair -->
+<div class="absolute top-1/2 left-1/3 transform -translate-x-1/2 -translate-y-1/2 group">
+<div class="relative">
+<!-- Tracking Indicators -->
+<div class="absolute -inset-8 border-2 border-primary/40 rounded-xl border-dashed"></div>
+<div class="absolute -top-4 -left-4 w-6 h-6 border-t-4 border-l-4 border-primary rounded-tl-lg"></div>
+<div class="absolute -bottom-4 -right-4 w-6 h-6 border-b-4 border-r-4 border-primary rounded-br-lg"></div>
+<!-- 3D Model Proxy (Transparent Soft Layer) -->
+<div class="w-64 h-80 bg-primary/10 backdrop-blur-sm rounded-xl border border-primary/20 flex items-center justify-center relative overflow-hidden">
+<img alt="Zen Chair" class="w-full h-full object-contain opacity-90 mix-blend-multiply" data-alt="A modern designer lounge chair in off-white textured fabric with light oak legs, isolated style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4qYOKiQWCC0SSyp5fbSkFsDrT6Eh79td5gKEmO2ee6hDvFIpC0adpoVCyRWKtypQ8baOGMxNpeFLxiDPh0GS9EmuuBOyyJcMg-Fe_NwjjUecHAQ_0fqAZhAzAdZJoAFGFuZJDPNAfv72-ETKPNUma9axkKwXz59ieEMxGJ8ghDSwEr0_6CXjh6LHQAMx-xC9uBa9fSLKuKexq48orE-P9jnwMrx777nyu7cHEL5Ls-iIYUXHrRq9TSczsx8ixp-urOI5rAAp4qFk"/>
+<!-- Tooltip Label -->
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-surface/90 backdrop-blur-md px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-bold font-headline text-primary uppercase tracking-widest">Zen Den Chair</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Focus Indicators (Floating Nodes) -->
+<div class="absolute top-[60%] right-[20%] w-4 h-4 rounded-full bg-primary/80 border-4 border-white/50 shadow-xl"></div>
+<div class="absolute top-[45%] right-[25%] w-3 h-3 rounded-full bg-primary/40 border-2 border-white/50 shadow-lg"></div>
+</div>
+<!-- Floating Controls -->
+<div class="absolute top-24 right-6 flex flex-col gap-4 z-10">
+<button class="w-14 h-14 bg-surface/80 backdrop-blur-xl rounded-full flex items-center justify-center shadow-xl text-on-surface hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">refresh</span>
+</button>
+<button class="w-14 h-14 bg-surface/80 backdrop-blur-xl rounded-full flex items-center justify-center shadow-xl text-on-surface hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">screenshot_region</span>
+</button>
+<button class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">view_in_ar</span>
+</button>
+</div>
+<!-- Item Carousel Section -->
+<div class="absolute bottom-0 left-0 w-full z-20 pb-28 pt-8">
+<div class="px-6 mb-4 flex justify-between items-end">
+<div>
+<h2 class="text-white font-headline text-2xl font-bold tracking-tight drop-shadow-md">Try in Space</h2>
+<p class="text-white/80 text-sm font-medium">Zen Collection • Spring 2024</p>
+</div>
+<div class="flex gap-2">
+<span class="px-4 py-1.5 rounded-full bg-primary text-white text-xs font-bold uppercase tracking-widest">Zen</span>
+<span class="px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-bold uppercase tracking-widest">Boost</span>
+</div>
+</div>
+<div class="flex overflow-x-auto gap-4 px-6 no-scrollbar snap-x">
+<!-- Item Card 1 -->
+<div class="flex-shrink-0 w-48 snap-start">
+<div class="bg-surface/95 backdrop-blur-xl rounded-lg p-3 shadow-2xl group transition-all hover:scale-[1.02]">
+<div class="aspect-square rounded-md overflow-hidden bg-surface-container-low mb-3 relative">
+<img alt="Zen Chair" class="w-full h-full object-cover" data-alt="Scandinavian style wooden chair with soft olive green cushion on a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9YM7XDA3op2BIz7KpmOL_P_Xi36cHyI4NaVAMmDbl-lAq0T8ZWtUUjnHFjYSiT10UNgllZtvN64E9tCkRMy8G_JWK6gQr43Y8zbguIcx_8C_J-mYNrhzkG2JUh4GUyyCLseynPjMSKXOcp6L1MpJ-H0NA_xR0sgiX_oSVFM2QNLp5qkH9XDbubrmbZDSPplhpE1PVGrvtwgWxeYhkqnRTb1Oa2kd6fqdY-lheiAacs6tbBpF8Rs4oI3AmIdDOb9f5-hqf2amk_aU"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h3 class="font-headline font-bold text-on-surface text-sm leading-tight mb-1">Zen Den Chair</h3>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider mb-3">Recycled Linen</p>
+<button class="w-full py-2 bg-primary text-white rounded-full text-[10px] font-bold uppercase tracking-widest hover:opacity-90 transition-opacity flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">add</span>
+                            View in Room
+                        </button>
+</div>
+</div>
+<!-- Item Card 2 -->
+<div class="flex-shrink-0 w-48 snap-start">
+<div class="bg-surface/95 backdrop-blur-xl rounded-lg p-3 shadow-2xl group transition-all hover:scale-[1.02]">
+<div class="aspect-square rounded-md overflow-hidden bg-surface-container-low mb-3">
+<img alt="Focus Nook Desk" class="w-full h-full object-cover" data-alt="Minimalist light wood desk with slim black metal legs and a small potted plant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG49p2l35P-nipDY_JFdsuncgrG9-lg7qOZOvbzbQ7Xb6qhscgxIwyT_PidF5wckxQen66t4OiegOB4tSCFejO-SvieHFLRJmucKvV6MzL6L03A5jsAILDXa7EBzGpanDSUkgt9r59ZdFRRdeIXr_rbTT426LERzPPJsiJVUwXER34w634Ot_fEySIDvVJ4kkDo3Z4aTlk-JkM8gOYsZ7B1Hc0tlrhGDrBQE5gBNsD5a-oSE35b4XlL-UCBaBKF19dh5euRJt8qD4"/>
+</div>
+<h3 class="font-headline font-bold text-on-surface text-sm leading-tight mb-1">Focus Nook Desk</h3>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider mb-3">Light Ash Wood</p>
+<button class="w-full py-2 bg-surface-container-highest text-on-surface rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">add</span>
+                            View in Room
+                        </button>
+</div>
+</div>
+<!-- Item Card 3 -->
+<div class="flex-shrink-0 w-48 snap-start">
+<div class="bg-surface/95 backdrop-blur-xl rounded-lg p-3 shadow-2xl group transition-all hover:scale-[1.02]">
+<div class="aspect-square rounded-md overflow-hidden bg-surface-container-low mb-3">
+<img alt="Energy Boost Rug" class="w-full h-full object-cover" data-alt="Circular hand-woven jute rug with a subtle green geometric pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDmEtRLidHzkEkVs93SQX2ObUFiqFm0OKshMiwODCt0zxb5futDHP3FuGsXkqKvgT8Hhmhj4IFDmdbFIXmZjfI18uSoZKUFdnzmOAQ8CNST5uww8a6o0pAqVLIvj8ydIbzJ2eSFCrAyq7tsAPxbs4-q6_aRU8yR4Zft6UD2duV3mMZpkJ4yZNQt-gBI_2GjKRoGvwMLCd-zAoQGy-ygaQ4YHm8Xl58DoRk3qWYlUr9-Z820SeDtx9f5M1ruXHZHwFZ3I8-iOn7vZk"/>
+</div>
+<h3 class="font-headline font-bold text-on-surface text-sm leading-tight mb-1">Energy Boost Rug</h3>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider mb-3">Natural Jute</p>
+<button class="w-full py-2 bg-surface-container-highest text-on-surface rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">add</span>
+                            View in Room
+                        </button>
+</div>
+</div>
+<!-- Item Card 4 -->
+<div class="flex-shrink-0 w-48 snap-start">
+<div class="bg-surface/95 backdrop-blur-xl rounded-lg p-3 shadow-2xl group transition-all hover:scale-[1.02]">
+<div class="aspect-square rounded-md overflow-hidden bg-surface-container-low mb-3">
+<img alt="Zen Floor Plant" class="w-full h-full object-cover" data-alt="Large fiddle leaf fig plant in a handcrafted ceramic terracotta pot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApKFN2Fz4hxFsEAkts6M_taDbmkOnZrhaR7cCgRJ01xtNOv4YPxBqxPPRUAk1HOEgbQboDE0UlTc6DUpPXIThBx51EDpWtmP-h74EmcYVLs_vYbllcoj83PMowRv3xeqDyABtR5yR5qW5At5BNnAwap5UNgrR6l68h0WeCgwJ57zk93KRYRlvVSPOkN4lqsFCHv44obc8XfnWjnHsdaYT5N4-9nnesjq8XzoW9E2BrfzKqf2SeIdp9cWLR9X6iin0kf7OpSuND5BU"/>
+</div>
+<h3 class="font-headline font-bold text-on-surface text-sm leading-tight mb-1">Zen Floor Plant</h3>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider mb-3">Living Organism</p>
+<button class="w-full py-2 bg-surface-container-highest text-on-surface rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">add</span>
+                            View in Room
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#faf9f5]/70 dark:bg-[#1a1c1a]/70 backdrop-blur-xl z-50 rounded-t-[3rem] shadow-[0_-20px_40px_rgba(47,51,47,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#2f332f] dark:text-[#e2e3de] opacity-60 hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-plus-jakarta text-[10px] uppercase tracking-widest font-medium mt-1">Mood</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#2E7D32] text-white dark:bg-[#91f78e] dark:text-[#00390a] rounded-full px-6 py-2 transition-all duration-500 hover:scale-110" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-plus-jakarta text-[10px] uppercase tracking-widest font-medium mt-1">Plan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2f332f] dark:text-[#e2e3de] opacity-60 hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-plus-jakarta text-[10px] uppercase tracking-widest font-medium mt-1">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2f332f] dark:text-[#e2e3de] opacity-60 hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-plus-jakarta text-[10px] uppercase tracking-widest font-medium mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

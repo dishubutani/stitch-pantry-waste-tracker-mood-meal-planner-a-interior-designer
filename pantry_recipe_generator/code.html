@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nourished - Pantry Recipe Generator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e0e3dd",
+                        "tertiary-fixed-dim": "#5fb1fb",
+                        "secondary-fixed": "#ffdcbe",
+                        "on-secondary-container": "#794500",
+                        "on-surface": "#2f332f",
+                        "on-secondary-fixed": "#5f3500",
+                        "tertiary-dim": "#00578c",
+                        "tertiary": "#00639f",
+                        "secondary-fixed-dim": "#ffca99",
+                        "on-primary-container": "#005e17",
+                        "on-tertiary": "#f7f9ff",
+                        "outline": "#787c77",
+                        "surface-tint": "#006f1d",
+                        "primary-fixed": "#91f78e",
+                        "on-tertiary-container": "#00395f",
+                        "on-secondary-fixed-variant": "#874e00",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#ffdcbe",
+                        "secondary": "#8c5100",
+                        "secondary-dim": "#7b4700",
+                        "error-dim": "#821a01",
+                        "error": "#aa371c",
+                        "inverse-on-surface": "#9c9d9a",
+                        "on-tertiary-fixed-variant": "#00426d",
+                        "tertiary-fixed": "#7bbeff",
+                        "on-error-container": "#671200",
+                        "surface-bright": "#faf9f5",
+                        "surface": "#faf9f5",
+                        "inverse-primary": "#91f78e",
+                        "surface-container-high": "#e7e9e3",
+                        "surface-container": "#edeee9",
+                        "surface-dim": "#d7dbd5",
+                        "inverse-surface": "#0d0f0d",
+                        "surface-container-low": "#f3f4ef",
+                        "outline-variant": "#afb3ad",
+                        "primary-fixed-dim": "#83e881",
+                        "on-secondary": "#fff7f4",
+                        "on-error": "#fff7f6",
+                        "on-primary-fixed-variant": "#00691a",
+                        "surface-variant": "#e0e3dd",
+                        "on-surface-variant": "#5c605b",
+                        "on-primary-fixed": "#00480f",
+                        "error-container": "#fa7150",
+                        "on-background": "#2f332f",
+                        "on-tertiary-fixed": "#00223b",
+                        "primary-container": "#91f78e",
+                        "on-primary": "#eaffe2",
+                        "primary-dim": "#006118",
+                        "primary": "#006f1d",
+                        "tertiary-container": "#7bbeff",
+                        "background": "#faf9f5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow { box-shadow: 0 20px 40px rgba(47, 51, 47, 0.06); }
+        .glass-header { backdrop-filter: blur(24px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#faf9f5]/70 dark:bg-stone-900/70 backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="close up portrait of a smiling woman with clear skin and soft natural lighting in a garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALN4jSUaqSIsOFuKndFSKjiI_aVTXvigy1fqTVR_4CBZE5fWKUYVZB2K0y_RBBqdKWQnjVec4zvQfuEs3GnHa8AqWmFADUPwYy7wbod5oHqlIxglbqCdSjUrTsDOkCKXLAze__vUXPPVHcsYRzmSmZJbgR3keHkyt0n008kcmW-LyE_R_xW2eeeHFXmmmqsowuOwvnHR-D-b3mz8pj7jcERtpERI3Q4d1MgSZTsUz_Vtn_CvcbvRg70y6eU0n4itrBrJOvDTsDocM"/>
+</div>
+</div>
+<h1 class="text-2xl font-black text-[#2E7D32] dark:text-[#4caf50] tracking-tighter">Nourished</h1>
+<div class="text-[#2E7D32] dark:text-[#4caf50] hover:scale-105 transition-transform duration-300 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="pantry">grocery</span>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-screen-xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-12">
+<h2 class="text-[3.5rem] leading-[1.1] font-extrabold tracking-tight text-on-surface mb-4">Nourished by your Pantry</h2>
+<p class="text-on-surface-variant text-lg max-w-md leading-relaxed">Discover what's possible with the ingredients you have on hand.</p>
+</section>
+<!-- Pantry Context: Selected Ingredients -->
+<section class="mb-12 overflow-hidden">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Selected Ingredients</span>
+<button class="text-primary font-bold text-sm hover:underline">Edit Pantry</button>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-4 -mx-6 px-6">
+<!-- Ingredient Chip -->
+<div class="flex-shrink-0 flex items-center gap-3 bg-surface-container-low px-5 py-3 rounded-full hover:scale-105 transition-transform duration-300 cursor-pointer">
+<div class="w-8 h-8 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="macro photography of a sliced ripe avocado showing creamy texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEp91SrSial-UN963jlTBu_vn8q9X478bYgoyQP10l50zN-XhAZGB4GrYjvoLbfVwrc4kKqk_9ftutB9oWzwFJyq42IFeAeip_YGXS0el6jO2FobkQMUjB64xt6mMDix2zwElzy8lqB7Q9IwYvFdfeLtrC5xhEp4diyLYHEBRKTxCyYCE2zW-7c9q4gKqg5OIsJdqOgDSr0Orc7Scs4hB1GZnvw1m3UKRdVufax2zlSDpa-OBXT0uIDiWgWyfaZ2Pk-GF-zpa-39U"/>
+</div>
+<span class="font-medium">Avocado</span>
+</div>
+<div class="flex-shrink-0 flex items-center gap-3 bg-surface-container-low px-5 py-3 rounded-full hover:scale-105 transition-transform duration-300 cursor-pointer">
+<div class="w-8 h-8 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="fresh green baby spinach leaves with water droplets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMnycJzoBPIBC09vA2dKVfHNYf5Mz7ujLp1Mk7GIHslnLBj7vRkZ8k50-8Z4lL3NjwQcfirtgSgG834HBsA2C81HSgW2wuHgd0xRzhLnlSj9YKINn8UDB2cL7ymNlW9voDnYwnF0HPoiyI6o_n9wGboNBjyFZKlm2__OSjv-uTN6rNjCa22GantLz_Ahobyo2pK_w0nPr0hyk9Ig7iUcUWyt6wuivP2cYUa4a1EFWblyy4kXCAjUdmGYGvau3cKJunB-PJHcm6m5A"/>
+</div>
+<span class="font-medium">Spinach</span>
+</div>
+<div class="flex-shrink-0 flex items-center gap-3 bg-surface-container-low px-5 py-3 rounded-full hover:scale-105 transition-transform duration-300 cursor-pointer">
+<div class="w-8 h-8 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="dried chickpeas in a wooden bowl with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSjM-ibNElC_pgcNKtUl6Rl4IM6MojFx7WySNu_U_B8NLdIg4aRmtlpSBNcZt48BbxMWOOx0BoafZsLlVXuZrE694l3dTBMkl3eI89Ho97JwsLTTZhZylQ60VJ-ZhCknUhFlmCMtjJHaJeRhxpncn6ub7HB0y4uHwwYX4KLZVXyPDHfwsrhRiG5AAxTu-ICrUF581lhz5rp-SFUqr76ybvM7YFh_aeQATZdCiHOKtM2_uRG8rmIoRRKzQU_ItAvYfHrHotsPutuhc"/>
+</div>
+<span class="font-medium">Chickpeas</span>
+</div>
+<div class="flex-shrink-0 flex items-center gap-3 bg-surface-container-low px-5 py-3 rounded-full hover:scale-105 transition-transform duration-300 cursor-pointer">
+<div class="w-8 h-8 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="vibrant yellow whole lemon on a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkzxGEybTsYw1rbVnu-G61T8DeByS2d_bxsqIufsNADsNJSgckCzhYuR4RiaEOlWFGO5_ThmJtvJ1ttRercw5oeGzT8cRh107h7JEEmD1ekfZqGxo1dmfUdxIYCXbQxugkQYaiQ3GmE4DHxgSIJ_BSpJADXFWU17wN23I00LPJZ0sdUwaC-wINOfN0R3Me60oz47NzKs2W0aGDf_BihXWSAP7v7okCVq96pi1W84Q0jSywrh6xfhLzinJ_FcGAYJzDOa-NJNOACB8"/>
+</div>
+<span class="font-medium">Lemons</span>
+</div>
+<div class="flex-shrink-0 flex items-center justify-center w-12 h-12 bg-surface-container-highest rounded-full">
+<span class="material-symbols-outlined text-on-surface-variant">add</span>
+</div>
+</div>
+</section>
+<!-- Recipe Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
+<!-- Card 1: Zen Garden Bowl -->
+<div class="bg-surface-container-lowest rounded-lg editorial-shadow overflow-hidden group hover:scale-[1.01] transition-all duration-400">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="overhead view of a healthy salad bowl with avocado, greens, and seeds in an organic ceramic bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-cC3Jyzg3HtNWVWa1FuHIHoo5rcvq0SjqvegTVRWE4P-EwrwVr5jtPs7NeJ6BrcbU6dmRSAFVBpmIFMlQrywg-nFzguSsJHR-z7Xj5i662lvtdd5Imp6ddat_C7JLFx7VJUWSvbHur7FX_KdYGC2_X-nNG6uwV92IZITVfpFZiih2dm5Uffd8Hte-196jcStXwdxNkjkrc9edZAmK5N0s2GvWHD24woWK9p2HWjw63eWqOP2kiX6-qi6Uq7JwJuUE6NbojWuUCEo"/>
+<div class="absolute top-4 left-4 bg-tertiary-container/80 backdrop-blur-md px-4 py-1.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-on-tertiary-container">Zen</span>
+</div>
+<div class="absolute top-4 right-4 bg-primary-container px-3 py-1 rounded-full">
+<span class="font-label text-[9px] font-bold uppercase tracking-tight text-on-primary-container">Uses Expiring Items</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-2xl font-bold tracking-tight text-on-surface">Zen Garden Bowl</h3>
+<div class="flex items-center text-on-surface-variant gap-1">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span class="text-xs font-medium">15 min</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">A peaceful medley of your fresh spinach, chickpeas, and lemon-tahini dressing.</p>
+<button class="w-full py-4 bg-gradient-to-br from-[#2E7D32] to-[#1b5e20] text-white rounded-full font-bold text-sm tracking-wide hover:scale-105 transition-transform duration-300">View Recipe</button>
+</div>
+</div>
+<!-- Card 2: Immunity Boost Salad -->
+<div class="bg-surface-container-lowest rounded-lg editorial-shadow overflow-hidden group hover:scale-[1.01] transition-all duration-400">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="vibrant salad with chickpeas, spinach, and bright lemon zest dressing on a white textured plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXvapNs-e9aR8_lOmFWrEWpQJp_UIUnphrpi4z_4cU58a1OPoruti7b4mOgprBmtplSehPjxr9eNxfq-mcdL3q51qpg8axihWMixrNJ1LyWYuow0ToF7DGuJ2Cy347lulcmMb42mVL_prBaDiwYUuWXjrDfmF7Qu1E2Ygomp9c5f5ZWl7TQZETD-2fEnRCWfY7ZXQ8cZ01Jp5_3b9xDHZ0wxzNDsig3pSWs3SuL5DlwOLp3lmx82_0qLcNj8x82SmQtXTxJ4wXeWo"/>
+<div class="absolute top-4 left-4 bg-secondary-container/80 backdrop-blur-md px-4 py-1.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-on-secondary-container">Boost</span>
+</div>
+<div class="absolute top-4 right-4 bg-surface-container-high px-3 py-1 rounded-full">
+<span class="font-label text-[9px] font-bold uppercase tracking-tight text-on-surface">Zero Waste</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-2xl font-bold tracking-tight text-on-surface">Immunity Boost Salad</h3>
+<div class="flex items-center text-on-surface-variant gap-1">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span class="text-xs font-medium">10 min</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Rich in Vitamin C and fiber, utilizing your pantry chickpeas for a nutrient dense lunch.</p>
+<button class="w-full py-4 bg-gradient-to-br from-[#2E7D32] to-[#1b5e20] text-white rounded-full font-bold text-sm tracking-wide hover:scale-105 transition-transform duration-300">View Recipe</button>
+</div>
+</div>
+<!-- Card 3: Creamy Avocado Hummus -->
+<div class="bg-surface-container-lowest rounded-lg editorial-shadow overflow-hidden group hover:scale-[1.01] transition-all duration-400 lg:col-span-1 md:col-span-2 lg:max-w-none md:max-w-md md:mx-auto">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="smooth green avocado hummus topped with chickpeas and olive oil in a stone bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG60oPASXlP1xM1AqbYbOzVTqZxjqcqegHjMiZDceUrmU6fAYxlkKhaqybHNOHZ4qUaDCtK4O-J_lfII60SFNSEXLGw5HtCWBFdl81SME4KXsnNlNWjZh-abxV1DFTHD96-YN3-MFNYjMTAp2cYxoM9WiYECL1tvOuKhRTSssb2M-FcBJZ3KnEoy9PqDQKwTeJa1ZcK2HK7ALqM1TQbnsZSWuasIwAc7nIwRQW3n_7X7D_qW-FdR0mfjjS5bF6sdWX1CCERlENsWc"/>
+<div class="absolute top-4 left-4 bg-tertiary-fixed/80 backdrop-blur-md px-4 py-1.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">lightbulb</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-on-tertiary-fixed-variant">Brain Power</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-2xl font-bold tracking-tight text-on-surface">Avocado Hummus</h3>
+<div class="flex items-center text-on-surface-variant gap-1">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span class="text-xs font-medium">5 min</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">The ultimate healthy snack using your overripe avocado and canned chickpeas.</p>
+<button class="w-full py-4 bg-gradient-to-br from-[#2E7D32] to-[#1b5e20] text-white rounded-full font-bold text-sm tracking-wide hover:scale-105 transition-transform duration-300">View Recipe</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#faf9f5]/70 dark:bg-stone-900/70 backdrop-blur-xl shadow-[0_-20px_40px_rgba(47,51,47,0.06)] rounded-t-[3rem]">
+<div class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-4 py-2 hover:text-[#2E7D32] dark:hover:text-[#4caf50] transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="mood">mood</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Mood</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-[#2E7D32] to-[#1b5e20] text-white rounded-full px-6 py-2 scale-110 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Plan</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-4 py-2 hover:text-[#2E7D32] dark:hover:text-[#4caf50] transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Stats</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-4 py-2 hover:text-[#2E7D32] dark:hover:text-[#4caf50] transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

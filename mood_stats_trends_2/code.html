@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-dim": "#006118",
+                      "primary": "#006f1d",
+                      "surface-tint": "#006f1d",
+                      "surface-container-low": "#f3f4ef",
+                      "on-secondary": "#fff7f4",
+                      "on-primary": "#eaffe2",
+                      "secondary": "#8c5100",
+                      "on-error-container": "#671200",
+                      "surface-container-lowest": "#ffffff",
+                      "error-container": "#fa7150",
+                      "on-secondary-container": "#794500",
+                      "on-surface": "#2f332f",
+                      "on-tertiary-fixed-variant": "#00426d",
+                      "on-secondary-fixed-variant": "#874e00",
+                      "tertiary-fixed": "#7bbeff",
+                      "background": "#faf9f5",
+                      "on-primary-fixed": "#00480f",
+                      "on-tertiary": "#f7f9ff",
+                      "on-primary-fixed-variant": "#00691a",
+                      "surface": "#faf9f5",
+                      "on-error": "#fff7f6",
+                      "surface-variant": "#e0e3dd",
+                      "surface-container-high": "#e7e9e3",
+                      "on-primary-container": "#005e17",
+                      "error-dim": "#821a01",
+                      "on-secondary-fixed": "#5f3500",
+                      "tertiary-container": "#7bbeff",
+                      "on-tertiary-fixed": "#00223b",
+                      "secondary-container": "#ffdcbe",
+                      "primary-fixed-dim": "#83e881",
+                      "on-tertiary-container": "#00395f",
+                      "inverse-primary": "#91f78e",
+                      "surface-container": "#edeee9",
+                      "on-background": "#2f332f",
+                      "surface-container-highest": "#e0e3dd",
+                      "primary-container": "#91f78e",
+                      "primary-fixed": "#91f78e",
+                      "error": "#aa371c",
+                      "outline-variant": "#afb3ad",
+                      "tertiary-dim": "#00578c",
+                      "surface-dim": "#d7dbd5",
+                      "tertiary": "#00639f",
+                      "inverse-surface": "#0d0f0d",
+                      "surface-bright": "#faf9f5",
+                      "secondary-fixed": "#ffdcbe",
+                      "outline": "#787c77",
+                      "tertiary-fixed-dim": "#5fb1fb",
+                      "on-surface-variant": "#5c605b",
+                      "secondary-fixed-dim": "#ffca99",
+                      "secondary-dim": "#7b4700",
+                      "inverse-on-surface": "#9c9d9a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Be Vietnam Pro"],
+                      "label": ["Be Vietnam Pro"]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(47, 51, 47, 0.06);
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/70 dark:bg-stone-950/70 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="user_profile_avatar" class="w-full h-full object-cover" data-alt="close-up portrait of a woman with a serene expression in natural lighting, soft focus garden background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEmcxZpBLvpl4ghbjkm_sfEYr9549Y0_6t1Akna_P463fEwErZuikAZrK7d-O-TXbhbZs1U14J7BDhi5dp_6IkRhtDlBjMAlJlQYvRD3YeGDRF9uPzFlvHJgQAtAT90Q9KabGSfPY7mVE_KiDa7WjPmlhFRS8GUmyTsalTdolDOr4FqUmatyCif4oX0gmFHVdV_semzjDzvmHmN_t9IHk_Tlw56qK0Q15OTi5jsl-KFo_JfeYso20wJB2pLmpfrpd1_pCyDfyP9-4"/>
+</div>
+<span class="text-2xl font-bold tracking-tighter text-green-800 dark:text-green-400 font-plus-jakarta-sans tracking-tight text-lg font-bold">Nourished</span>
+</div>
+<div class="flex gap-4">
+<button class="material-symbols-outlined text-stone-500 hover:opacity-80 transition-opacity">calendar_today</button>
+<button class="material-symbols-outlined text-stone-500 hover:opacity-80 transition-opacity">notifications</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto space-y-12">
+<!-- Hero Header -->
+<section class="space-y-2">
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface leading-tight">Your Emotional Rhythm</h1>
+<p class="text-on-surface-variant font-medium">Tracking the synergy between nutrition and spirit.</p>
+</section>
+<!-- Bento Grid: Main Charts -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Mood Trend Chart (Large Card) -->
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-lg editorial-shadow">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-xl font-bold tracking-tight mb-1">Weekly Resonance</h2>
+<span class="text-xs uppercase tracking-widest font-bold text-outline">Last 7 Days</span>
+</div>
+<div class="flex gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+</div>
+</div>
+<!-- SVG Visualization representing the soft line graph -->
+<div class="relative h-48 w-full">
+<svg class="w-full h-full preserve-3d overflow-visible" viewbox="0 0 700 200">
+<!-- Background Grid Lines -->
+<line class="text-surface-container-high" stroke="currentColor" stroke-width="0.5" x1="0" x2="700" y1="0" y2="0"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-width="0.5" x1="0" x2="700" y1="66" y2="66"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-width="0.5" x1="0" x2="700" y1="133" y2="133"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-width="0.5" x1="0" x2="700" y1="200" y2="200"></line>
+<!-- Smooth Line Path -->
+<path d="M0,150 C50,140 100,60 150,80 S250,180 300,140 S400,20 450,40 S550,100 600,120 S650,50 700,70" fill="none" stroke="url(#paint0_linear)" stroke-linecap="round" stroke-width="6"></path>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="paint0_linear" x1="0" x2="700" y1="0" y2="0">
+<stop stop-color="#006f1d"></stop> <!-- Zen Green -->
+<stop offset="0.5" stop-color="#00639f"></stop> <!-- Brain Blue -->
+<stop offset="1" stop-color="#8c5100"></stop> <!-- Boost Orange -->
+</lineargradient>
+</defs>
+</svg>
+<!-- X-Axis Labels -->
+<div class="flex justify-between mt-6 px-1">
+<span class="text-[10px] font-bold text-outline uppercase tracking-tighter">Mon</span>
+<span class="text-[10px] font-bold text-outline uppercase tracking-tighter">Tue</span>
+<span class="text-[10px] font-bold text-outline uppercase tracking-tighter">Wed</span>
+<span class="text-[10px] font-bold text-outline uppercase tracking-tighter">Thu</span>
+<span class="text-[10px] font-bold text-outline uppercase tracking-tighter">Fri</span>
+<span class="text-[10px] font-bold text-outline uppercase tracking-tighter">Sat</span>
+<span class="text-[10px] font-bold text-on-surface uppercase tracking-tighter">Sun</span>
+</div>
+</div>
+</div>
+<!-- Mood Distribution (Donut Chart) -->
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col items-center justify-center space-y-6">
+<div class="relative w-40 h-40">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<!-- Zen 40% -->
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#006f1d" stroke-dasharray="40 60" stroke-dashoffset="0" stroke-width="4"></circle>
+<!-- Brain 30% -->
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#00639f" stroke-dasharray="30 70" stroke-dashoffset="-40" stroke-width="4"></circle>
+<!-- Boost 20% -->
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#8c5100" stroke-dasharray="20 80" stroke-dashoffset="-70" stroke-width="4"></circle>
+<!-- Comfort 10% -->
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#e0e3dd" stroke-dasharray="10 90" stroke-dashoffset="-90" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-2xl font-extrabold text-on-surface">100%</span>
+<span class="text-[10px] uppercase font-bold text-outline">Clarity</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-6 gap-y-2 w-full">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-xs font-semibold">Zen 40%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-xs font-semibold">Brain 30%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-xs font-semibold">Boost 20%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="text-xs font-semibold">Comfort 10%</span>
+</div>
+</div>
+</div>
+<!-- Weekly Insights -->
+<div class="bg-primary-container/20 p-8 rounded-lg space-y-6">
+<div>
+<h2 class="text-xl font-bold tracking-tight mb-2">This Week's Clarity</h2>
+<p class="text-sm text-on-primary-container font-medium">Patterns emerging from your logs.</p>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-4 items-start">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-lg">self_improvement</span>
+</div>
+<p class="text-sm leading-relaxed text-on-surface"><span class="font-bold">80% more 'Zen'</span> days after Morning Yoga sessions.</p>
+</li>
+<li class="flex gap-4 items-start">
+<div class="w-8 h-8 rounded-full bg-tertiary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-lg">restaurant</span>
+</div>
+<p class="text-sm leading-relaxed text-on-surface"><span class="font-bold">Matcha Soba</span> reduced mid-day stress on Tuesday.</p>
+</li>
+<li class="flex gap-4 items-start">
+<div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-lg">bolt</span>
+</div>
+<p class="text-sm leading-relaxed text-on-surface">Caffeine peak at 10 AM correlates with <span class="font-bold">Boost spikes</span>.</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- Activity Correlation: Top Mood Shifters -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<h2 class="text-2xl font-bold tracking-tight">Top Mood Shifters</h2>
+<button class="text-xs font-bold uppercase tracking-widest text-primary">View All</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Shifter Card 1 -->
+<div class="group relative overflow-hidden rounded-lg bg-surface-container-lowest editorial-shadow">
+<div class="h-40 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="overhead view of a yoga mat and water bottle on a clean wooden floor with bright morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRBGWd_dhgDDWWURwM4bALCzZ3TaQGGJxHM2DhMQC61scZBPL0YTMeKir_Ss4CEPHFWZxQzyzbMaqPbLMrIkU3TN5P2mx482MQ3jZyw7iRx-BV7A4ZvbPHrYTRmlvKJUHNningQdJ1eyaM5PAuUzoW5kwTrTRP5wVEcRZtPaSRMsUnqPtFv2tmxwfTRAyZcO5sq_tZa4QLxTu_Pb8YIYnUhavytfs8gCavOJx9gHUl7H17bzgM9Y793aELSPVzNlABejUIkh1Ujxc"/>
+</div>
+<div class="p-6 space-y-2">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary">Activity</span>
+<span class="flex items-center gap-1 text-[10px] font-bold text-secondary uppercase bg-secondary-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">bolt</span> Boost
+                            </span>
+</div>
+<h3 class="text-lg font-bold">Energizing Yoga</h3>
+<p class="text-sm text-outline">High correlation with afternoon focus.</p>
+</div>
+</div>
+<!-- Shifter Card 2 -->
+<div class="group relative overflow-hidden rounded-lg bg-surface-container-lowest editorial-shadow">
+<div class="h-40 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="aesthetic bowl of steel-cut oats topped with fresh blueberries, walnut halves, and a drizzle of honey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPfzW1qnZm7o6zjUY92jPoM_5gDs4luYzXIS9YL_bhihJxEBiOUaqVaBWzGX7y7rNDl3A-VkPxsvDydYZw2qJZ3bQ9aXTZ7VCwomatz5XGp2TMm9UFhAaRztEnPfu4w7YWdn8x5fIgad1BG0xNjaW0IrQpePqPo9Kw1e7s_gAMvUWEkP3if3WBc42_fgzdiFaWgxd5P5BpEoZHW2-L3hRdNPVPKQu-yjOAOK6k1AFpObyTM03QlUXePf0DmMtOwK4Abn2uAQcuFpQ"/>
+</div>
+<div class="p-6 space-y-2">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-bold uppercase tracking-widest text-tertiary">Nutrition</span>
+<span class="flex items-center gap-1 text-[10px] font-bold text-tertiary uppercase bg-tertiary-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">psychology</span> Brain
+                            </span>
+</div>
+<h3 class="text-lg font-bold">Berry &amp; Walnut Oats</h3>
+<p class="text-sm text-outline">Consistent link to mental endurance.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-4 bg-stone-50/70 dark:bg-stone-950/70 backdrop-blur-xl z-50 rounded-t-[3rem] shadow-[0_-20px_40px_rgba(47,51,47,0.06)]">
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all" href="#">
+<span class="material-symbols-outlined">mood</span>
+<span class="font-plus-jakarta-sans text-[10px] uppercase tracking-widest font-bold">Mood</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all" href="#">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-plus-jakarta-sans text-[10px] uppercase tracking-widest font-bold">Plan</span>
+</a>
+<!-- ACTIVE TAB: Stats -->
+<a class="flex flex-col items-center justify-center bg-green-100 dark:bg-green-900/40 text-green-900 dark:text-green-100 rounded-full px-5 py-2 scale-105 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+<span class="font-plus-jakarta-sans text-[10px] uppercase tracking-widest font-bold">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-plus-jakarta-sans text-[10px] uppercase tracking-widest font-bold">Profile</span>
+</a>
+</nav>
+</body></html>

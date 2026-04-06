@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#d7dbd5",
+                    "inverse-surface": "#0d0f0d",
+                    "surface-container": "#edeee9",
+                    "surface-container-high": "#e7e9e3",
+                    "on-error-container": "#671200",
+                    "tertiary-fixed": "#7bbeff",
+                    "surface": "#faf9f5",
+                    "inverse-primary": "#91f78e",
+                    "surface-bright": "#faf9f5",
+                    "on-tertiary-fixed-variant": "#00426d",
+                    "inverse-on-surface": "#9c9d9a",
+                    "tertiary-container": "#7bbeff",
+                    "background": "#faf9f5",
+                    "primary-container": "#91f78e",
+                    "on-primary": "#eaffe2",
+                    "primary-dim": "#006118",
+                    "primary": "#006f1d",
+                    "on-background": "#2f332f",
+                    "error-container": "#fa7150",
+                    "on-tertiary-fixed": "#00223b",
+                    "on-primary-fixed-variant": "#00691a",
+                    "on-surface-variant": "#5c605b",
+                    "on-primary-fixed": "#00480f",
+                    "surface-variant": "#e0e3dd",
+                    "on-secondary": "#fff7f4",
+                    "on-error": "#fff7f6",
+                    "outline-variant": "#afb3ad",
+                    "surface-container-low": "#f3f4ef",
+                    "primary-fixed-dim": "#83e881",
+                    "outline": "#787c77",
+                    "secondary-fixed-dim": "#ffca99",
+                    "on-primary-container": "#005e17",
+                    "on-tertiary": "#f7f9ff",
+                    "tertiary": "#00639f",
+                    "tertiary-dim": "#00578c",
+                    "on-secondary-fixed": "#5f3500",
+                    "secondary-fixed": "#ffdcbe",
+                    "on-secondary-container": "#794500",
+                    "on-surface": "#2f332f",
+                    "tertiary-fixed-dim": "#5fb1fb",
+                    "surface-container-highest": "#e0e3dd",
+                    "error": "#aa371c",
+                    "error-dim": "#821a01",
+                    "secondary": "#8c5100",
+                    "secondary-dim": "#7b4700",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#ffdcbe",
+                    "on-tertiary-container": "#00395f",
+                    "on-secondary-fixed-variant": "#874e00",
+                    "surface-tint": "#006f1d",
+                    "primary-fixed": "#91f78e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(47, 51, 47, 0.06);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#faf9f5]/70 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="text-[#2E7D32] hover:opacity-80 transition-opacity scale-95 duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-plus-jakarta text-2xl tracking-tight font-bold text-[#2E7D32]">Nourished</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container hover:opacity-80 transition-opacity cursor-pointer">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="portrait of a smiling woman with a natural look, soft outdoor natural lighting, high-end editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABiF5OzpibG8O33MeYY8tcxy27q5PuSnrvVH8OZt80Vf0ebeRczg_Zb3f2pkgqy1senX-y-S-a-O3CZFMzEq6x8upCCKnMNgBX9OhXoCVqzW9RUE0lzMI1ACsZHc3hVSdMCqAo0ivhFhimfrlBI34NrLQRM1NWSObRLCITmIWaqlL-hhMh1CJO6WROIwNm7nCW5ReTz3o34mOwWQ5vhM6pc7fV8wDXcxitaVX07oG4dUFBV1DM1XawAY2vMuP5E3D-VKrdQleN5uk"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 max-w-2xl mx-auto min-h-screen">
+<!-- Editorial Header -->
+<section class="mb-10">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Community Vibe Feed</p>
+<h2 class="font-headline text-5xl font-extrabold tracking-tighter text-on-surface">Curated Rituals.</h2>
+</section>
+<!-- Tabs Navigation -->
+<nav class="flex gap-4 mb-10 overflow-x-auto hide-scrollbar py-2">
+<button class="px-6 py-2 rounded-full bg-primary text-white font-medium whitespace-nowrap editorial-shadow">For You</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface font-medium whitespace-nowrap hover:bg-surface-container-highest transition-colors">Trending</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface font-medium whitespace-nowrap hover:bg-surface-container-highest transition-colors">Rituals</button>
+</nav>
+<!-- Feed Container -->
+<div class="space-y-16">
+<!-- Vibe Post 1 -->
+<article class="relative group">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-6 editorial-shadow relative">
+<img alt="Matcha Chia Pudding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="overhead shot of a vibrant green matcha chia seed pudding bowl topped with fresh strawberries and mint leaves on a stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYpA-LqoEYvMB_hWjYB7q_DcgL4Ukgflmz2dVMlwe2cEMpFEW3smo7ETosEVwomsnJztcp_bZFjGkd59DRCvrO2wHX4OQdCjlS9FOyTTEWtMJXL-te2iT1p-CQR4Z202iikbN64AF1V4sgu4Gs45p3NSsKjI3irn4GxYnX8O6u8GotnK2HNxs6m7XVPtXvH0o1yQkZ6D4Qg6xsUFVVYl9EFG_Ra5_HUdBZEwOtSuc_twFCtKeT_78ZZHn8wNp4K1L_-cUCUUL3xfY"/>
+<!-- Overlay Badge -->
+<div class="absolute top-6 left-6 bg-surface/80 backdrop-blur-md px-4 py-2 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-on-surface">Zen Mood</span>
+</div>
+</div>
+<div class="px-2">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Creator" class="w-full h-full object-cover" data-alt="portrait of a man with soft lighting, minimalist background, high-end lifestyle photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCFebrD6BnM7Bp2bFlKP5BTgtwi1vJF88_iksOda65CSVO2Et-6kEx-CyHEp4AJ5--nftL8Sakom5bS6_fqY1FhXpSFBZh1qyWDbDBH7gxnKu0sHIpnb7XcFKtQdZTgMCDPv8FFGxH7jePWX5nDt08bLMya5yN9YsJquXC9IND5YB4qG98rzUdvKfHmfYwC_oM5n5S3ACyRB8DZ3WCeiUX8m1_WW7TQm9cL1EKTxypcobvvAOnR4-Br86ouLG43LTTOgRXw_zA_zU"/>
+</div>
+<span class="font-bold text-on-surface text-sm">Julian R.</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3 tracking-tight leading-tight">
+                        Finding my center with Matcha Chia Pudding this morning. <span class="text-primary-dim">#ZenAndCalm</span>
+</h3>
+<div class="flex gap-3 mt-6">
+<button class="flex-1 bg-primary text-white py-4 px-6 rounded-full font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all scale-100 hover:scale-[1.02] active:scale-95">
+<span class="material-symbols-outlined" data-icon="add_task">add_task</span>
+                            Try This Ritual
+                        </button>
+<button class="bg-surface-container-highest text-on-surface p-4 rounded-full hover:bg-surface-variant transition-all scale-100 hover:scale-[1.02]">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Vibe Post 2 (Asymmetric Layout) -->
+<article class="flex flex-col md:flex-row gap-8 items-center">
+<div class="w-full md:w-3/5 rounded-xl overflow-hidden editorial-shadow order-2 md:order-1 relative">
+<img alt="Yoga Space" class="w-full h-[400px] object-cover" data-alt="serene home yoga studio with warm sunlight streaming through large windows, soft textures, and a single yoga mat on wooden floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7duRsVWpB7BkFMvy-ChCWqor5zC096zaWFp4vDEuxSQwIqm2QRE3gO3aZVDfe9hjCtLwNCn0c2AU-VkQRlvyyOZRBtxami-K6EDe-pgqzSfzRaVTfhdkpe0OKIeETkWMVyTIfZxiQwyIKjMH2yTxHfO1AqWYHuub4jj4Gdrwqf_7hpa1o1KLzJAPEWDWMBHIaiXaaDPuPFDPF3dzAjjUR_e2hpUb0zxJERJa451JO6bi6Oqri-apypzO3P6dullpwHE7aei6W54k"/>
+</div>
+<div class="w-full md:w-2/5 order-1 md:order-2 flex flex-col justify-center">
+<p class="font-label text-[10px] uppercase tracking-widest text-primary font-bold mb-2">Morning Flow</p>
+<h3 class="font-headline text-3xl font-extrabold mb-4 tracking-tighter">Sunlight &amp; Silence.</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6 font-medium">
+                        Waking up with the sun to ground myself before the day begins. This routine has changed everything. 🧘‍♀️
+                    </p>
+<button class="w-max px-8 py-3 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">
+                        Save to Plan
+                    </button>
+</div>
+</article>
+<!-- Vibe Post 3 -->
+<article class="relative group">
+<div class="aspect-square rounded-xl overflow-hidden mb-6 editorial-shadow relative">
+<img alt="Fresh Fruit Bowl" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="artistic close-up of a vibrant fruit bowl with dragon fruit, kiwi, and berries, bright natural lighting, fresh and energetic mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXNYIXcMO4S_0JN-DSSoI-p3qxaFcsan5X9M9J-oxAtnvyTP_-xBWOXbTIUrIp-rLMoiHJnG_m2Bw6cE3WVJPrYX5jfI2uvRczEUdO2MS-ksduFN0nAzdI1VMn8vbbn9Z3SW6UPtgePkDnO-2kFyV-wtGXEUjoxuijADCOJkyrVkRXNYEARyDAtx5cJMMBGAOdhsk22oblAQOp0WcL6wQ_gK3POwtcyH6CnG4mGJSyLmylhOKtoTLKoInz947WX96RhJw_Z6qGuAA"/>
+<!-- Glassmorphism Card Overlay -->
+<div class="absolute bottom-6 left-6 right-6 p-6 rounded-lg bg-surface/70 backdrop-blur-xl border border-white/20 editorial-shadow">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-primary">Boost Ritual</span>
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-surface bg-gray-200"></div>
+<div class="w-6 h-6 rounded-full border-2 border-surface bg-gray-300"></div>
+<div class="w-6 h-6 rounded-full border-2 border-surface bg-gray-400"></div>
+</div>
+</div>
+<h4 class="font-headline text-lg font-bold">The Anti-Inflammatory Bowl</h4>
+<p class="text-xs text-on-surface-variant mb-4">420 people tried this today</p>
+<button class="w-full bg-primary text-white py-3 rounded-full font-bold text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="restaurant_menu">restaurant_menu</span>
+                            Save Ritual
+                        </button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#faf9f5]/70 backdrop-blur-xl z-50 rounded-t-[3rem] shadow-[0_-20px_40px_rgba(47,51,47,0.06)]">
+<a class="flex flex-col items-center justify-center bg-[#2E7D32] text-white dark:bg-[#91f78e] dark:text-[#00390a] rounded-full px-6 py-2 transition-all duration-500 scale-110" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-plus-jakarta text-[10px] uppercase tracking-widest font-medium mt-1">Mood</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2f332f] opacity-60 hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-plus-jakarta text-[10px] uppercase tracking-widest font-medium mt-1">Plan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2f332f] opacity-60 hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-plus-jakarta text-[10px] uppercase tracking-widest font-medium mt-1">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2f332f] opacity-60 hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-plus-jakarta text-[10px] uppercase tracking-widest font-medium mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

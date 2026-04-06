@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sleep Quality Report</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#2E7D32",
+                        "surface": "#0a0c0a",
+                        "on-surface": "#e2e3de",
+                        "on-surface-variant": "#c1c9be",
+                        "outline": "#8b9389",
+                        "surface-container": "#161a16",
+                        "surface-container-low": "#111411"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "2.5rem",
+                        "lg": "2.5rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { 
+            font-family: 'Be Vietnam Pro', sans-serif; 
+            background-color: #0a0c0a;
+            background-image: radial-gradient(circle at top right, #1a2e1c 0%, #0a0c0a 60%);
+            min-height: 100dvh;
+        }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-effect {
+            filter: drop-shadow(0 0 12px rgba(46, 125, 50, 0.4));
+        }
+        .glow-text {
+            text-shadow: 0 0 15px rgba(145, 247, 142, 0.3);
+        }
+        .glass-card {
+            background: rgba(22, 26, 22, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .editorial-spacing {
+            letter-spacing: -0.01em;
+        }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/40 backdrop-blur-2xl">
+<div class="flex items-center justify-between px-8 py-6 w-full max-w-lg mx-auto">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary">menu</span>
+<h1 class="text-lg font-bold text-on-surface font-headline tracking-tight">Sleep Report</h1>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">more_vert</span>
+</div>
+</header>
+<main class="pt-32 pb-40 px-8 max-w-lg mx-auto space-y-16">
+<!-- Sleep Quality Score: Luminous Gauge -->
+<section class="flex flex-col items-center justify-center space-y-8">
+<div class="relative w-72 h-72 flex items-center justify-center">
+<!-- Circular Gauge -->
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 100 100">
+<circle class="text-white/10" cx="50" cy="50" fill="none" r="45" stroke="currentColor" stroke-width="2"></circle>
+<circle class="glow-effect transition-all duration-1000" cx="50" cy="50" fill="none" r="45" stroke="url(#scoreGradient)" stroke-dasharray="283" stroke-dashoffset="42" stroke-linecap="round" stroke-width="4"></circle>
+<defs>
+<lineargradient id="scoreGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#2E7D32"></stop>
+<stop offset="100%" stop-color="#91f78e"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="text-7xl font-extrabold tracking-tighter text-on-surface editorial-spacing glow-text">85</span>
+<span class="text-[10px] uppercase tracking-[0.3em] font-bold text-outline mt-2">Score</span>
+</div>
+</div>
+<div class="text-center space-y-2">
+<h2 class="text-3xl font-bold text-on-surface leading-tight editorial-spacing">Restorative Sleep</h2>
+<p class="text-on-surface-variant font-medium text-sm">Your body successfully recharged last night.</p>
+</div>
+</section>
+<!-- Bento Grid Insights -->
+<div class="grid grid-cols-1 gap-6">
+<!-- Nightly Breakdown -->
+<section class="glass-card rounded-[2.5rem] p-8 space-y-8">
+<h3 class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary">Nightly Breakdown</h3>
+<div class="space-y-6">
+<div class="flex justify-between items-end border-b border-white/5 pb-4">
+<div class="flex flex-col">
+<span class="text-xs font-medium text-on-surface-variant">Time in Bed</span>
+<span class="text-2xl font-bold mt-1">8h 12m</span>
+</div>
+<span class="material-symbols-outlined text-primary/80 text-2xl">bedtime</span>
+</div>
+<div class="flex justify-between items-end border-b border-white/5 pb-4">
+<div class="flex flex-col">
+<span class="text-xs font-medium text-on-surface-variant">Deep Sleep</span>
+<span class="text-2xl font-bold mt-1">22%</span>
+</div>
+<span class="material-symbols-outlined text-primary/80 text-2xl">psychology</span>
+</div>
+<div class="flex justify-between items-end pb-2">
+<div class="flex flex-col">
+<span class="text-xs font-medium text-on-surface-variant">Wake-up Time</span>
+<span class="text-2xl font-bold mt-1">7:15 AM</span>
+</div>
+<span class="material-symbols-outlined text-primary/80 text-2xl">wb_sunny</span>
+</div>
+</div>
+</section>
+<!-- Ritual Reward (Moment of Zen) -->
+<section class="relative glass-card rounded-[2.5rem] overflow-hidden p-8 min-h-[220px] flex flex-col justify-end">
+<!-- Atmospheric Glow -->
+<div class="absolute top-0 right-0 w-48 h-48 bg-primary/20 rounded-full -mr-16 -mt-16 blur-[60px]"></div>
+<div class="space-y-4 relative z-10">
+<div class="bg-primary/20 backdrop-blur-xl border border-white/10 rounded-full w-14 h-14 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div>
+<h3 class="text-xl font-bold leading-snug mb-2">Ritual Reward</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        You slept <span class="text-primary font-bold">15% better</span> on nights you used the <span class="italic text-on-surface">Wind Down Timer</span> before bed.
+                    </p>
+</div>
+</div>
+</section>
+</div>
+<!-- Sleep Duration Chart -->
+<section class="glass-card rounded-[2.5rem] p-8 space-y-10">
+<div class="flex justify-between items-center">
+<h3 class="text-lg font-bold editorial-spacing">Sleep Duration</h3>
+<span class="text-[10px] uppercase tracking-[0.15em] font-bold text-outline">Last 7 Days</span>
+</div>
+<div class="flex items-end justify-between h-40 px-2 gap-4">
+<div class="flex flex-col items-center gap-4 flex-1 h-full justify-end">
+<div class="w-full bg-white/5 rounded-full h-[60%] hover:bg-primary/30 transition-all duration-500"></div>
+<span class="text-[9px] font-bold text-outline">MON</span>
+</div>
+<div class="flex flex-col items-center gap-4 flex-1 h-full justify-end">
+<div class="w-full bg-white/5 rounded-full h-[75%] hover:bg-primary/30 transition-all duration-500"></div>
+<span class="text-[9px] font-bold text-outline">TUE</span>
+</div>
+<div class="flex flex-col items-center gap-4 flex-1 h-full justify-end">
+<div class="w-full bg-primary shadow-[0_0_15px_rgba(46,125,50,0.4)] rounded-full h-[85%]"></div>
+<span class="text-[9px] font-bold text-primary">WED</span>
+</div>
+<div class="flex flex-col items-center gap-4 flex-1 h-full justify-end">
+<div class="w-full bg-white/5 rounded-full h-[65%] hover:bg-primary/30 transition-all duration-500"></div>
+<span class="text-[9px] font-bold text-outline">THU</span>
+</div>
+<div class="flex flex-col items-center gap-4 flex-1 h-full justify-end">
+<div class="w-full bg-white/5 rounded-full h-[80%] hover:bg-primary/30 transition-all duration-500"></div>
+<span class="text-[9px] font-bold text-outline">FRI</span>
+</div>
+<div class="flex flex-col items-center gap-4 flex-1 h-full justify-end">
+<div class="w-full bg-white/5 rounded-full h-[95%] hover:bg-primary/30 transition-all duration-500"></div>
+<span class="text-[9px] font-bold text-outline">SAT</span>
+</div>
+<div class="flex flex-col items-center gap-4 flex-1 h-full justify-end">
+<div class="w-full bg-white/5 rounded-full h-[70%] hover:bg-primary/30 transition-all duration-500"></div>
+<span class="text-[9px] font-bold text-outline">SUN</span>
+</div>
+</div>
+</section>
+<!-- Morning Vitality -->
+<section class="glass-card rounded-[2.5rem] p-8 overflow-hidden relative">
+<div class="flex flex-col space-y-6 relative z-10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<h3 class="text-lg font-bold editorial-spacing">Morning Vitality</h3>
+</div>
+<div class="flex flex-col gap-6">
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                    Your "Calm" and "Focus" morning moods are <span class="font-bold text-primary glow-text">82% consistent</span> with over 7.5 hours of sleep.
+                </p>
+<div class="flex items-center gap-3">
+<div class="flex -space-x-3">
+<div class="w-12 h-12 rounded-full border-4 border-surface-container bg-primary/20 flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">sentiment_very_satisfied</span>
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-surface-container bg-blue-500/20 flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-blue-400 text-xl" style="font-variation-settings: 'FILL' 1;">filter_drama</span>
+</div>
+</div>
+<span class="text-xs font-bold text-outline uppercase tracking-widest ml-2">Mood Trends</span>
+</div>
+</div>
+</div>
+<!-- Atmospheric accent -->
+<div class="absolute bottom-0 right-0 w-40 h-40 bg-primary/10 rounded-full translate-x-12 translate-y-12 blur-3xl"></div>
+</section>
+<!-- Lifestyle Image Section -->
+<section class="rounded-[3rem] overflow-hidden aspect-[16/10] shadow-2xl relative">
+<img alt="Serene bedroom" class="w-full h-full object-cover opacity-60 mix-blend-luminosity scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJHcxrzcn1qNR2EbEKujgsBa5mVW6GFnDiibPakBD12q2njrzg4TyvJyvv_eD8szJUsxCnefapGNDXGx3221HYq6oZYoZfFpW9VXR2zBm6tlEdxQz_aVJsp8TuWLbo3OR_FHtwS-zkKpp0Rb3YLe1JEFJPtEzEHhEVs2hO5NktVc1KBsJ9mSymCdaEttGEEWoa-Fol1MlV57T5yaM2vPjwEFy5zfHoa1vsQDVmNP6llNLpohjMxWbUQ3l9Q9c77uj0Zb7TNWoTJI8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-lg flex justify-around items-center px-8 pb-10 pt-6 bg-surface/80 backdrop-blur-3xl z-50 rounded-t-[3.5rem] border-t border-white/[0.05]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined text-2xl">calendar_today</span>
+<span class="font-label text-[9px] uppercase tracking-widest font-bold mt-2">Today</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined text-2xl">auto_stories</span>
+<span class="font-label text-[9px] uppercase tracking-widest font-bold mt-2">Journal</span>
+</a>
+<a class="flex flex-col items-center justify-center" href="#">
+<div class="bg-primary w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-primary/30 mb-2">
+<span class="material-symbols-outlined text-white text-2xl" style="font-variation-settings: 'FILL' 1;">bar_chart</span>
+</div>
+<span class="font-label text-[9px] uppercase tracking-widest font-bold text-primary">Report</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="font-label text-[9px] uppercase tracking-widest font-bold mt-2">Profile</span>
+</a>
+</nav>
+</body></html>

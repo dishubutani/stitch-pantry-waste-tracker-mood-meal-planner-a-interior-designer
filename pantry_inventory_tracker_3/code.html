@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nourished | Pantry Inventory Tracker</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-dim": "#00578c",
+                    "surface-bright": "#faf9f5",
+                    "on-primary-fixed-variant": "#00691a",
+                    "tertiary": "#00639f",
+                    "on-surface-variant": "#5c605b",
+                    "primary-fixed-dim": "#83e881",
+                    "outline-variant": "#afb3ad",
+                    "primary": "#006f1d",
+                    "surface-container-highest": "#e0e3dd",
+                    "secondary-fixed": "#ffdcbe",
+                    "background": "#faf9f5",
+                    "on-tertiary": "#f7f9ff",
+                    "inverse-on-surface": "#9c9d9a",
+                    "on-primary-fixed": "#00480f",
+                    "error-dim": "#821a01",
+                    "secondary-container": "#ffdcbe",
+                    "surface": "#faf9f5",
+                    "on-tertiary-container": "#00395f",
+                    "surface-variant": "#e0e3dd",
+                    "tertiary-fixed": "#7bbeff",
+                    "primary-container": "#91f78e",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#787c77",
+                    "on-primary-container": "#005e17",
+                    "secondary": "#8c5100",
+                    "secondary-fixed-dim": "#ffca99",
+                    "surface-container-high": "#e7e9e3",
+                    "primary-dim": "#006118",
+                    "on-secondary-fixed-variant": "#874e00",
+                    "secondary-dim": "#7b4700",
+                    "on-error": "#fff7f6",
+                    "tertiary-fixed-dim": "#5fb1fb",
+                    "on-secondary": "#fff7f4",
+                    "primary-fixed": "#91f78e",
+                    "on-surface": "#2f332f",
+                    "on-background": "#2f332f",
+                    "surface-container-low": "#f3f4ef",
+                    "inverse-surface": "#0d0f0d",
+                    "surface-dim": "#d7dbd5",
+                    "on-secondary-fixed": "#5f3500",
+                    "inverse-primary": "#91f78e",
+                    "on-tertiary-fixed": "#00223b",
+                    "error-container": "#fa7150",
+                    "on-error-container": "#671200",
+                    "tertiary-container": "#7bbeff",
+                    "surface-tint": "#006f1d",
+                    "on-tertiary-fixed-variant": "#00426d",
+                    "error": "#aa371c",
+                    "on-primary": "#eaffe2",
+                    "surface-container": "#edeee9",
+                    "on-secondary-container": "#794500"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-stone-50/70 dark:bg-stone-950/70 backdrop-blur-xl fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center">
+<div class="flex items-center gap-4">
+<button class="text-green-800 dark:text-green-400 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-2xl font-bold italic text-green-900 dark:text-green-100 tracking-tight font-['Plus_Jakarta_Sans']">Nourished</h1>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-on-surface-variant text-sm font-medium">Kitchen Inventory</span>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="portrait of a young woman with a natural, healthy glow in soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsBMiF-Aq8YGu_BfGpAITEkMNdwSiVYrhE0sERoDBEFCJlHvxS_4nbU-KUAxvckGiFE8b4I-EkZb1HpA2WTkfiW-WO7UpWPkUJ0IhRlAu8PZdYtj5I_4mdKSUMmRo2ZlumznMLVruCg7WewiBX5o8d4iEoDgdQEo6cyIvsir-Td7jDOA-0OWR77NOxFkxWuBVxhhZBUZpWKKcjBgV9XDVvCP6pusR6ZBX-LNhQBlbIeWKzrfx4kque7PSuLdApqrwSXq56HomJ2Ms"/>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-7xl mx-auto">
+<!-- Editorial Header -->
+<section class="mb-12">
+<h2 class="text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface mb-2">My Pantry</h2>
+<p class="text-on-surface-variant text-lg">Curating the essentials for your Zen mood.</p>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Column 1: Alerts & Expiring (Narrow) -->
+<div class="md:col-span-4 space-y-8">
+<!-- Expiring Soon Card -->
+<div class="bg-surface-container-low rounded-xl p-8 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-error-container/10 rounded-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-500"></div>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-error" data-icon="alarm">alarm</span>
+<h3 class="text-sm font-label font-bold uppercase tracking-widest text-on-surface-variant">Expiring Soon</h3>
+</div>
+<ul class="space-y-6">
+<li class="flex justify-between items-center">
+<div>
+<p class="font-bold text-on-surface">Fresh Spinach</p>
+<p class="text-xs text-error font-medium">Expires in 2 days</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="inventory_2">inventory_2</span>
+</li>
+<li class="flex justify-between items-center">
+<div>
+<p class="font-bold text-on-surface">Almond Milk</p>
+<p class="text-xs text-error font-medium">Expires tomorrow</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="inventory_2">inventory_2</span>
+</li>
+</ul>
+<button class="mt-8 w-full py-4 rounded-full bg-surface-container-highest text-on-surface font-bold text-sm transition-all hover:scale-[1.02]">Manage Alerts</button>
+</div>
+<!-- Suggested Recipes (Editorial Style) -->
+<div class="bg-primary-container/30 rounded-xl p-8 relative overflow-hidden">
+<h3 class="text-sm font-label font-bold uppercase tracking-widest text-on-primary-container mb-6">Use it Up: Zen Mood</h3>
+<div class="space-y-6">
+<div class="group cursor-pointer">
+<div class="h-40 rounded-lg overflow-hidden mb-4 shadow-sm">
+<img alt="Spinach Smoothie" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="top-down view of a vibrant green spinach smoothie bowl with sliced bananas and hemp seeds in a ceramic bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkpKTB4juoBaF4KP60FkheViyZG3qKPOJSlp8ReCZ4_5LHxEUw5czw4LCetKoOOxIG_rfVyvY4uWxDz-3WYgZXNZaCkI5wwiIHjYGyn0H3OK4KutLzK-llHw9j2YBcGEftTasGZMNem4QdHudCP_V-UkLJhuSETxVmi5P3Rd3rzfilq24UnBDEgEXvyjesqElWs0OmLFASK-BdAZOuXn0e4rNQENslc65P0Ohzq50Ure4oh97Ok9qHSpDI3orm512AdYmk75HqWok"/>
+</div>
+<h4 class="text-xl font-bold leading-tight">Spirited Green Smoothie Bowl</h4>
+<p class="text-sm text-on-surface-variant mt-1">Uses: Fresh Spinach, Chia Seeds</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 2: Inventory Tracking (Wide) -->
+<div class="md:col-span-8 space-y-8">
+<!-- Status Sections -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+<!-- Running Low Section -->
+<div class="mb-12">
+<div class="flex justify-between items-center mb-8">
+<div class="flex items-center gap-3">
+<div class="w-2 h-8 bg-secondary rounded-full"></div>
+<h3 class="text-2xl font-bold">Running Low</h3>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold">4 ITEMS</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Low Item Card -->
+<div class="bg-surface-container-low p-5 rounded-lg flex items-center justify-between group hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="eco">eco</span>
+</div>
+<div>
+<p class="font-bold">Matcha Powder</p>
+<p class="text-xs text-on-surface-variant">15% remaining</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-outline transition-all hover:bg-secondary hover:text-on-secondary hover:border-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+<!-- Low Item Card -->
+<div class="bg-surface-container-low p-5 rounded-lg flex items-center justify-between group hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="grain">grain</span>
+</div>
+<div>
+<p class="font-bold">Chia Seeds</p>
+<p class="text-xs text-on-surface-variant">100g left</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-outline transition-all hover:bg-secondary hover:text-on-secondary hover:border-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Stocked Section -->
+<div>
+<div class="flex justify-between items-center mb-8">
+<div class="flex items-center gap-3">
+<div class="w-2 h-8 bg-primary rounded-full"></div>
+<h3 class="text-2xl font-bold">Stocked</h3>
+</div>
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-xs font-bold">12 ITEMS</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Stocked Item Card -->
+<div class="bg-surface-container-low p-5 rounded-lg flex items-center justify-between opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="set_meal">set_meal</span>
+</div>
+<div>
+<p class="font-bold">Atlantic Salmon</p>
+<p class="text-xs text-on-surface-variant">2 Fillets</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Stocked Item Card -->
+<div class="bg-surface-container-low p-5 rounded-lg flex items-center justify-between opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="forest">forest</span>
+</div>
+<div>
+<p class="font-bold">Walnuts</p>
+<p class="text-xs text-on-surface-variant">500g Bag</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Stocked Item Card -->
+<div class="bg-surface-container-low p-5 rounded-lg flex items-center justify-between opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="water_drop">water_drop</span>
+</div>
+<div>
+<p class="font-bold">Extra Virgin Olive Oil</p>
+<p class="text-xs text-on-surface-variant">750ml bottle</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Stocked Item Card -->
+<div class="bg-surface-container-low p-5 rounded-lg flex items-center justify-between opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="egg">egg</span>
+</div>
+<div>
+<p class="font-bold">Organic Eggs</p>
+<p class="text-xs text-on-surface-variant">12 Count</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Inventory Tip -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-stone-800 text-stone-50 rounded-xl p-8 flex flex-col justify-between aspect-square md:aspect-auto">
+<p class="font-headline italic text-2xl leading-snug">"Sustainability is not just about what we eat, but how we manage what we already have."</p>
+<div class="flex items-center gap-4 mt-6">
+<div class="w-12 h-12 rounded-full bg-stone-700"></div>
+<div>
+<p class="font-bold text-sm">Chef Julian</p>
+<p class="text-xs text-stone-400">Head of Culinary Mind</p>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden relative aspect-square md:aspect-auto min-h-[300px]">
+<img alt="Pantry Aesthetic" class="w-full h-full object-cover" data-alt="neatly organized minimalist pantry shelf with glass jars containing grains, seeds, and nuts against a soft beige wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvEnqNMhEpT4E6bE0vayUOZ39wvh3LJQC_BKIRIzzGt2pRSDPUT_FLfnUt2ZlAeRUJP2ChjQ4Yx6GOtmJGI6A1q4HZcLSdDhtD3i7CBtjk44I4nC9MbJhUFpBf8_pCszczTSsYJpfSvuhiVW64yvYs4tq9KvsfYNRoHF8DyoILJl6j31N5QIEYcVM_gdWBrIWe2pCTtKCtdAkiJY6Xml9zXMXzotW-kX_jmpF2yYvfhcDiAaQZ-ZMDCOCWfbhacAwkkBzGU_6ZI4E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+<p class="text-white font-bold">See full pantry visualization</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB (Suppressed based on rules, but included if contextual to "Add Item") -->
+<!-- Assuming "Add Item" is the primary FAB action for an inventory screen -->
+<button class="fixed bottom-28 right-8 w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center z-50 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-stone-50/70 dark:bg-stone-950/70 backdrop-blur-xl shadow-[0_-20px_40px_rgba(47,51,47,0.04)] rounded-t-[3rem]">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="filter_vintage">filter_vintage</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest mt-1">Mood</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest mt-1">Plan</span>
+</a>
+<!-- Stats Active (Closest match for "Inventory/Data") -->
+<a class="flex flex-col items-center justify-center bg-green-100 dark:bg-green-900/30 text-green-900 dark:text-green-100 rounded-full px-5 py-2 scale-105 duration-500 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="analytics" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest mt-1">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

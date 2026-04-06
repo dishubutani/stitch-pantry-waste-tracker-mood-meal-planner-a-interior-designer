@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sleep Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-container": "#00395f",
+                      "on-error-container": "#671200",
+                      "surface-container-highest": "#e0e3dd",
+                      "background": "#faf9f5",
+                      "tertiary-fixed": "#7bbeff",
+                      "tertiary-dim": "#00578c",
+                      "inverse-surface": "#0d0f0d",
+                      "on-surface": "#2f332f",
+                      "on-background": "#2f332f",
+                      "outline": "#787c77",
+                      "secondary": "#8c5100",
+                      "on-secondary-container": "#794500",
+                      "primary-fixed-dim": "#83e881",
+                      "surface-bright": "#faf9f5",
+                      "on-tertiary": "#f7f9ff",
+                      "error": "#aa371c",
+                      "error-dim": "#821a01",
+                      "secondary-container": "#ffdcbe",
+                      "surface-dim": "#d7dbd5",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-container": "#005e17",
+                      "tertiary-container": "#7bbeff",
+                      "surface-container-high": "#e7e9e3",
+                      "primary-container": "#91f78e",
+                      "on-error": "#fff7f6",
+                      "surface-container": "#edeee9",
+                      "inverse-on-surface": "#9c9d9a",
+                      "inverse-primary": "#91f78e",
+                      "primary-dim": "#006118",
+                      "primary": "#006f1d",
+                      "secondary-fixed": "#ffdcbe",
+                      "on-secondary": "#fff7f4",
+                      "surface-variant": "#e0e3dd",
+                      "on-secondary-fixed-variant": "#874e00",
+                      "tertiary-fixed-dim": "#5fb1fb",
+                      "surface-tint": "#006f1d",
+                      "on-tertiary-fixed": "#00223b",
+                      "on-primary-fixed-variant": "#00691a",
+                      "error-container": "#fa7150",
+                      "outline-variant": "#afb3ad",
+                      "on-surface-variant": "#5c605b",
+                      "on-primary-fixed": "#00480f",
+                      "tertiary": "#00639f",
+                      "surface": "#faf9f5",
+                      "surface-container-low": "#f3f4ef",
+                      "secondary-fixed-dim": "#ffca99",
+                      "on-primary": "#eaffe2",
+                      "secondary-dim": "#7b4700",
+                      "on-tertiary-fixed-variant": "#00426d",
+                      "on-secondary-fixed": "#5f3500",
+                      "primary-fixed": "#91f78e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body": [
+                              "Be Vietnam Pro"
+                      ],
+                      "label": [
+                              "Be Vietnam Pro"
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-text {
+            letter-spacing: -0.02em;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#faf9f5]/70 dark:bg-[#1a1c1a]/70 backdrop-blur-xl">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#2E7D32] dark:text-[#91f78e] hover:opacity-80 transition-opacity scale-95 duration-300 ease-in-out" data-icon="arrow_back">arrow_back</button>
+<h1 class="text-xl font-bold text-[#2E7D32] dark:text-[#91f78e] font-['Plus_Jakarta_Sans'] tracking-tight">Sleep Sanctuary</h1>
+</div>
+<div class="material-symbols-outlined text-[#2f332f] dark:text-[#e2e3de]" data-icon="more_vert">more_vert</div>
+</div>
+</header>
+<main class="pt-20 pb-32 max-w-5xl mx-auto px-6 space-y-12">
+<!-- Hero & Timer Section -->
+<section class="relative h-[450px] w-full rounded-xl overflow-hidden group">
+<img alt="Night sky" class="absolute inset-0 w-full h-full object-cover" data-alt="a serene alpine lake at night reflecting a crescent moon and brilliant stars with soft mist and deep blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsMDkoXkSpTiso6Nrva89IBQZuDapylIs_rxNGfx03qA0AtmSQdkvsgSRUexmtYYJ5bxmI2C-schYgmAwNkH1i3tW4WTPr9JDHWuDXreNKvnO4qDU-BpA0NGrC0zmQ59MZ0A0k-LDxdPXPF9pZbb5uqD3Y8U1iIz7fjxr7iK05yKC_D3_lsZPnCt92wazYJysl3xdXOppVKnu8rCtPtE6eJG0AYy9kJ8k-756KFFQIQAUzyoNd5ZT__KEM_acxymfCo3vofQudoEI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-6">
+<span class="font-label text-[11px] uppercase tracking-[0.2em] opacity-80 mb-4">Wind Down Timer</span>
+<div class="relative">
+<!-- Timer Circle Visual -->
+<svg class="w-64 h-64 -rotate-90">
+<circle cx="128" cy="128" fill="none" r="120" stroke="rgba(255,255,255,0.1)" stroke-width="4"></circle>
+<circle class="transition-all duration-1000" cx="128" cy="128" fill="none" r="120" stroke="white" stroke-dasharray="753" stroke-dashoffset="180" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-6xl font-headline font-extrabold editorial-text">45:00</span>
+<span class="text-sm font-medium opacity-70">Minutes Remaining</span>
+</div>
+</div>
+<div class="mt-8 flex gap-4">
+<button class="bg-primary hover:bg-primary-dim text-white px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105 active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        Start Ritual
+                    </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105 active:scale-95">
+                        Reset
+                    </button>
+</div>
+</div>
+</section>
+<!-- Bento Grid Rituals Section -->
+<section>
+<div class="flex items-baseline justify-between mb-8">
+<h2 class="text-3xl font-headline font-bold text-on-surface editorial-text">Evening Rituals</h2>
+<span class="text-sm font-medium text-primary">2 of 4 Complete</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Ritual 1: Lights -->
+<div class="bg-surface-container-low rounded-lg p-8 flex items-start justify-between group hover:bg-surface-container transition-colors duration-300">
+<div class="flex gap-6">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="light_mode">light_mode</span>
+</div>
+<div>
+<h3 class="text-xl font-headline font-semibold mb-2">Dim the Lights</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Lowering light intensity triggers melatonin production.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-8 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Ritual 2: Digital Detox -->
+<div class="bg-surface-container-low rounded-lg p-8 flex items-start justify-between group hover:bg-surface-container transition-colors duration-300">
+<div class="flex gap-6">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="phonelink_off">phonelink_off</span>
+</div>
+<div>
+<h3 class="text-xl font-headline font-semibold mb-2">Digital Detox</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">No screens at least 30 minutes before sleep.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-8 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Ritual 3: Herbal Tea -->
+<div class="bg-surface-container-low rounded-lg p-8 flex items-start justify-between group hover:bg-surface-container transition-colors duration-300">
+<div class="flex gap-6">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="local_cafe">local_cafe</span>
+</div>
+<div>
+<h3 class="text-xl font-headline font-semibold mb-2">Herbal Tea</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Sip on chamomile or valerian root to relax.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-8 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Ritual 4: Meditation -->
+<div class="bg-surface-container-low rounded-lg p-8 flex items-start justify-between group hover:bg-surface-container transition-colors duration-300">
+<div class="flex gap-6">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="spa">spa</span>
+</div>
+<div>
+<h3 class="text-xl font-headline font-semibold mb-2">Sleep Meditation</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">A 5-minute guided session to quiet the mind.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-8 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Soundscapes Section -->
+<section class="space-y-6">
+<h2 class="text-3xl font-headline font-bold text-on-surface editorial-text">Soundscapes</h2>
+<div class="flex overflow-x-auto gap-6 pb-4 no-scrollbar">
+<!-- Soundscape Card 1 -->
+<div class="flex-shrink-0 w-72 h-96 relative rounded-lg overflow-hidden group cursor-pointer">
+<img alt="Rain" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="macro photography of raindrops on a lush tropical green leaf with soft focus forest background and cool tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSo0p4XRxOoVWnTZqy0z7JS_U5x5MubfmC6FxToijNICNuAGZyX9T4Qe61KxFykwfkdt_eNw1PLJw8bTsMB9pP4-C0A93-ayBxmpKFHpLr-lOI3B6LMvWn0DwxP-_LSiJTGBada1fRFSLXlsM4RPWNH6lf6NKbNXXzTYsXlNXotjUqZCEcO1aivL6Lvy09B8O9IRTNscyyWgZPNdHT8Tl_haiUcSumbBS79Rt3iy1pM_dOGDXc36KY11v_wg4KePD0VrTkN5q4JDs"/>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full text-white">
+<h4 class="text-2xl font-headline font-bold mb-2">Rain on Leaves</h4>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+<span class="text-sm font-medium opacity-90">Deep Forest Ambient</span>
+</div>
+</div>
+<div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md rounded-full p-2">
+<span class="material-symbols-outlined text-white" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<!-- Soundscape Card 2 -->
+<div class="flex-shrink-0 w-72 h-96 relative rounded-lg overflow-hidden group cursor-pointer">
+<img alt="Hum" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="aesthetic minimal composition of an old radio and a cozy warm lamp on a nightstand with soft bokeh lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCqAVw-gxH_uzK_3nys0_xnS9iOF8LI5ZNKJ_5vjTiYTaic0pi5eHekJF9OFxWpacKihMJlPpknD960_HLWdje5iZe3ZBR1OJj1AO5zLB9TcVr2s8qQ93JP4IeW-RDFu5gb_SukO2MmmuK1JMQyid1xeENmU1_rwkQYKR3etHik9swlxQF_AMAq1jaqQxTgJB6afunVSIWLDkKvmlrM-WJS64U7GcuHBuk1FQqJPpsYr-ImifktWVovRDZPCIGSr4seQ5y370YOjg"/>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full text-white">
+<h4 class="text-2xl font-headline font-bold mb-2">Ambient Hum</h4>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+<span class="text-sm font-medium opacity-90">White Noise Static</span>
+</div>
+</div>
+<div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md rounded-full p-2">
+<span class="material-symbols-outlined text-white" data-icon="pause_circle" style="font-variation-settings: 'FILL' 1;">pause_circle</span>
+</div>
+</div>
+<!-- Soundscape Card 3 -->
+<div class="flex-shrink-0 w-72 h-96 relative rounded-lg overflow-hidden group cursor-pointer">
+<img alt="Ocean" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="slow shutter photography of moonlit ocean waves crashing softly on a sandy beach at twilight with deep indigo hues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi_OUCuuk178fB_09ohaUIYMW9uJgIQ8caRUt-7GiBptU9_f8lnWN-eeY9Hgb1vBvP62GfmbvPF-ahOXwIstZOz2B7WPcIBaoHMi0mDZvwg1FGQXaikuaHTe3u-qms1NytX6EaQqZGjKrsKBTtOyzH_4vIyfvhBD8Qv_Uo11rlHTwwzqgVp7Cb7c4DWKPjCZ9A3BUqS6bcRXAS0GCMtTiWiEYy7WM6XYYeQd5ZDO3-L3UX4NoFfgAT4QRnEz-n4AZ-3oXeqU3a3ck"/>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full text-white">
+<h4 class="text-2xl font-headline font-bold mb-2">Lunar Tides</h4>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+<span class="text-sm font-medium opacity-90">Rhythmic Sea Breeze</span>
+</div>
+</div>
+<div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md rounded-full p-2">
+<span class="material-symbols-outlined text-white" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-8 pb-6 pt-4 bg-[#faf9f5]/70 dark:bg-[#1a1c1a]/70 backdrop-blur-xl z-50 rounded-t-[3rem] shadow-[0_-20px_40px_rgba(47,51,47,0.06)]">
+<button class="flex flex-col items-center justify-center text-[#2f332f] dark:text-[#e2e3de] opacity-60 p-2 hover:scale-105 transition-transform scale-90 duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-[0.05em] font-medium mt-1">Nourish</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-gradient-to-br from-[#2E7D32] to-[#388E3C] text-white rounded-full p-3 scale-110 -translate-y-2 transition-all hover:scale-105 duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="bedtime" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-[0.05em] font-medium mt-1">Sanctuary</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#2f332f] dark:text-[#e2e3de] opacity-60 p-2 hover:scale-105 transition-transform scale-90 duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="spa">spa</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-[0.05em] font-medium mt-1">Mind</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#2f332f] dark:text-[#e2e3de] opacity-60 p-2 hover:scale-105 transition-transform scale-90 duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] uppercase tracking-[0.05em] font-medium mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

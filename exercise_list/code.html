@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nourished - Exercise List</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#d7dbd5",
+                        "on-primary-fixed": "#00480f",
+                        "surface": "#faf9f5",
+                        "on-error": "#fff7f6",
+                        "on-surface-variant": "#5c605b",
+                        "surface-container": "#edeee9",
+                        "error-dim": "#821a01",
+                        "tertiary-fixed": "#7bbeff",
+                        "primary-fixed-dim": "#83e881",
+                        "on-tertiary-container": "#00395f",
+                        "tertiary-dim": "#00578c",
+                        "surface-tint": "#006f1d",
+                        "outline-variant": "#afb3ad",
+                        "on-secondary-container": "#794500",
+                        "tertiary-fixed-dim": "#5fb1fb",
+                        "on-surface": "#2f332f",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#fff7f4",
+                        "primary-dim": "#006118",
+                        "secondary-fixed": "#ffdcbe",
+                        "error-container": "#fa7150",
+                        "primary-fixed": "#91f78e",
+                        "secondary-fixed-dim": "#ffca99",
+                        "secondary": "#8c5100",
+                        "background": "#faf9f5",
+                        "on-primary-fixed-variant": "#00691a",
+                        "on-tertiary-fixed": "#00223b",
+                        "surface-variant": "#e0e3dd",
+                        "on-secondary-fixed": "#5f3500",
+                        "tertiary": "#00639f",
+                        "on-secondary-fixed-variant": "#874e00",
+                        "inverse-on-surface": "#9c9d9a",
+                        "outline": "#787c77",
+                        "surface-container-highest": "#e0e3dd",
+                        "on-tertiary-fixed-variant": "#00426d",
+                        "surface-container-high": "#e7e9e3",
+                        "secondary-dim": "#7b4700",
+                        "primary-container": "#91f78e",
+                        "inverse-primary": "#91f78e",
+                        "error": "#aa371c",
+                        "tertiary-container": "#7bbeff",
+                        "surface-container-low": "#f3f4ef",
+                        "on-primary": "#eaffe2",
+                        "surface-bright": "#faf9f5",
+                        "on-primary-container": "#005e17",
+                        "inverse-surface": "#0d0f0d",
+                        "on-tertiary": "#f7f9ff",
+                        "on-error-container": "#671200",
+                        "secondary-container": "#ffdcbe",
+                        "on-background": "#2f332f",
+                        "primary": "#006f1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #faf9f5;
+            color: #2f332f;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .scale-up-102:hover { transform: scale(1.02); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/70 dark:bg-stone-950/70 backdrop-blur-xl">
+<nav class="flex justify-between items-center px-6 h-16 w-full max-w-screen-xl mx-auto">
+<button class="text-green-800 dark:text-green-400 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-2xl font-bold tracking-tight text-green-800 dark:text-green-500 font-headline">Nourished</h1>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a smiling woman with a natural look and soft outdoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPBFRV1BEKl3kVNh4OIYj_9KUS9IQ67rPF83JytKd2ptzsWpV0-R9pGO8frnm8ThaQd85lpOEChS-0sU8jB6uyWJL0cmK9ZpCU_gSaKumahAMN_4uS3sHGXCIStH_WasUcoqyzLFOHKlcHgR_4MXyoj4Dk4wFJcPd7QtNCFskq1dGgNPhR0_3lLoZZnVmonj7IWurFNSLcXTow08iVAIjK7purDytS0sDZiSxBm5S_PKuh0A1A1oGSHkiRGkah8Fko6eC6Qm8XHSo"/>
+</div>
+</nav>
+</header>
+<main class="mt-20 px-6 max-w-screen-xl mx-auto space-y-12">
+<!-- Today's Mood Match Section -->
+<section class="space-y-6">
+<div class="flex flex-col gap-1">
+<span class="text-label text-sm font-semibold uppercase tracking-widest text-primary">Current Vibe: Need a Boost</span>
+<h2 class="text-4xl font-extrabold tracking-tight">Today's Mood Match</h2>
+</div>
+<div class="relative group overflow-hidden rounded-xl bg-surface-container-low p-1 lg:p-2 transition-all duration-500 hover:shadow-xl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-0 md:gap-8 items-center">
+<div class="md:col-span-7 relative h-80 md:h-[450px] overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A person practicing advanced yoga in a bright, sunlit minimalist studio with large windows overlooking a lush forest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3pRoGjvsdFWp-dd43f0oM6XmE3KOY5Fq9PHXN19mi4o3KO3cTHe1uZE5yYBOsU8moZNQJgH7DZXg14YqIzsL7w1h4PFSPiTYl_Lujzi5yhLabQ6O6goR21pWVhM48uMzZF9Gx9zUCxSmy0PaUt55oVgFi4p5ZJOcWd7LS4ofPbbEAQND12BWxsZ7oKGDq2KoJBrpBXtC56nl-JNhXJNhht6S6lP2YTxsJKCNhKn62bu11xuYDASLBwl83Pm7xf24MBxGHH8TByrk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 flex gap-3">
+<span class="px-4 py-2 bg-surface-container-lowest/90 backdrop-blur-md rounded-full text-xs font-bold uppercase tracking-wider">Energizing</span>
+<span class="px-4 py-2 bg-primary text-on-primary rounded-full text-xs font-bold uppercase tracking-wider">45 MIN</span>
+</div>
+</div>
+<div class="md:col-span-5 p-6 md:p-0 space-y-4">
+<h3 class="text-3xl font-bold leading-tight">Energizing Power Yoga</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Ignite your inner fire with a fluid sequence designed to wake up every cell. Perfect for shaking off morning sluggishness or hitting reset after a long meeting.
+                        </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="flex-1 md:flex-none px-8 py-4 bg-primary text-on-primary font-bold rounded-full shadow-lg shadow-primary/20 scale-up-102 transition-all duration-300">
+                                Start Session
+                            </button>
+<button class="flex-1 md:flex-none p-4 bg-surface-container-highest text-on-surface rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Choose by Energy Level (Bento Grid) -->
+<section class="space-y-6">
+<h2 class="text-2xl font-bold tracking-tight">Choose by Energy Level</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Low Energy -->
+<div class="bg-surface-container-low rounded-lg p-6 flex flex-col justify-between h-[400px] hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary">self_care</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Low: Gentle Stretching</h3>
+<p class="text-on-surface-variant text-sm">Slow down and reconnect. Focus on deep breathing and myofascial release.</p>
+</div>
+<div class="mt-4 overflow-hidden rounded-md h-48">
+<img class="w-full h-full object-cover" data-alt="Serene close-up of hands touching toes in a peaceful outdoor setting with soft afternoon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy09vdfr3xXmdatSeVmfmz_wMz3VhFXgnDqVS7DlsL87Fb23EGpQngF1hgQ3wQH_0B1TDSUnYG6hs3tqBZtYBsQO94bxnA2mT1dsWVPHyZs06FtOEUiDOQZZJO4XvHZncePsPW99Zqz5jTfXyFb9_qMXFi-mnYIF07RdeCWuLb0Zx9jjeeH5MsyXUyVvGWzQyDX4IXrNdSlpMd9f-ehXf7WfPc5aa2EM2ZdKIsaFYKwdEgX70ulpF2-QOcavdjMIZV0DUE4zNIFqQ"/>
+</div>
+</div>
+<!-- Medium Energy -->
+<div class="bg-surface-container-low rounded-lg p-6 flex flex-col justify-between h-[400px] hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-tertiary">directions_run</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Medium: Steady Cardio</h3>
+<p class="text-on-surface-variant text-sm">Build endurance with a rhythmic flow. Best for clearing the mind and improving circulation.</p>
+</div>
+<div class="mt-4 overflow-hidden rounded-md h-48">
+<img class="w-full h-full object-cover" data-alt="Person jogging through a misty coastal path at sunrise, soft cool tones and atmospheric fog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAudvpDV4NqiEC40qlGCVWw3DNGKz5T-MJTZ5HbblWI_d2Hp597sCZeOxVzcVvydHcHo6-HxM5MPlQUquBBzhCnNZFfUxe2pZpmhFyWQuAeZUozF8VeKweNf6chM28ApnxMt-69EtrM4GmepO_cdPHK0yzDFVV2BU36buN1W6Ddyf54lMzOecqc6F-Wipc94UpefQByLacK8GhOi41KNdI-N4xcpiqrH0t55D7PiaycWXlV3v8er0Lit6uaZL-bQaa1-GBKIEX26Y"/>
+</div>
+</div>
+<!-- High Energy -->
+<div class="bg-surface-container-low rounded-lg p-6 flex flex-col justify-between h-[400px] hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">bolt</span>
+</div>
+<h3 class="text-xl font-bold mb-2">High: HIIT Intense</h3>
+<p class="text-on-surface-variant text-sm">Maximum effort for maximum reward. Push your limits with metabolic conditioning.</p>
+</div>
+<div class="mt-4 overflow-hidden rounded-md h-48">
+<img class="w-full h-full object-cover" data-alt="Powerful shot of an athlete doing battle ropes in a gritty yet clean architectural gym space with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0PlO7vefxPQyiUcb440Ue6MWn5y1B2ng1GmvHtgGA9zc9gEKGqF86eiZgkr_smT7L5YxNlF7Zz9OnNaMQq89LZsIWy0FA7lv2YBrITbAc4NxAbwvI32hG-XtiGzs0VF6f0JCFRD5WExTJRHaBIrgrqf6-r0KE65kh71uoaIyCw2SCpA_z0wtQeKQnxlQ--M50xiCbMSqQ5tSA8iKcYH6ydNeyuq4arh-hMfWFnDVUtQvHcDwDwy6_fNh8spChxE9LSgcw_Xnbc0E"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Recently Completed Section (Asymmetric List) -->
+<section class="space-y-6">
+<h2 class="text-2xl font-bold tracking-tight">Recently Completed</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Workout Item 1 -->
+<div class="flex gap-6 items-center bg-surface-container-lowest p-4 rounded-lg shadow-sm border border-outline-variant/10">
+<div class="w-24 h-24 rounded-md overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Top down view of colorful kettlebells on a clean gym floor, professional fitness equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIQNOuT67FFxZTqVlfJ7ZGJ53OIlspws7ikh3jCFUSS_chaSC3MVfWcRYW9uQdE3WMfptcCYAit5k72YrYxMZnXA1YsD0Rn-PxOfOGTuFsLow6o2CZAIO1oAh3YUswQiviIxr_U-yhIUMiMZoD_W8nC9Nv4xfyorY952sjQcGxDA9XwBy1XF-zJoiFgdutQVACFvIFxs5Fd03se5qIF3C6jAMZ5VmA6qCnV-01kS608U2KEZ80SjlwmpnJEcRWBADLFccqN3MtBCQ"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-lg">Full Body Strength</h4>
+<p class="text-on-surface-variant text-sm">Yesterday, 5:45 PM</p>
+</div>
+<span class="text-primary font-bold">Done</span>
+</div>
+<div class="mt-3 flex gap-4 text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 32m</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">local_fire_department</span> 240 kcal</span>
+</div>
+</div>
+</div>
+<!-- Workout Item 2 -->
+<div class="flex gap-6 items-center bg-surface-container-lowest p-4 rounded-lg shadow-sm border border-outline-variant/10">
+<div class="w-24 h-24 rounded-md overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Woman doing pilates movements in a bright airy studio, focused expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWZxGD_eAmJjQS9sbRT3QXOUw-rwXxE6tD_7g3dFOccWxxIDU5qIL8Q39bSFekXDVswgyGsb61es8JOmc62ZacZjIM0WEGNvC-QX7RKCftOlns51EeiOVoeGOeFdhouk3TzoLipRgUZN6bpJwj-QflOd-ACrxDZJi4MVDanoQK3HJ0JKfP9gzFpwalCg_-UOQbs8DO5mq2QnwhMKiMhKpcw3t3-_LdoqW2aGa6QEYdYvy2EaCSysl-rqc0BncqbNrdRvpTJT7HSt8"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-lg">Morning Core Flow</h4>
+<p class="text-on-surface-variant text-sm">2 days ago, 7:15 AM</p>
+</div>
+<span class="text-primary font-bold">Done</span>
+</div>
+<div class="mt-3 flex gap-4 text-xs font-semibold uppercase tracking-wider text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 20m</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">local_fire_department</span> 110 kcal</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-stone-50/70 dark:bg-stone-950/70 backdrop-blur-xl z-50 rounded-t-[3rem] shadow-[0_-20px_40px_rgba(47,51,47,0.06)]">
+<!-- Mood -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-6 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-1">self_care</span>
+<span class="font-plus-jakarta text-[11px] uppercase tracking-wider font-semibold">Mood</span>
+</a>
+<!-- Plan (Active) -->
+<a class="flex flex-col items-center justify-center bg-green-100 dark:bg-green-900/40 text-green-900 dark:text-green-100 rounded-full px-6 py-2 transition-all duration-500 scale-105" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+<span class="font-plus-jakarta text-[11px] uppercase tracking-wider font-semibold">Plan</span>
+</a>
+<!-- Stats -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-6 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-1">query_stats</span>
+<span class="font-plus-jakarta text-[11px] uppercase tracking-wider font-semibold">Stats</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-6 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-plus-jakarta text-[11px] uppercase tracking-wider font-semibold">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button - Only for Primary Action -->
+<button class="fixed bottom-28 right-6 w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 z-40">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</body></html>

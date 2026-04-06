@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#00223b",
+                        "error-container": "#fa7150",
+                        "on-background": "#2f332f",
+                        "surface-variant": "#e0e3dd",
+                        "on-surface-variant": "#5c605b",
+                        "on-primary-fixed": "#00480f",
+                        "on-primary-fixed-variant": "#00691a",
+                        "tertiary-container": "#7bbeff",
+                        "background": "#faf9f5",
+                        "primary-dim": "#006118",
+                        "primary": "#006f1d",
+                        "primary-container": "#91f78e",
+                        "on-primary": "#eaffe2",
+                        "primary-fixed-dim": "#83e881",
+                        "surface-container-low": "#f3f4ef",
+                        "outline-variant": "#afb3ad",
+                        "on-error": "#fff7f6",
+                        "on-secondary": "#fff7f4",
+                        "surface-container": "#edeee9",
+                        "surface-container-high": "#e7e9e3",
+                        "surface-dim": "#d7dbd5",
+                        "inverse-surface": "#0d0f0d",
+                        "inverse-on-surface": "#9c9d9a",
+                        "on-tertiary-fixed-variant": "#00426d",
+                        "surface-bright": "#faf9f5",
+                        "surface": "#faf9f5",
+                        "inverse-primary": "#91f78e",
+                        "tertiary-fixed": "#7bbeff",
+                        "on-error-container": "#671200",
+                        "error-dim": "#821a01",
+                        "secondary-dim": "#7b4700",
+                        "secondary": "#8c5100",
+                        "error": "#aa371c",
+                        "on-tertiary-container": "#00395f",
+                        "on-secondary-fixed-variant": "#874e00",
+                        "primary-fixed": "#91f78e",
+                        "surface-tint": "#006f1d",
+                        "secondary-container": "#ffdcbe",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#f7f9ff",
+                        "secondary-fixed-dim": "#ffca99",
+                        "on-primary-container": "#005e17",
+                        "outline": "#787c77",
+                        "on-surface": "#2f332f",
+                        "secondary-fixed": "#ffdcbe",
+                        "on-secondary-container": "#794500",
+                        "surface-container-highest": "#e0e3dd",
+                        "tertiary-fixed-dim": "#5fb1fb",
+                        "tertiary-dim": "#00578c",
+                        "tertiary": "#00639f",
+                        "on-secondary-fixed": "#5f3500"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(47, 51, 47, 0.06);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-stone-50/70 dark:bg-stone-950/70 backdrop-blur-xl">
+<div class="flex items-center gap-4">
+<button class="text-green-800 dark:text-green-400 hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] text-2xl font-black text-green-800 dark:text-green-400 tracking-tighter">Grocery List</h1>
+</div>
+<div class="flex items-center gap-3">
+<button class="text-stone-500 hover:text-green-800 transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<img alt="User profile" class="w-10 h-10 rounded-full object-cover editorial-shadow" data-alt="portrait of a woman with a kind expression in soft natural lighting, high-end editorial photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzJsZIvnAAf9zu4DgyOysTaWSzk8YVdjWCknnkHIvSALNQeu9F2rFhZyjCVWHlT9EsKXEyfACuh8oquQ5FrQpBljaj-Rf0UZ5NYv56NVG-bxV8yjA6tkodpCmB14c_LLVfXy1_bsYA-MAJQC299uHQxPvzNZMgY0oVSZOeQTwkZiIuuuTOYeBWmYCAEs1u2uKn7F27M_rTXbCWrB07Vw6-caioN3I-cQPo7exONtnr5l76-uRCY9mlt-QhLmyCTm628Mk2eXi2HGQ"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-4xl mx-auto">
+<!-- Editorial Hero Section -->
+<section class="mb-12 relative">
+<div class="flex justify-between items-end mb-6">
+<div class="space-y-1">
+<p class="font-label text-xs font-bold tracking-widest text-primary uppercase">Current Inventory</p>
+<h2 class="font-headline text-4xl font-bold tracking-tight text-on-surface">Weekly Pantry</h2>
+</div>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 px-6 py-3 bg-surface-container-high text-on-surface rounded-full font-bold text-sm hover:scale-105 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="delete_sweep">delete_sweep</span>
+                        Clear All
+                    </button>
+<button class="flex items-center gap-2 px-6 py-3 bg-primary text-on-primary rounded-full font-bold text-sm hover:scale-105 transition-all editorial-shadow">
+<span class="material-symbols-outlined text-sm" data-icon="shopping_bag">shopping_bag</span>
+                        Shopping Mode
+                    </button>
+</div>
+</div>
+<div class="relative w-full h-48 rounded-xl overflow-hidden mb-8">
+<img alt="Fresh produce" class="w-full h-full object-cover" data-alt="high-end macro shot of fresh vibrant vegetables and fruits in a wooden crate with artistic soft side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAILdFYk2GgzRaWfvp5gGwTcavESrcMUiDNb9QXClublgsZ5A2InqDi0R9SrmZ86RRRUddD1DmhBHzJb67EcFKc6zfhkk4eJ506EHJ7c84wP4IgZnOv6l0QRaHoThy5oZkn324oh5borhcbjY3W0HUYAXkvMMO3zw1Bygzt4DP38hcT4owRY6psEVGOZ_tE_fBHdzbp6fdFOjTWsh6k9yxTnakB4HikFqkPMiOUeZC8P2DtpUVhenM3VpGZVXB-2kfrQxAeKWrDJsE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">32 Items Total</span>
+</div>
+</div>
+</section>
+<!-- Quick Add Asymmetric Grid -->
+<section class="mb-12">
+<div class="bg-surface-container-low rounded-lg p-6 flex flex-col md:flex-row gap-4 items-center">
+<div class="flex-grow w-full relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline" data-icon="add_circle">add_circle</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-lowest border-none rounded-md focus:ring-2 focus:ring-primary-container transition-all font-body text-on-surface" placeholder="Add a custom item (e.g. Organic Almonds)" type="text"/>
+</div>
+<button class="w-full md:w-auto px-8 py-4 bg-primary text-on-primary rounded-full font-bold hover:scale-105 transition-all">
+                    Add Item
+                </button>
+</div>
+</section>
+<!-- Categories List -->
+<div class="space-y-12">
+<!-- Category: Produce -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="eco">eco</span>
+</div>
+<h3 class="font-headline text-2xl font-bold">Produce</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Item 1 -->
+<div class="group bg-surface-container-lowest p-5 rounded-lg flex items-center gap-4 transition-all hover:bg-surface-container border border-outline-variant/10">
+<div class="relative w-6 h-6 border-2 border-primary rounded-md flex items-center justify-center cursor-pointer group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary scale-0 group-active:scale-100 transition-transform" data-icon="check" style="font-size: 18px; font-weight: 800;">check</span>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-on-surface">Spinach Leaves</p>
+<span class="font-label text-[10px] uppercase tracking-wider text-tertiary font-bold">For: Brain Power Smoothie</span>
+</div>
+<span class="text-on-surface-variant font-bold text-sm">2 Bags</span>
+</div>
+<!-- Item 2 -->
+<div class="group bg-surface-container-lowest p-5 rounded-lg flex items-center gap-4 transition-all hover:bg-surface-container border border-outline-variant/10">
+<div class="relative w-6 h-6 border-2 border-primary rounded-md flex items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined text-primary" data-icon="check" style="font-size: 18px; font-weight: 800; font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="flex-grow opacity-50">
+<p class="font-bold text-on-surface line-through">Blueberries</p>
+<span class="font-label text-[10px] uppercase tracking-wider text-stone-400 font-bold">For: Zen Breakfast Bowl</span>
+</div>
+<span class="text-on-surface-variant font-bold text-sm opacity-50">1 Box</span>
+</div>
+<!-- Item 3 -->
+<div class="group bg-surface-container-lowest p-5 rounded-lg flex items-center gap-4 transition-all hover:bg-surface-container border border-outline-variant/10">
+<div class="relative w-6 h-6 border-2 border-primary rounded-md flex items-center justify-center cursor-pointer group-hover:bg-primary/10 transition-colors"></div>
+<div class="flex-grow">
+<p class="font-bold text-on-surface">Avocado</p>
+<span class="font-label text-[10px] uppercase tracking-wider text-secondary font-bold">For: Comfort Toast</span>
+</div>
+<span class="text-on-surface-variant font-bold text-sm">3 Units</span>
+</div>
+</div>
+</section>
+<!-- Category: Pantry -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+</div>
+<h3 class="font-headline text-2xl font-bold">Pantry</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="group bg-surface-container-lowest p-5 rounded-lg flex items-center gap-4 transition-all hover:bg-surface-container border border-outline-variant/10">
+<div class="relative w-6 h-6 border-2 border-primary rounded-md flex items-center justify-center cursor-pointer"></div>
+<div class="flex-grow">
+<p class="font-bold text-on-surface">Rolled Oats</p>
+<span class="font-label text-[10px] uppercase tracking-wider text-tertiary font-bold">For: Brain Power Oats</span>
+</div>
+<span class="text-on-surface-variant font-bold text-sm">1kg</span>
+</div>
+<div class="group bg-surface-container-lowest p-5 rounded-lg flex items-center gap-4 transition-all hover:bg-surface-container border border-outline-variant/10">
+<div class="relative w-6 h-6 border-2 border-primary rounded-md flex items-center justify-center cursor-pointer"></div>
+<div class="flex-grow">
+<p class="font-bold text-on-surface">Chia Seeds</p>
+<span class="font-label text-[10px] uppercase tracking-wider text-primary font-bold">For: Mood Boost Pudding</span>
+</div>
+<span class="text-on-surface-variant font-bold text-sm">250g</span>
+</div>
+</div>
+</section>
+<!-- Category: Dairy & Alternatives -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" data-icon="egg_alt">egg_alt</span>
+</div>
+<h3 class="font-headline text-2xl font-bold">Dairy &amp; Alternatives</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="group bg-surface-container-lowest p-5 rounded-lg flex items-center gap-4 transition-all hover:bg-surface-container border border-outline-variant/10">
+<div class="relative w-6 h-6 border-2 border-primary rounded-md flex items-center justify-center cursor-pointer"></div>
+<div class="flex-grow">
+<p class="font-bold text-on-surface">Almond Milk</p>
+<span class="font-label text-[10px] uppercase tracking-wider text-tertiary font-bold">For: Multiple Meals</span>
+</div>
+<span class="text-on-surface-variant font-bold text-sm">2 Liters</span>
+</div>
+<div class="group bg-surface-container-lowest p-5 rounded-lg flex items-center gap-4 transition-all hover:bg-surface-container border border-outline-variant/10">
+<div class="relative w-6 h-6 border-2 border-primary rounded-md flex items-center justify-center cursor-pointer"></div>
+<div class="flex-grow">
+<p class="font-bold text-on-surface">Greek Yogurt</p>
+<span class="font-label text-[10px] uppercase tracking-wider text-secondary font-bold">For: Zen Breakfast Bowl</span>
+</div>
+<span class="text-on-surface-variant font-bold text-sm">500g</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-stone-50/70 dark:bg-stone-950/70 backdrop-blur-xl rounded-t-[3rem] shadow-[0_-20px_40px_rgba(47,51,47,0.06)]">
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all duration-500 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="emoji_emotions">emoji_emotions</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-widest font-bold mt-1">Mood</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all duration-500 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-widest font-bold mt-1">Plan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all duration-500 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-widest font-bold mt-1">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-5 py-2 hover:text-green-700 dark:hover:text-green-300 transition-all duration-500 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-widest font-bold mt-1">Profile</span>
+</a>
+</nav>
+<!-- FAB (Suppressed on this focused task screen as per instruction, but could be present if it were a high-level summary) -->
+</body></html>

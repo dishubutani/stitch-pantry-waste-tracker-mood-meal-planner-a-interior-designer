@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sleep Quality Report</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#9c9d9a",
+                        "surface-dim": "#d7dbd5",
+                        "on-background": "#2f332f",
+                        "on-error": "#fff7f6",
+                        "tertiary-fixed": "#7bbeff",
+                        "on-primary-fixed": "#00480f",
+                        "secondary-fixed": "#ffdcbe",
+                        "on-secondary-container": "#794500",
+                        "inverse-primary": "#91f78e",
+                        "on-primary-container": "#005e17",
+                        "surface-bright": "#faf9f5",
+                        "on-surface-variant": "#5c605b",
+                        "on-tertiary": "#f7f9ff",
+                        "inverse-surface": "#0d0f0d",
+                        "error": "#aa371c",
+                        "surface-tint": "#006f1d",
+                        "primary-fixed-dim": "#83e881",
+                        "secondary-fixed-dim": "#ffca99",
+                        "secondary-container": "#ffdcbe",
+                        "on-primary-fixed-variant": "#00691a",
+                        "error-dim": "#821a01",
+                        "on-error-container": "#671200",
+                        "on-tertiary-container": "#00395f",
+                        "on-secondary-fixed-variant": "#874e00",
+                        "surface-container-low": "#f3f4ef",
+                        "outline-variant": "#afb3ad",
+                        "surface-variant": "#e0e3dd",
+                        "on-surface": "#2f332f",
+                        "primary-container": "#91f78e",
+                        "primary": "#006f1d",
+                        "error-container": "#fa7150",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-dim": "#7b4700",
+                        "on-secondary": "#fff7f4",
+                        "primary-dim": "#006118",
+                        "on-tertiary-fixed-variant": "#00426d",
+                        "surface-container": "#edeee9",
+                        "surface": "#faf9f5",
+                        "secondary": "#8c5100",
+                        "surface-container-highest": "#e0e3dd",
+                        "tertiary-fixed-dim": "#5fb1fb",
+                        "tertiary-container": "#7bbeff",
+                        "surface-container-high": "#e7e9e3",
+                        "outline": "#787c77",
+                        "tertiary-dim": "#00578c",
+                        "on-tertiary-fixed": "#00223b",
+                        "background": "#faf9f5",
+                        "on-primary": "#eaffe2",
+                        "primary-fixed": "#91f78e",
+                        "on-secondary-fixed": "#5f3500",
+                        "tertiary": "#00639f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-editorial-gradient {
+            background: linear-gradient(135deg, #006f1d 0%, #91f78e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#faf9f5]/70 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#2E7D32]">menu</span>
+</div>
+<h1 class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-lg text-[#2f332f]">Sleep Report</h1>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#2f332f]/60">more_vert</span>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto space-y-12">
+<!-- Sleep Quality Score: Large Elegant Gauge -->
+<section class="flex flex-col items-center justify-center space-y-6">
+<div class="relative w-64 h-64 flex items-center justify-center">
+<!-- Circular Gauge -->
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 100 100">
+<circle class="text-surface-container-highest" cx="50" cy="50" fill="none" r="45" stroke="currentColor" stroke-width="4"></circle>
+<circle cx="50" cy="50" fill="none" r="45" stroke="url(#scoreGradient)" stroke-dasharray="283" stroke-dashoffset="42" stroke-linecap="round" stroke-width="8"></circle>
+<defs>
+<lineargradient id="scoreGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#006f1d"></stop>
+<stop offset="100%" stop-color="#91f78e"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="text-5xl font-extrabold tracking-tighter text-on-surface">85</span>
+<span class="text-[10px] uppercase tracking-[0.1em] font-bold text-outline">Out of 100</span>
+</div>
+</div>
+<div class="text-center space-y-1">
+<h2 class="text-3xl font-bold text-on-surface leading-tight">Restorative Sleep</h2>
+<p class="text-on-surface-variant font-medium text-sm">Your body successfully recharged last night.</p>
+</div>
+</section>
+<!-- Bento Grid Insights -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Nightly Breakdown (Data Points) -->
+<section class="bg-surface-container-low rounded-lg p-8 flex flex-col justify-between aspect-square">
+<h3 class="text-[10px] uppercase tracking-[0.1em] font-bold text-outline">Nightly Breakdown</h3>
+<div class="space-y-6">
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<div class="flex flex-col">
+<span class="text-sm font-medium opacity-60">Time in Bed</span>
+<span class="text-2xl font-semibold">8h 12m</span>
+</div>
+<span class="material-symbols-outlined text-primary text-xl">bedtime</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<div class="flex flex-col">
+<span class="text-sm font-medium opacity-60">Deep Sleep</span>
+<span class="text-2xl font-semibold">22%</span>
+</div>
+<span class="material-symbols-outlined text-primary text-xl">psychology</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-2">
+<div class="flex flex-col">
+<span class="text-sm font-medium opacity-60">Wake-up Time</span>
+<span class="text-2xl font-semibold">7:15 AM</span>
+</div>
+<span class="material-symbols-outlined text-primary text-xl">wb_sunny</span>
+</div>
+</div>
+</section>
+<!-- Correlation Insights (Image bleed & Asymmetry) -->
+<section class="relative bg-primary-container/20 rounded-lg overflow-hidden p-8 aspect-square flex flex-col justify-end">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full -mr-4 -mt-4 blur-xl"></div>
+<div class="space-y-4 relative z-10">
+<div class="bg-white/40 backdrop-blur-md rounded-full w-12 h-12 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+</div>
+<h3 class="text-xl font-bold leading-snug">Ritual Reward</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        You slept <span class="text-primary font-bold text-lg">15% better</span> on nights you used the <span class="italic">Wind Down Timer</span> before bed.
+                    </p>
+</div>
+</section>
+</div>
+<!-- Sleep Duration Chart -->
+<section class="bg-surface-container-lowest rounded-xl p-8 space-y-8">
+<div class="flex justify-between items-center">
+<h3 class="text-lg font-bold">Sleep Duration</h3>
+<span class="text-[10px] uppercase tracking-[0.05em] font-bold text-outline">Last 7 Days</span>
+</div>
+<div class="flex items-end justify-between h-48 px-2 gap-3">
+<div class="flex flex-col items-center gap-3 flex-1">
+<div class="w-full bg-surface-container rounded-full h-[60%] hover:bg-primary/20 transition-colors duration-500"></div>
+<span class="text-[10px] font-bold text-outline">MON</span>
+</div>
+<div class="flex flex-col items-center gap-3 flex-1">
+<div class="w-full bg-surface-container rounded-full h-[75%] hover:bg-primary/20 transition-colors duration-500"></div>
+<span class="text-[10px] font-bold text-outline">TUE</span>
+</div>
+<div class="flex flex-col items-center gap-3 flex-1">
+<div class="w-full bg-primary rounded-full h-[85%]"></div>
+<span class="text-[10px] font-bold text-primary">WED</span>
+</div>
+<div class="flex flex-col items-center gap-3 flex-1">
+<div class="w-full bg-surface-container rounded-full h-[65%] hover:bg-primary/20 transition-colors duration-500"></div>
+<span class="text-[10px] font-bold text-outline">THU</span>
+</div>
+<div class="flex flex-col items-center gap-3 flex-1">
+<div class="w-full bg-surface-container rounded-full h-[80%] hover:bg-primary/20 transition-colors duration-500"></div>
+<span class="text-[10px] font-bold text-outline">FRI</span>
+</div>
+<div class="flex flex-col items-center gap-3 flex-1">
+<div class="w-full bg-surface-container rounded-full h-[95%] hover:bg-primary/20 transition-colors duration-500"></div>
+<span class="text-[10px] font-bold text-outline">SAT</span>
+</div>
+<div class="flex flex-col items-center gap-3 flex-1">
+<div class="w-full bg-surface-container rounded-full h-[70%] hover:bg-primary/20 transition-colors duration-500"></div>
+<span class="text-[10px] font-bold text-outline">SUN</span>
+</div>
+</div>
+</section>
+<!-- Mood & Energy Impact -->
+<section class="bg-[#2f332f] text-[#faf9f5] rounded-xl p-8 overflow-hidden relative">
+<div class="flex flex-col space-y-6 relative z-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<h3 class="text-lg font-bold">Morning Vitality</h3>
+</div>
+<div class="flex items-center gap-8">
+<div class="flex-1">
+<p class="text-sm opacity-80 leading-relaxed">Your "Calm" and "Focus" morning moods are <span class="font-bold text-primary-container">82% consistent</span> with over 7.5 hours of sleep.</p>
+</div>
+<div class="flex -space-x-3">
+<div class="w-12 h-12 rounded-full border-4 border-[#2f332f] bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[#00480f] text-sm">sentiment_very_satisfied</span>
+</div>
+<div class="w-12 h-12 rounded-full border-4 border-[#2f332f] bg-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[#00223b] text-sm">filter_drama</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Organic shape background -->
+<div class="absolute bottom-0 right-0 w-48 h-48 bg-primary/20 rounded-full translate-x-12 translate-y-12 blur-3xl"></div>
+</section>
+<!-- Lifestyle Image Section -->
+<section class="rounded-xl overflow-hidden aspect-[16/9]">
+<img class="w-full h-full object-cover grayscale opacity-80" data-alt="minimalist bedroom with soft linen sheets and morning sunlight filtering through natural curtains in a serene atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJHcxrzcn1qNR2EbEKujgsBa5mVW6GFnDiibPakBD12q2njrzg4TyvJyvv_eD8szJUsxCnefapGNDXGx3221HYq6oZYoZfFpW9VXR2zBm6tlEdxQz_aVJsp8TuWLbo3OR_FHtwS-zkKpp0Rb3YLe1JEFJPtEzEHhEVs2hO5NktVc1KBsJ9mSymCdaEttGEEWoa-Fol1MlV57T5yaM2vPjwEFy5zfHoa1vsQDVmNP6llNLpohjMxWbUQ3l9Q9c77uj0Zb7TNWoTJI8"/>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-8 bg-[#faf9f5]/70 backdrop-blur-xl z-50 rounded-t-[3rem] shadow-[0_-20px_40px_rgba(47,51,47,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#2f332f]/50 px-5 py-2.5 transition-all duration-500 hover:scale-110 active:scale-95" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-[0.05em] font-medium mt-1">Today</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2f332f]/50 px-5 py-2.5 transition-all duration-500 hover:scale-110 active:scale-95" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-[0.05em] font-medium mt-1">Journal</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-tr from-[#2E7D32] to-[#91f78e] text-white rounded-full px-5 py-2.5 transition-all duration-500 hover:scale-110 active:scale-95" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-[0.05em] font-medium mt-1">Report</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2f332f]/50 px-5 py-2.5 transition-all duration-500 hover:scale-110 active:scale-95" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-[0.05em] font-medium mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

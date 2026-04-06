@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nourished | Mood Stats &amp; Trends</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Be+Vietnam+Pro:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-dim": "#821a01",
+                        "secondary": "#8c5100",
+                        "secondary-dim": "#7b4700",
+                        "error": "#aa371c",
+                        "on-tertiary-container": "#00395f",
+                        "on-secondary-fixed-variant": "#874e00",
+                        "surface-tint": "#006f1d",
+                        "primary-fixed": "#91f78e",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#ffdcbe",
+                        "secondary-fixed-dim": "#ffca99",
+                        "on-primary-container": "#005e17",
+                        "on-tertiary": "#f7f9ff",
+                        "outline": "#787c77",
+                        "secondary-fixed": "#ffdcbe",
+                        "on-secondary-container": "#794500",
+                        "on-surface": "#2f332f",
+                        "tertiary-fixed-dim": "#5fb1fb",
+                        "surface-container-highest": "#e0e3dd",
+                        "tertiary": "#00639f",
+                        "tertiary-dim": "#00578c",
+                        "on-secondary-fixed": "#5f3500",
+                        "on-background": "#2f332f",
+                        "error-container": "#fa7150",
+                        "on-tertiary-fixed": "#00223b",
+                        "on-primary-fixed-variant": "#00691a",
+                        "on-surface-variant": "#5c605b",
+                        "on-primary-fixed": "#00480f",
+                        "surface-variant": "#e0e3dd",
+                        "tertiary-container": "#7bbeff",
+                        "background": "#faf9f5",
+                        "primary-container": "#91f78e",
+                        "on-primary": "#eaffe2",
+                        "primary-dim": "#006118",
+                        "primary": "#006f1d",
+                        "outline-variant": "#afb3ad",
+                        "surface-container-low": "#f3f4ef",
+                        "primary-fixed-dim": "#83e881",
+                        "on-secondary": "#fff7f4",
+                        "on-error": "#fff7f6",
+                        "surface-container": "#edeee9",
+                        "surface-container-high": "#e7e9e3",
+                        "surface-dim": "#d7dbd5",
+                        "inverse-surface": "#0d0f0d",
+                        "on-tertiary-fixed-variant": "#00426d",
+                        "inverse-on-surface": "#9c9d9a",
+                        "on-error-container": "#671200",
+                        "tertiary-fixed": "#7bbeff",
+                        "surface": "#faf9f5",
+                        "inverse-primary": "#91f78e",
+                        "surface-bright": "#faf9f5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #faf9f5;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface mb-24 overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f5]/70 dark:bg-stone-900/70 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-green-800 dark:text-green-400">menu</span>
+<span class="font-plus-jakarta text-2xl tracking-tighter font-bold text-green-800 dark:text-green-400">Nourished</span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-stone-500 dark:text-stone-400 font-label uppercase tracking-widest text-[11px] font-bold">
+<a class="hover:opacity-80 transition-opacity" href="#">Mood</a>
+<a class="hover:opacity-80 transition-opacity" href="#">Kitchen</a>
+<a class="text-green-800 dark:text-green-400 hover:opacity-80 transition-opacity" href="#">Insights</a>
+<a class="hover:opacity-80 transition-opacity" href="#">Profile</a>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="pt-24 px-6 md:px-12 max-w-6xl mx-auto space-y-12">
+<!-- Hero Header: Mood Trends -->
+<header class="relative space-y-4">
+<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+<div>
+<span class="font-label uppercase tracking-[0.2em] text-primary text-[11px] font-bold">Weekly Performance</span>
+<h1 class="text-5xl md:text-7xl font-bold tracking-tighter leading-none mt-2 text-on-surface">Mood Trends</h1>
+</div>
+<div class="flex gap-2">
+<div class="px-5 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label text-xs font-bold transition-all hover:scale-105">This Week</div>
+<div class="px-5 py-2 rounded-full bg-surface text-outline border-[0.5px] border-outline-variant/20 font-label text-xs font-bold">Last Week</div>
+</div>
+</div>
+</header>
+<!-- Editorial Visualization: Mood Chart -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-8 bg-surface-container-low rounded-xl p-8 relative overflow-hidden">
+<div class="flex justify-between items-center mb-12">
+<h2 class="text-xl font-bold tracking-tight">Energy &amp; Flow</h2>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Calm</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-tertiary"></div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Energetic</span>
+</div>
+</div>
+</div>
+<!-- Mock Chart with Asymmetric Editorial Style -->
+<div class="relative h-64 w-full flex items-end justify-between px-2">
+<!-- Energy Line (Mock SVG for fluidity) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" preserveaspectratio="none" viewbox="0 0 800 200">
+<path d="M0,150 C100,120 150,180 250,140 S400,60 550,100 S700,40 800,80" fill="none" stroke="#006f1d" stroke-linecap="round" stroke-width="4"></path>
+<path d="M0,180 C100,160 180,100 300,120 S500,160 650,80 S800,110 800,110" fill="none" opacity="0.6" stroke="#00639f" stroke-dasharray="8 8" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+<!-- Day Labels -->
+<div class="w-full flex justify-between pt-4 mt-auto border-t border-outline-variant/10">
+<span class="text-[10px] font-bold text-outline uppercase">Mon</span>
+<span class="text-[10px] font-bold text-outline uppercase">Tue</span>
+<span class="text-[10px] font-bold text-outline uppercase">Wed</span>
+<span class="text-[10px] font-bold text-on-surface uppercase font-extrabold underline decoration-primary decoration-2 underline-offset-4">Thu</span>
+<span class="text-[10px] font-bold text-outline uppercase">Fri</span>
+<span class="text-[10px] font-bold text-outline uppercase">Sat</span>
+<span class="text-[10px] font-bold text-outline uppercase">Sun</span>
+</div>
+</div>
+</div>
+<!-- Vibe Summary Card -->
+<div class="lg:col-span-4 bg-gradient-to-br from-primary to-primary-dim rounded-xl p-8 text-on-primary flex flex-col justify-between h-full min-h-[300px] shadow-[0_20px_40px_rgba(47,51,47,0.06)] transform hover:scale-[1.02] transition-transform">
+<div>
+<span class="material-symbols-outlined text-4xl mb-6" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h3 class="text-3xl font-bold tracking-tight leading-tight">Vibe Summary</h3>
+</div>
+<p class="text-xl font-medium leading-relaxed opacity-90">
+                    You're 15% more 'Zen &amp; Calm' this week compared to last.
+                </p>
+<div class="pt-6 border-t border-on-primary/20">
+<span class="font-label text-[10px] uppercase tracking-widest font-bold">Keep the momentum</span>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Influencers & Habit Correlation -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Top Mood Influencers -->
+<div class="lg:col-span-2 space-y-6">
+<div class="flex justify-between items-end">
+<h2 class="text-2xl font-bold tracking-tight">Top Mood Influencers</h2>
+<span class="text-primary font-bold text-xs uppercase tracking-widest border-b border-primary">View All</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Influencer 1 -->
+<div class="group relative overflow-hidden rounded-lg bg-surface-container-lowest flex flex-col transition-all duration-500 hover:shadow-xl">
+<div class="h-48 overflow-hidden">
+<img alt="Yoga session" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="overhead view of a yoga mat with a peaceful morning sunlight stretching across a minimalist wooden floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGEj6QfrsDodz9t4czu_S_-QRe1p1za2b0HmeDWse8gFOTpkwJi0YsK1iyXz2pZYgpjDCjEmoznlbNNEbVv7hpBhv-3yLXvq8fQFPl0MFKdZY0Ousm7vRV765MAMT8EpJXVW6fY-gIRYGvCTWFnQAxR3o0DEBRVVD8rwPOzWSYUZQbbB0tPW_R1991Kmg9edO5_A8Of4Qfteh_i0-tL_5clUwr856YgVXKOUpI3MM1_FuNQz6Pd2gnBssJGWmJ3eKmRNJG7cW6Wpg"/>
+</div>
+<div class="p-6">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold">Activity</span>
+<h4 class="text-lg font-bold mt-1">Energizing Power Yoga</h4>
+<div class="mt-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="text-xs font-medium text-on-surface-variant">+24% Focus Surge</span>
+</div>
+</div>
+</div>
+<!-- Influencer 2 -->
+<div class="group relative overflow-hidden rounded-lg bg-surface-container-lowest flex flex-col transition-all duration-500 hover:shadow-xl">
+<div class="h-48 overflow-hidden">
+<img alt="Matcha Pudding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="a glass of vibrant green matcha latte with chia seeds topped with fresh mint leaf on a stone tray" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApE9OBirJGq8LIQs0SJ6_6SdGSZ7J3kdHwe6Tj_9fNOF83p4MpGE19xy7199T8cReZe_zFtvRpz-aWS4dApDlzMKrWg9mP3ZM6b3jvhIxmgjhdeFV6_Ed5pd1cIo1NbQ7L-NZVnE9Zu3MBiRqx-Pft6IR6pjNUHp4Nt5XYzgp5QGx9gff3UUPPnK_D3BRF2wK_Bcq-YW2Tgjporvw8BR76XBx2VyZ55pDI-Vtu6FXEGWwwWXUTO6UVFc9Kq3rj6Si-ekZU-yQewbA"/>
+</div>
+<div class="p-6">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Nutrition</span>
+<h4 class="text-lg font-bold mt-1">Matcha Chia Pudding</h4>
+<div class="mt-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="text-xs font-medium text-on-surface-variant">Extended Calm State</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Habit Correlation -->
+<div class="bg-surface-container-high rounded-xl p-8 flex flex-col space-y-8">
+<h2 class="text-2xl font-bold tracking-tight">Habit Correlation</h2>
+<div class="space-y-6">
+<!-- Progress Item 1 -->
+<div class="space-y-2">
+<div class="flex justify-between items-center font-label text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">
+<span>Mood-Aligned Meals</span>
+<span class="text-primary">12/14</span>
+</div>
+<div class="h-1.5 w-full bg-outline-variant/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[85%]"></div>
+</div>
+</div>
+<!-- Progress Item 2 -->
+<div class="space-y-2">
+<div class="flex justify-between items-center font-label text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">
+<span>Flow Exercises</span>
+<span class="text-primary">4/5</span>
+</div>
+<div class="h-1.5 w-full bg-outline-variant/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[80%]"></div>
+</div>
+</div>
+<!-- Progress Item 3 -->
+<div class="space-y-2">
+<div class="flex justify-between items-center font-label text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">
+<span>Zen Moments Captured</span>
+<span class="text-tertiary">28</span>
+</div>
+<div class="h-1.5 w-full bg-outline-variant/20 rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full w-[60%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-auto p-4 bg-surface-container-lowest rounded-lg">
+<p class="text-xs leading-relaxed text-on-surface-variant italic">
+                        "Your consistency in mood-aligned meals is the primary driver of your 'Zen' state this week."
+                    </p>
+</div>
+</div>
+</section>
+<!-- Editorial Insight Section -->
+<section class="bg-surface-container-lowest rounded-xl p-12 flex flex-col md:flex-row items-center gap-12 overflow-hidden border border-outline-variant/10">
+<div class="md:w-1/2 space-y-6">
+<span class="font-label text-[11px] uppercase tracking-[0.2em] text-secondary font-bold">Deep Insight</span>
+<h2 class="text-4xl font-bold tracking-tighter leading-tight">The Sleep-Satiety Cycle</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                    Data shows that when you consume protein-heavy meals before 7:00 PM, your energy levels the next morning are 22% more consistent. Consider shifting your dinner window.
+                </p>
+<button class="px-8 py-4 bg-surface-container-highest text-on-surface rounded-full font-label text-xs uppercase tracking-widest font-bold hover:scale-105 transition-transform">
+                    Explore Strategy
+                </button>
+</div>
+<div class="md:w-1/2 relative">
+<div class="aspect-square w-full rounded-xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+<img alt="Morning Routine" class="w-full h-full object-cover" data-alt="a peaceful bedroom setting with soft linen sheets, morning light through sheer curtains, and a ceramic mug on a nightstand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCfmyjZbWbQC9LOEqXkMrtyLjAVWvS6SU5yYPFD3Uiew90bdIIdiQ428DjGWK18tdh5L-rIOATyJmLC3WgOcBzyQZDiAuU0rNuDInOzpMgNhvBtsUnB8rfJZZn_xzlRB3o3MVHPOJc21qECE34aPoqxC8X_C9P8rAkKSln1rZZuZ7n12sXqjXtKgbD7D7Evg_aehiSzC5geRD0j6ZMkkn5N6v-76h8yBqQjqg11ZZsiTo7KXkmobh_yPLibRQ3VpinLLbbjTbY-w8"/>
+</div>
+<!-- Float Overlay -->
+<div class="absolute -bottom-4 -left-4 p-6 bg-tertiary-container text-on-tertiary-container rounded-lg shadow-lg max-w-[180px]">
+<span class="font-bold text-3xl tracking-tighter">+8.2h</span>
+<p class="text-[10px] font-bold uppercase tracking-widest mt-1">Avg Sleep Duration</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-[#faf9f5]/70 dark:bg-stone-900/70 backdrop-blur-xl rounded-t-[3rem] shadow-[0_-20px_40px_rgba(47,51,47,0.06)] fixed bottom-0 left-0 w-full flex justify-around items-center px-8 pb-8 pt-4">
+<div class="flex items-center justify-center text-stone-400 dark:text-stone-500 p-4 hover:text-green-700 dark:hover:text-green-300 transition-opacity">
+<span class="material-symbols-outlined text-2xl">mood</span>
+</div>
+<div class="flex items-center justify-center text-stone-400 dark:text-stone-500 p-4 hover:text-green-700 dark:hover:text-green-300 transition-opacity">
+<span class="material-symbols-outlined text-2xl">restaurant_menu</span>
+</div>
+<!-- Active Item -->
+<div class="flex items-center justify-center bg-gradient-to-br from-[#2E7D32] to-[#91f78e] text-white rounded-full p-4 scale-110 shadow-lg">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">query_stats</span>
+</div>
+<div class="flex items-center justify-center text-stone-400 dark:text-stone-500 p-4 hover:text-green-700 dark:hover:text-green-300 transition-opacity">
+<span class="material-symbols-outlined text-2xl">person</span>
+</div>
+</nav>
+</body></html>

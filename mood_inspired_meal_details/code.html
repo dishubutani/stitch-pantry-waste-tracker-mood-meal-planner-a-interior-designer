@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#005e17",
+                    "error": "#aa371c",
+                    "surface-container": "#edeee9",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#874e00",
+                    "inverse-primary": "#91f78e",
+                    "on-secondary": "#fff7f4",
+                    "on-primary": "#eaffe2",
+                    "inverse-surface": "#0d0f0d",
+                    "on-tertiary-fixed": "#00223b",
+                    "primary-container": "#91f78e",
+                    "secondary-fixed": "#ffdcbe",
+                    "outline-variant": "#afb3ad",
+                    "surface-variant": "#e0e3dd",
+                    "surface-dim": "#d7dbd5",
+                    "tertiary-container": "#7bbeff",
+                    "secondary-fixed-dim": "#ffca99",
+                    "surface-container-highest": "#e0e3dd",
+                    "tertiary-fixed-dim": "#5fb1fb",
+                    "on-error": "#fff7f6",
+                    "on-secondary-fixed": "#5f3500",
+                    "on-surface": "#2f332f",
+                    "on-error-container": "#671200",
+                    "surface-container-high": "#e7e9e3",
+                    "background": "#faf9f5",
+                    "primary-fixed": "#91f78e",
+                    "outline": "#787c77",
+                    "error-container": "#fa7150",
+                    "on-tertiary": "#f7f9ff",
+                    "surface-container-low": "#f3f4ef",
+                    "surface-tint": "#006f1d",
+                    "primary-fixed-dim": "#83e881",
+                    "on-background": "#2f332f",
+                    "on-surface-variant": "#5c605b",
+                    "tertiary-fixed": "#7bbeff",
+                    "secondary-dim": "#7b4700",
+                    "on-primary-fixed-variant": "#00691a",
+                    "secondary": "#8c5100",
+                    "inverse-on-surface": "#9c9d9a",
+                    "secondary-container": "#ffdcbe",
+                    "surface": "#faf9f5",
+                    "error-dim": "#821a01",
+                    "on-secondary-container": "#794500",
+                    "on-primary-fixed": "#00480f",
+                    "primary": "#006f1d",
+                    "primary-dim": "#006118",
+                    "tertiary": "#00639f",
+                    "surface-bright": "#faf9f5",
+                    "on-tertiary-container": "#00395f",
+                    "on-tertiary-fixed-variant": "#00426d",
+                    "tertiary-dim": "#00578c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(47, 51, 47, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-stone-50/70 backdrop-blur-xl">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-green-800 hover:opacity-80 transition-opacity active:scale-90 duration-300">menu</button>
+<h1 class="font-headline text-2xl font-black text-green-800 tracking-tighter">Nourished</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a serene woman with natural lighting and soft background bokeh, reflecting a healthy lifestyle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtzm5zPr5QJ5yoymCkgDefQ5Pz1UF0wVASiayaa3TiI106T9T-qf8N7pd7QDLZHp90QXFPsgHWvTwBuovJz6oesfFvuzOn3eR_ka4ewh7dN5EunRGm_UvybQZM3M81hFw-ziU76NTnvpPnn8wFDLbHxbJ3-ww3AfjXlnzeodzgdGW8IBU1KEpMALIWIV3uK1PTEDwbBC8AIq2tCuNtur2n-Ax6j2m6VccwEhe5-gGzczsXVSp3gRlIKeHDg414Tje6k-SZYeOEHYM"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Hero Editorial Section -->
+<section class="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-20">
+<div class="lg:col-span-7 order-2 lg:order-1">
+<div class="inline-flex items-center gap-2 bg-tertiary-container text-on-tertiary-container px-6 py-2 rounded-full mb-6 editorial-shadow active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold">Brain Power</span>
+</div>
+<h2 class="font-headline text-[3.5rem] leading-[1.1] font-extrabold tracking-tight text-on-surface mb-6">
+                    Berry &amp; <br/>
+<span class="text-primary italic font-normal">Walnut</span> Oats
+                </h2>
+<p class="font-body text-lg text-on-surface-variant max-w-md leading-relaxed">
+                    Designed for clarity and sustained cognitive focus. A morning ritual that nourishes your mind as much as your body.
+                </p>
+</div>
+<div class="lg:col-span-5 order-1 lg:order-2">
+<div class="relative group">
+<div class="absolute -top-4 -left-4 w-full h-full bg-surface-container rounded-xl -z-10 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
+<img alt="Berry &amp; Walnut Oats" class="w-full h-[500px] object-cover rounded-xl editorial-shadow transition-transform duration-700 group-hover:scale-[1.02]" data-alt="Editorial food photography of a ceramic bowl filled with steel-cut oats, topped with fresh blueberries, toasted walnuts, and a drizzle of honey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRWfVcxxROeMKSjwRyzoJ9WWDtgdfD7ch5DWI5JlC8SmTFlBBq2z-YlxSxkHmWpsl-3GQt7JHeFn5w332B2vZvU085AKJgZEFnmzoYuiqKGweoEg452V9nCSkHnsLLvxDmvWktGRH-PkyGodSTWby2iqhQjT84IACBgU9s9m5Pka6PljD3RojcVd1m-g7PITiry0Kwe_Wj8At2yN3H0Hgvq6q0_Obs6qP1Lq76V1Hyg9TjLJQlWP2i0omMhuJC5ALioE1NG68_USQ"/>
+</div>
+</div>
+</section>
+<!-- Bento Ingredient Focus -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+<!-- Walnuts Focus -->
+<div class="md:col-span-2 bg-surface-container-low rounded-lg p-10 flex flex-col md:flex-row gap-8 items-center">
+<div class="w-full md:w-1/2">
+<h3 class="font-headline text-2xl font-bold mb-4">The Focus Engine</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                        Walnuts are rich in <span class="text-primary font-bold">DHA</span>, a type of Omega-3 fatty acid shown to protect brain health in newborns, improve cognitive performance in adults, and prevent or slow age-related cognitive decline.
+                    </p>
+</div>
+<div class="w-full md:w-1/2 rounded-lg overflow-hidden h-48 md:h-64">
+<img alt="Walnuts" class="w-full h-full object-cover" data-alt="Macro photography of organic walnut halves on a textured stone surface with warm, soft side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEZdezIGLmVBsphQMvPKCU9jgeqzX3XqiYdiDC75CmT7p-lpvut5hBC0VJaMw9iY0kBZbrpAavRCN6mFx7ATSPuqZy6RxAlf0pJ9ZxBQRPiLAAS9ZrB6ZQGe-ztk2OkYZ3bcGlCoAHqZwY-Zz1V7PY8Ss26dG8D682nnl5LmngoosjTjLIpswLaE5uTzKES72zxQ2hViKQzLNIvrT2xppYiGt6mFLjtNpwgs-e5ChfDhamDOPwcjaAlwCUe8gJIOgeSut29Tl3GcQ"/>
+</div>
+</div>
+<!-- Antioxidant Focus -->
+<div class="bg-surface-container-highest rounded-lg p-8 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-tertiary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">shutter_speed</span>
+<h3 class="font-headline text-xl font-bold mb-2">Antioxidant Boost</h3>
+<p class="font-body text-sm text-on-surface-variant">Blueberries contain anthocyanins, which cross the blood-brain barrier and enhance signaling in brain centers.</p>
+</div>
+<div class="mt-6 flex gap-2">
+<span class="w-8 h-8 rounded-full bg-tertiary-container"></span>
+<span class="w-8 h-8 rounded-full bg-primary-container"></span>
+</div>
+</div>
+</section>
+<!-- Prep & Ingredients Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Ingredients -->
+<div class="lg:col-span-4">
+<h4 class="font-label text-xs uppercase tracking-[0.2em] font-bold text-outline mb-8">Ingredients</h4>
+<ul class="space-y-6">
+<li class="flex items-center justify-between pb-4 border-b border-outline-variant/20">
+<span class="font-body text-lg">Steel-cut Oats</span>
+<span class="font-headline font-bold text-on-surface-variant">1/2 cup</span>
+</li>
+<li class="flex items-center justify-between pb-4 border-b border-outline-variant/20">
+<span class="font-body text-lg text-primary font-medium">Toasted Walnuts</span>
+<span class="font-headline font-bold text-on-surface-variant">1/4 cup</span>
+</li>
+<li class="flex items-center justify-between pb-4 border-b border-outline-variant/20">
+<span class="font-body text-lg text-tertiary font-medium">Fresh Blueberries</span>
+<span class="font-headline font-bold text-on-surface-variant">1/2 cup</span>
+</li>
+<li class="flex items-center justify-between pb-4 border-b border-outline-variant/20">
+<span class="font-body text-lg">Chia Seeds</span>
+<span class="font-headline font-bold text-on-surface-variant">1 tbsp</span>
+</li>
+<li class="flex items-center justify-between pb-4 border-b border-outline-variant/20">
+<span class="font-body text-lg">Manuka Honey</span>
+<span class="font-headline font-bold text-on-surface-variant">1 tsp</span>
+</li>
+</ul>
+</div>
+<!-- Steps -->
+<div class="lg:col-span-8 bg-surface-container-low rounded-xl p-10">
+<h4 class="font-label text-xs uppercase tracking-[0.2em] font-bold text-outline mb-10">Preparation Steps</h4>
+<div class="space-y-12">
+<div class="flex gap-8 group">
+<span class="font-headline text-5xl font-black text-outline-variant/30 transition-colors group-hover:text-primary">01</span>
+<div>
+<h5 class="font-headline text-xl font-bold mb-2">Slow Simmer</h5>
+<p class="font-body text-on-surface-variant leading-relaxed">Combine oats with 1.5 cups of water or nut milk. Simmer on low heat for 15-20 minutes until creamy. Patience develops the best texture.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<span class="font-headline text-5xl font-black text-outline-variant/30 transition-colors group-hover:text-primary">02</span>
+<div>
+<h5 class="font-headline text-xl font-bold mb-2">Antioxidant Infusion</h5>
+<p class="font-body text-on-surface-variant leading-relaxed">Fold in the chia seeds and half of the blueberries while the oats are still hot. This allows the berries to slightly burst and release their juices.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<span class="font-headline text-5xl font-black text-outline-variant/30 transition-colors group-hover:text-primary">03</span>
+<div>
+<h5 class="font-headline text-xl font-bold mb-2">The Brain Finish</h5>
+<p class="font-body text-on-surface-variant leading-relaxed">Top with the remaining fresh berries and raw toasted walnuts. Drizzle honey in a circular motion to finish the editorial presentation.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Nutrition Summary Floating Card -->
+<div class="mt-20 bg-primary-container/20 rounded-xl p-8 flex flex-wrap justify-around items-center gap-6 editorial-shadow">
+<div class="text-center">
+<span class="block font-label text-[10px] uppercase tracking-widest text-on-primary-container/60 mb-1">Calories</span>
+<span class="font-headline text-2xl font-black text-on-primary-container">342</span>
+</div>
+<div class="text-center">
+<span class="block font-label text-[10px] uppercase tracking-widest text-on-primary-container/60 mb-1">Protein</span>
+<span class="font-headline text-2xl font-black text-on-primary-container">12g</span>
+</div>
+<div class="text-center">
+<span class="block font-label text-[10px] uppercase tracking-widest text-on-primary-container/60 mb-1">Fiber</span>
+<span class="font-headline text-2xl font-black text-on-primary-container">9g</span>
+</div>
+<div class="text-center">
+<span class="block font-label text-[10px] uppercase tracking-widest text-on-primary-container/60 mb-1">Omega-3</span>
+<span class="font-headline text-2xl font-black text-on-primary-container">2.5g</span>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-stone-50/70 backdrop-blur-xl rounded-t-[3rem] shadow-[0_-20px_40px_rgba(47,51,47,0.06)]">
+<a class="flex flex-col items-center justify-center text-stone-500 hover:text-green-700 transition-all duration-500 px-5 py-2" href="#">
+<span class="material-symbols-outlined mb-1">emoji_emotions</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-widest font-bold">Mood</span>
+</a>
+<!-- Plan is Active State -->
+<a class="flex flex-col items-center justify-center bg-green-100 text-green-900 rounded-full px-5 py-2 scale-105 transition-all duration-500 ease-in-out" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-widest font-bold">Plan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 hover:text-green-700 transition-all duration-500 px-5 py-2" href="#">
+<span class="material-symbols-outlined mb-1">query_stats</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-widest font-bold">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 hover:text-green-700 transition-all duration-500 px-5 py-2" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] uppercase tracking-widest font-bold">Profile</span>
+</a>
+</nav>
+</body></html>

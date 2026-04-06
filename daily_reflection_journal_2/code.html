@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Be+Vietnam+Pro:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "surface-dim": "#d7dbd5",
+                  "inverse-surface": "#0d0f0d",
+                  "surface-container": "#edeee9",
+                  "surface-container-high": "#e7e9e3",
+                  "on-error-container": "#671200",
+                  "tertiary-fixed": "#7bbeff",
+                  "surface": "#faf9f5",
+                  "inverse-primary": "#91f78e",
+                  "surface-bright": "#faf9f5",
+                  "on-tertiary-fixed-variant": "#00426d",
+                  "inverse-on-surface": "#9c9d9a",
+                  "tertiary-container": "#7bbeff",
+                  "background": "#faf9f5",
+                  "primary-container": "#91f78e",
+                  "on-primary": "#eaffe2",
+                  "primary-dim": "#006118",
+                  "primary": "#006f1d",
+                  "on-background": "#2f332f",
+                  "error-container": "#fa7150",
+                  "on-tertiary-fixed": "#00223b",
+                  "on-primary-fixed-variant": "#00691a",
+                  "on-surface-variant": "#5c605b",
+                  "on-primary-fixed": "#00480f",
+                  "surface-variant": "#e0e3dd",
+                  "on-secondary": "#fff7f4",
+                  "on-error": "#fff7f6",
+                  "outline-variant": "#afb3ad",
+                  "surface-container-low": "#f3f4ef",
+                  "primary-fixed-dim": "#83e881",
+                  "outline": "#787c77",
+                  "secondary-fixed-dim": "#ffca99",
+                  "on-primary-container": "#005e17",
+                  "on-tertiary": "#f7f9ff",
+                  "tertiary": "#00639f",
+                  "tertiary-dim": "#00578c",
+                  "on-secondary-fixed": "#5f3500",
+                  "secondary-fixed": "#ffdcbe",
+                  "on-secondary-container": "#794500",
+                  "on-surface": "#2f332f",
+                  "tertiary-fixed-dim": "#5fb1fb",
+                  "surface-container-highest": "#e0e3dd",
+                  "error": "#aa371c",
+                  "error-dim": "#821a01",
+                  "secondary": "#8c5100",
+                  "secondary-dim": "#7b4700",
+                  "surface-container-lowest": "#ffffff",
+                  "secondary-container": "#ffdcbe",
+                  "on-tertiary-container": "#00395f",
+                  "on-secondary-fixed-variant": "#874e00",
+                  "surface-tint": "#006f1d",
+                  "primary-fixed": "#91f78e"
+          },
+          "borderRadius": {
+                  "DEFAULT": "1rem",
+                  "lg": "2rem",
+                  "xl": "3rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Plus Jakarta Sans"],
+                  "body": ["Be Vietnam Pro"],
+                  "label": ["Be Vietnam Pro"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .font-plus-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .glass-effect {
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+    textarea:focus, input:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(145, 247, 142, 0.3);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-[#faf9f5]/70 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="text-[#2E7D32] hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-[#2E7D32] font-plus-jakarta text-2xl tracking-tight font-bold">Nourished</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Close-up portrait of a woman with a serene expression, soft natural lighting, minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYFlpAO-3wFnPMBheq7GM78meqpgngZ_hkM4BjnZQpTl91wFObFjQBE_LTD49-3EJTI-tVZdgyuwaL5HsyZANkORp4g9Gtg9oXncyCT2ty_mtRfWaQTGOR8JVHTxL1ZInItAw0vViWYro_5hDr63L96LoKHiw0q8r-e6tQUIiFtToNLWIoguu8KQe5I8ThSeRxioIvRyL9Nziyt5NCs8fJd2c21kac8ll-qeNVYGlzUoYBlJMxePvZqRylKR384CmiPndzEnBQSHE"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto space-y-12">
+<!-- Header & Date -->
+<section class="space-y-2">
+<h2 class="text-on-surface font-headline text-4xl font-extrabold tracking-tight">Today's Reflection</h2>
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-[0.15em] font-semibold">Saturday, October 14</p>
+</section>
+<!-- Interactive Mood Selector -->
+<section class="space-y-6">
+<p class="text-on-surface font-headline text-lg font-medium">How are you feeling right now?</p>
+<div class="flex justify-between items-center gap-2 overflow-x-auto pb-2">
+<button class="flex flex-col items-center gap-3 p-4 min-w-[80px] rounded-lg bg-surface-container-low hover:scale-105 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl text-tertiary" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-[10px] font-label uppercase tracking-wider font-bold text-on-surface-variant">Zen</span>
+</button>
+<button class="flex flex-col items-center gap-3 p-4 min-w-[80px] rounded-lg bg-primary-container text-on-primary-container scale-110 shadow-lg transition-all duration-300">
+<span class="material-symbols-outlined text-3xl" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="text-[10px] font-label uppercase tracking-wider font-bold">Boost</span>
+</button>
+<button class="flex flex-col items-center gap-3 p-4 min-w-[80px] rounded-lg bg-surface-container-low hover:scale-105 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl text-secondary" data-icon="psychology">psychology</span>
+<span class="text-[10px] font-label uppercase tracking-wider font-bold text-on-surface-variant">Brain</span>
+</button>
+<button class="flex flex-col items-center gap-3 p-4 min-w-[80px] rounded-lg bg-surface-container-low hover:scale-105 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl text-error" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-[10px] font-label uppercase tracking-wider font-bold text-on-surface-variant">Comfort</span>
+</button>
+</div>
+</section>
+<!-- Hero Journal Entry -->
+<section class="relative group">
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-primary-container/20 rounded-full blur-3xl group-focus-within:bg-primary-container/40 transition-colors"></div>
+<div class="bg-surface-container-lowest rounded-xl p-8 space-y-6 relative border border-outline/5">
+<label class="block text-on-surface font-headline text-2xl font-bold leading-tight" for="main-journal">
+          What nourished your soul today?
+        </label>
+<textarea class="w-full bg-transparent border-none p-0 text-on-surface-variant text-lg leading-relaxed placeholder:text-outline-variant/50 focus:ring-0 min-h-[160px] resize-none" id="main-journal" placeholder="The morning light on the kitchen counter, the smell of fresh rosemary..."></textarea>
+</div>
+</section>
+<!-- Gratitude List (Asymmetric Bento) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="md:col-span-2">
+<h3 class="text-on-surface font-headline text-lg font-medium mb-4">Gratitude List</h3>
+</div>
+<div class="space-y-4">
+<div class="group relative">
+<input class="w-full bg-surface-container-low border-none rounded-full px-6 py-4 text-sm focus:bg-white transition-all duration-300 placeholder:text-outline-variant" placeholder="I am grateful for..." type="text"/>
+</div>
+<div class="group relative">
+<input class="w-full bg-surface-container-low border-none rounded-full px-6 py-4 text-sm focus:bg-white transition-all duration-300 placeholder:text-outline-variant" placeholder="Something that made me smile..." type="text"/>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-6 flex flex-col justify-center items-center text-center border border-outline/5">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="potted_plant">potted_plant</span>
+<p class="text-xs text-on-surface-variant font-medium leading-relaxed">Cultivating gratitude leads to 25% better sleep quality.</p>
+</div>
+</section>
+<!-- Activity Feedback -->
+<section class="bg-surface-container-high rounded-xl p-6 border border-outline/5 space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img alt="Activity thumbnail" class="w-full h-full object-cover" data-alt="Close up of a yoga mat and a ceramic water bottle on a light wood floor, soft sunlight streaming in" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWu5z8DUHkMPxbrtCE5NA0NDiCBHAx6a4HPWWql6ySS7aNiGrfj6R0ziGH6TCKRvj8sQjlL83LXZkSRFMN3RRty80Lgu8cAV52MBXtF94pZtyUIjbCjOYUb4QvEiytWp5aw9p1jxO8jEieyvRdBQn8s_5vf6xeIevKNvVcj39ci_wRS6u2UOXxW8P_wW-Ir2VZaJUk4Co9jV2NfdKSjZ_wFcszxBrjhR_jhio9n3MTVDgCOow4__pI7cv941zzB-f-XU3bd3sXXpk"/>
+</div>
+<div>
+<p class="text-xs font-label uppercase tracking-widest text-on-surface-variant font-bold">Planned Activity</p>
+<h4 class="font-headline font-bold text-on-surface">Vinyasa Flow &amp; Greens</h4>
+</div>
+</div>
+<div class="bg-primary text-white font-plus-jakarta font-bold px-4 py-1 rounded-full text-sm">
+          10/10
+        </div>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest/50 border-none rounded-lg px-4 py-3 text-sm italic placeholder:text-outline-variant focus:bg-surface-container-lowest" placeholder="How did this specific activity make you feel?" type="text"/>
+</div>
+</section>
+<!-- Save Button -->
+<section class="flex justify-center pt-4">
+<button class="bg-gradient-to-br from-primary to-primary-dim text-white font-plus-jakarta font-bold px-12 py-4 rounded-full shadow-lg hover:scale-105 transition-transform duration-300 flex items-center gap-2">
+<span>Complete Entry</span>
+<span class="material-symbols-outlined text-sm" data-icon="done_all">done_all</span>
+</button>
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-3 bg-[#faf9f5]/70 backdrop-blur-xl z-50 rounded-t-[3rem] shadow-[0_-20px_40px_rgba(47,51,47,0.06)]">
+<div class="flex flex-col items-center justify-center bg-[#2E7D32] text-white rounded-full px-6 py-2 transition-all duration-500 scale-100">
+<span class="material-symbols-outlined" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-plus-jakarta text-[10px] uppercase tracking-widest font-medium">Mood</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#2f332f] opacity-60 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-plus-jakarta text-[10px] uppercase tracking-widest font-medium">Plan</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#2f332f] opacity-60 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-plus-jakarta text-[10px] uppercase tracking-widest font-medium">Stats</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#2f332f] opacity-60 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-plus-jakarta text-[10px] uppercase tracking-widest font-medium">Profile</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Nourished Market | Sustainable Shopping Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#91f78e",
+                    "surface-container": "#edeee9",
+                    "on-tertiary-container": "#00395f",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#0d0f0d",
+                    "on-secondary-container": "#794500",
+                    "on-tertiary-fixed-variant": "#00426d",
+                    "background": "#faf9f5",
+                    "on-surface": "#2f332f",
+                    "surface": "#faf9f5",
+                    "secondary-container": "#ffdcbe",
+                    "secondary-fixed-dim": "#ffca99",
+                    "tertiary-dim": "#00578c",
+                    "primary-dim": "#006118",
+                    "tertiary": "#00639f",
+                    "secondary": "#8c5100",
+                    "error": "#aa371c",
+                    "primary-fixed": "#91f78e",
+                    "on-secondary-fixed-variant": "#874e00",
+                    "outline-variant": "#afb3ad",
+                    "surface-variant": "#e0e3dd",
+                    "error-container": "#fa7150",
+                    "primary-fixed-dim": "#83e881",
+                    "on-tertiary-fixed": "#00223b",
+                    "secondary-dim": "#7b4700",
+                    "on-primary-fixed": "#00480f",
+                    "surface-bright": "#faf9f5",
+                    "on-primary": "#eaffe2",
+                    "tertiary-container": "#7bbeff",
+                    "tertiary-fixed": "#7bbeff",
+                    "tertiary-fixed-dim": "#5fb1fb",
+                    "on-primary-container": "#005e17",
+                    "surface-dim": "#d7dbd5",
+                    "inverse-on-surface": "#9c9d9a",
+                    "surface-tint": "#006f1d",
+                    "primary": "#006f1d",
+                    "error-dim": "#821a01",
+                    "on-primary-fixed-variant": "#00691a",
+                    "on-error": "#fff7f6",
+                    "outline": "#787c77",
+                    "on-tertiary": "#f7f9ff",
+                    "surface-container-highest": "#e0e3dd",
+                    "surface-container-low": "#f3f4ef",
+                    "on-secondary-fixed": "#5f3500",
+                    "on-secondary": "#fff7f4",
+                    "on-error-container": "#671200",
+                    "secondary-fixed": "#ffdcbe",
+                    "on-surface-variant": "#5c605b",
+                    "surface-container-high": "#e7e9e3",
+                    "on-background": "#2f332f",
+                    "inverse-primary": "#91f78e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 w-full z-50 bg-[#faf9f5]/70 dark:bg-stone-900/70 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-green-800 dark:text-green-400 cursor-pointer" data-icon="menu">menu</span>
+<span class="text-xl font-bold tracking-tight text-green-900 dark:text-green-100 font-plus-jakarta-sans tracking-tighter">The Nourished Market</span>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="text-green-800 dark:text-green-400 font-bold font-plus-jakarta-sans tracking-tighter hover:opacity-80 transition-opacity" href="#">Discover</a>
+<a class="text-stone-500 dark:text-stone-400 font-plus-jakarta-sans tracking-tighter hover:opacity-80 transition-opacity" href="#">Seasonal</a>
+<a class="text-stone-500 dark:text-stone-400 font-plus-jakarta-sans tracking-tighter hover:opacity-80 transition-opacity" href="#">Brands</a>
+<a class="text-stone-500 dark:text-stone-400 font-plus-jakarta-sans tracking-tighter hover:opacity-80 transition-opacity" href="#">Eco-Tips</a>
+</nav>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="minimalist close-up portrait of a woman with soft lighting and natural skin texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJYFIY-UpywlANcrp2yqEGmu1v0pHn5V0l6v0P9ydh9NtuYEuvodj35zBJ7LGVVU8KKdFZSFl4ME-MYqhYBT-gHQOknZlpwntmRkIGDMYt5V2o5Cj9TU3iprGHIVxnVlR-yNmLvlie-djcMLNSITy_p510hZLJgKfctjoe--oXVWQ6qcdDOdXqJ0ZYGNZ7LRGUHqONsg7G4IzFrw_YTyzA9aVkrDTa-SYVoh0209Qr-K-cxaLD9QBBas46ElmaI5prqbCmLbyC5yQ"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 max-w-7xl mx-auto px-6">
+<!-- Hero Header -->
+<section class="relative mb-20 overflow-hidden rounded-xl">
+<div class="flex flex-col md:flex-row items-center gap-12 py-12">
+<div class="w-full md:w-1/2 space-y-6 z-10">
+<span class="inline-block px-4 py-1.5 bg-primary-container text-on-primary-container text-[10px] font-bold tracking-widest uppercase rounded-full">Editorial Guide</span>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-primary leading-[1.1]">
+                        Shop with <span class="text-outline italic font-light">Intention</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-md leading-relaxed">
+                        Every purchase is a silent vote for the world you want to live in. Discover how conscious consumption nourishes both your body and the planet.
+                    </p>
+<div class="pt-4">
+<button class="bg-gradient-to-tr from-primary to-primary-dim text-on-primary px-8 py-4 rounded-full font-semibold shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform flex items-center gap-2">
+                            Explore the Guide <span class="material-symbols-outlined text-sm">arrow_downward</span>
+</button>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-[4/5] rounded-lg overflow-hidden relative shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="high-quality editorial shot of fresh organic vegetables in a handcrafted wooden crate with soft morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv1DlU_gjKB5K1BFi_SSUVCQuzAHSfFHcCuyVfKlQRZ0fcjkdYiQY7dr9RUHerLlYcAGkwCnzDugInsSQ8gptbLOCwJxQI_Q6gbU8AN5Enpl-3OMdfQOYJvikhXbTzl_rQNKfJtFyltIV4oasMkHZeQ_jzbKWehr9od3XrhjSaFNvFJwYMpT9wUgRMkAx5S3V0a2mohSVaYFaAZZ_YqbMzTF0PKJDVFDfdqjGWxJasU9ZAgjx1QsVn4QK5-n10uWp_PBmnM77ozPM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-lg shadow-xl max-w-[240px] border border-outline-variant/10">
+<p class="text-sm font-medium text-on-surface italic">"Sustainable living isn't about perfection, it's about making better choices, one meal at a time."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Seasonal Spotlight -->
+<section class="mb-24">
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="text-3xl font-bold tracking-tight mb-2">Seasonal Spotlight</h2>
+<p class="text-on-surface-variant">The lowest footprint, the highest flavor.</p>
+</div>
+<button class="text-primary font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+                    View Calendar <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="group relative bg-surface-container-low rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-500">
+<div class="aspect-[1/1] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="vibrant bunch of heirloom carrots with green tops on a rustic stone background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCac9Kcs9u43VqnO6HzICYUdaOIeBxAGgFwaEtMwHAe0JnTjlAGkK-1EzYt5Qc67o4FNnyIJ0zelLhNQOwIasVx8YZPLvjaTBiAE3KwPPSjilVDFmQmWibeycD732RnS-tQ-l4nAo_D8wpAz3rorodWuPZjhyKC5-nr-3w06RxZy8vHBpltHAY1tMrrInTvVlO2W-S25XeEtGTxyNPlY4Tba7XwpTbPYn5FWgLsWKoxMuK8X0vmNSU1XjHh1jYxU90_70ZWwjxFPSY"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-xl font-bold">Heirloom Carrots</h3>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider">Local</span>
+</div>
+<div class="flex items-center gap-2 text-green-700 mb-4">
+<span class="material-symbols-outlined text-sm">eco</span>
+<span class="text-xs font-semibold uppercase tracking-widest">Low Carbon Footprint</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2">Direct from Heritage Farms. Reduced transport emissions and chemical-free soil practices.</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative bg-surface-container-low rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-500">
+<div class="aspect-[1/1] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="sliced delicata squash arranged artfully showing its unique striped skin and scalloped edges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE6qplUWDqiLkExvypQ33FBNdIbiYOT6tI19PfZneFQFlopdKOWGRYbo1DwPgRxPO2Waw-BcZlK-qXOtlRrenpGvJ26yZeS89rzXpQ9zDHOL1k2hMFw6x9lLwMWyODnZB6oM8PD6HWBeFu8yqKD3RiwvefVorA8Uji3qjTHOzVN28u0cV_Ow-0DPYvGbF1nMtu86QDjFwqY9Fh2pObvV6Z7aHfo95SjsJ-n42UEOeLqhdS5pyhLu15o5soHywQl1_nJYBXdpceews"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-xl font-bold">Delicata Squash</h3>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider">Organic</span>
+</div>
+<div class="flex items-center gap-2 text-green-700 mb-4">
+<span class="material-symbols-outlined text-sm">eco</span>
+<span class="text-xs font-semibold uppercase tracking-widest">Low Carbon Footprint</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2">Winter favorite with edible skin, meaning zero waste in your kitchen preparation.</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative bg-surface-container-low rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-500">
+<div class="aspect-[1/1] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="overhead shot of a colorful mixed seasonal salad bowl with radishes and seeds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3GoXmp45opEk353knBojsHK-TAXxhC2_D0P-TRtF9hj02w3pa-4Hcein4x2lF0-huBBDA3aItFd0PW_3Wxecj-QW-7VU5eJTizUbTyA6IJiWVsMGmt801ZeJT0uUS3K8uUNp8ue0H7KCp7YygJ_2Z1wjqdEDxvuvXVKEZFku7fiqnnlEIvwiGU0ypprSsqph5EMZhBXl7Ps6MRS1C9iCDphmmikqd0IImmH97v0ZVXcP_4iNSQJZ94WXpxYRtjvrDcsuXOJX9FSk"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-xl font-bold">Micro Greens</h3>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider">Hydroponic</span>
+</div>
+<div class="flex items-center gap-2 text-green-700 mb-4">
+<span class="material-symbols-outlined text-sm">eco</span>
+<span class="text-xs font-semibold uppercase tracking-widest">Low Carbon Footprint</span>
+</div>
+<p class="text-sm text-on-surface-variant line-clamp-2">Grown vertically in urban centers, minimizing road miles to reach your plate.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Sustainable Brand Directory -->
+<section class="mb-24 bg-surface-container-low rounded-xl p-8 md:p-12">
+<div class="max-w-3xl mb-12">
+<h2 class="text-3xl font-bold tracking-tight mb-4">Sustainable Brand Directory</h2>
+<p class="text-on-surface-variant text-lg">We've vetted the providers so you don't have to. These brands lead the way in restorative agriculture and ethical labor.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Brand 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border border-outline-variant/5 hover:border-primary/20 transition-all cursor-pointer">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 bg-secondary-container rounded-md flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container">grain</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Seed &amp; Grain</h4>
+<p class="text-xs text-on-surface-variant mb-3 italic">Ancient Grains &amp; Flours</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-tertiary-container/30 text-on-tertiary-container text-[9px] font-extrabold uppercase px-2 py-0.5 rounded">B-Corp</span>
+<span class="bg-primary-container/30 text-on-primary-container text-[9px] font-extrabold uppercase px-2 py-0.5 rounded">Plastic Free</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Brand 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border border-outline-variant/5 hover:border-primary/20 transition-all cursor-pointer">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 bg-primary-container rounded-md flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container">nature_people</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Earth First Pantry</h4>
+<p class="text-xs text-on-surface-variant mb-3 italic">Bulk Staples &amp; Spices</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-tertiary-container/30 text-on-tertiary-container text-[9px] font-extrabold uppercase px-2 py-0.5 rounded">B-Corp</span>
+<span class="bg-secondary-container/30 text-on-secondary-container text-[9px] font-extrabold uppercase px-2 py-0.5 rounded">Fair Trade</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Brand 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border border-outline-variant/5 hover:border-primary/20 transition-all cursor-pointer">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 bg-tertiary-container rounded-md flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container">water_drop</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Verdant Press</h4>
+<p class="text-xs text-on-surface-variant mb-3 italic">Cold-Pressed Oils</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary-container/30 text-on-primary-container text-[9px] font-extrabold uppercase px-2 py-0.5 rounded">Regenerative</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Brand 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm border border-outline-variant/5 hover:border-primary/20 transition-all cursor-pointer">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 bg-secondary-container rounded-md flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container">inventory_2</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Pure Harvest</h4>
+<p class="text-xs text-on-surface-variant mb-3 italic">Zero-Waste Preserves</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary-container/30 text-on-primary-container text-[9px] font-extrabold uppercase px-2 py-0.5 rounded">Plastic Free</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Zero-Waste Shopping Tips -->
+<section class="mb-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<div class="grid grid-cols-1 gap-8">
+<div class="flex gap-6 items-start">
+<div class="w-14 h-14 shrink-0 bg-white rounded-full flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-primary text-3xl">shopping_basket</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Bring your own jars</h3>
+<p class="text-on-surface-variant leading-relaxed">Avoid the plastic aisle entirely. Clean, weight-labeled jars for bulk grains and pulses are the gold standard of zero-waste shopping.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-14 h-14 shrink-0 bg-white rounded-full flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-primary text-3xl">energy_savings_leaf</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Choose loose produce</h3>
+<p class="text-on-surface-variant leading-relaxed">Resist the pre-packaged bags. Selecting individual items reduces unnecessary plastic and helps you buy only exactly what you need.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-14 h-14 shrink-0 bg-white rounded-full flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-primary text-3xl">receipt_long</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Shop with a List</h3>
+<p class="text-on-surface-variant leading-relaxed">Food waste is the hidden giant of environmental impact. A precise list ensures every item bought has a designated purpose in your meal plan.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-8">
+<h2 class="text-4xl font-extrabold tracking-tight">Zero-Waste <br/><span class="text-primary">Mastery</span></h2>
+<div class="aspect-[4/3] rounded-lg overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="aesthetic minimalist glass jars filled with various grains and pulses on a clean wooden shelf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATPYn3TJ4Pxadx-8TszI2VDqw_3ZZOu7zQuHiyV3c4rc3JY1BrCF1uRn1vlSwGJzRm2uF_WO77mt3CgWMBiuZdsIUyxG-MGCvPj7bvhQa_B2O5m8Aqs6OCOoFLJ4PcADMhHQpiUjcUhKVzMpkscHndcgRNOJbSy4po5lKaUL3sQElrzUEjxQrlDjGsJ4DQS4Z85rvznbooy6UHYxRMHQ4P3W-eDDF562jtw4nZgg6OBhvElgNFeW4XVYpRtBlOgTAlEAnvZL3ha8o"/>
+</div>
+</div>
+</section>
+<!-- Ethical Alternatives -->
+<section class="mb-20">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold tracking-tight mb-4">The Ethical Pivot</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Small swaps that lead to significant change. Try replacing these common convenience items with their planet-friendly counterparts.</p>
+</div>
+<div class="bg-white rounded-lg shadow-xl overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-low">
+<tr>
+<th class="p-6 font-bold uppercase text-[10px] tracking-widest text-on-surface-variant">Standard Choice</th>
+<th class="p-6"></th>
+<th class="p-6 font-bold uppercase text-[10px] tracking-widest text-primary">Better Alternative</th>
+<th class="p-6 font-bold uppercase text-[10px] tracking-widest text-on-surface-variant">Impact</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="p-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-md bg-stone-100 flex items-center justify-center text-stone-400">
+<span class="material-symbols-outlined">block</span>
+</div>
+<span class="font-medium">Plastic-wrapped spinach</span>
+</div>
+</td>
+<td class="p-6 text-center">
+<span class="material-symbols-outlined text-outline-variant">trending_flat</span>
+</td>
+<td class="p-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<span class="font-bold text-primary">Bunch-tied spinach</span>
+</div>
+</td>
+<td class="p-6">
+<span class="text-xs font-medium text-on-surface-variant">Zero Plastic Waste</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="p-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-md bg-stone-100 flex items-center justify-center text-stone-400">
+<span class="material-symbols-outlined">block</span>
+</div>
+<span class="font-medium">Imported Out-of-season Berries</span>
+</div>
+</td>
+<td class="p-6 text-center">
+<span class="material-symbols-outlined text-outline-variant">trending_flat</span>
+</td>
+<td class="p-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<span class="font-bold text-primary">Seasonal stone fruit</span>
+</div>
+</td>
+<td class="p-6">
+<span class="text-xs font-medium text-on-surface-variant">-80% Carbon Miles</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="p-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-md bg-stone-100 flex items-center justify-center text-stone-400">
+<span class="material-symbols-outlined">block</span>
+</div>
+<span class="font-medium">Single-use coffee pods</span>
+</div>
+</td>
+<td class="p-6 text-center">
+<span class="material-symbols-outlined text-outline-variant">trending_flat</span>
+</td>
+<td class="p-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<span class="font-bold text-primary">French press beans</span>
+</div>
+</td>
+<td class="p-6">
+<span class="text-xs font-medium text-on-surface-variant">Compostable Grounds</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<!-- BottomNavBar from JSON -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-end pb-6 px-4 bg-[#faf9f5]/80 dark:bg-stone-950/80 backdrop-blur-2xl rounded-t-[3rem] z-50 shadow-[0_-10px_40px_rgba(47,51,47,0.04)] md:hidden">
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-green-600 transition-colors cursor-pointer">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-be-vietnam-pro text-[10px] uppercase tracking-widest font-bold">Discover</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-green-600 transition-colors cursor-pointer">
+<span class="material-symbols-outlined">eco</span>
+<span class="font-be-vietnam-pro text-[10px] uppercase tracking-widest font-bold">Seasonal</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-gradient-to-tr from-green-700 to-green-500 text-white rounded-full w-14 h-14 mb-2 shadow-lg shadow-green-900/20 scale-110 transition-transform duration-500 cursor-pointer">
+<span class="material-symbols-outlined">verified</span>
+<span class="font-be-vietnam-pro text-[10px] uppercase tracking-widest font-bold mt-1">Brands</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-green-600 transition-colors cursor-pointer">
+<span class="material-symbols-outlined">recycling</span>
+<span class="font-be-vietnam-pro text-[10px] uppercase tracking-widest font-bold">Eco-Tips</span>
+</div>
+</nav>
+<!-- Contextual FAB - suppressed for details/guide screen as per mandate -->
+</body></html>
